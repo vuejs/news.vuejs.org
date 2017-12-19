@@ -1,4 +1,8 @@
 module.exports = {
+  env: {
+    SPACE: process.env.SPACE,
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN
+  },
   /*
   ** Headers of the page
   */
@@ -10,7 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Official Vue.js News' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }
     ]
   },
   /*
@@ -33,6 +37,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
     }
   }
 }

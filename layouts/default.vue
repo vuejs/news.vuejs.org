@@ -1,52 +1,82 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
+<template lang="pug">
+div
+  NavBar
+  .container
+    .issues-container
+      nuxt
+    .sidebar-container
+      SideBar
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import NavBar from '~/components/NavBar'
+import SideBar from '~/components/SideBar'
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    NavBar,
+    SideBar
+  },
+  head () {
+    return {
+      title: 'News — Vue.js'
+    }
+  }
 }
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+<style lang="sass">
+html
+  font:
+    family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+    size: 15px
+  background: #fff
+  margin: 0
+  color: #34495e
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+.container
+  padding-top: 60px
+  max-width: 1200px
+  margin: 0 auto
+  display: flex
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+.issues-container,
+.sidebar-container
+  padding: 0 30px
+
+.issues-container
+  width: 65%
+
+.sidebar-container
+  width: 35%
+
+a
+  text-decoration: none
+  color: #34495e
+
+.content a, .link
+  font-weight: 600
+  color: #42b983
+
+.slide-transition
+  transition: all .5s cubic-bezier(.55,0,.1,1)
+
+.slide-left-enter,
+.slide-right-leave-active
+  opacity: 0
+  transform: translate(50px, 0)
+
+.slide-left-leave-active,
+.slide-right-enter
+  opacity: 0
+  transform: translate(-50px, 0)
 </style>

@@ -1,50 +1,34 @@
 <template lang="pug">
-  section.container
-    Logo
-      h1.title
-        | news.vuejs.org
-    .links
-      a.button--grey(href="https://nuxtjs.org/" target="_blank") Documentation
-      a.button--grey(href="https://github.com/nuxt/nuxt.js" target="_blank") GitHub
+.issues-list.slide-transition
+  Issue(
+    v-for="(issue, index) of issues",
+    :issue="issue",
+    :key="issue.fields.issueNumber",
+    :is-large="index === 0"
+  )
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Issue from '~/components/Issue'
 
 export default {
-  components: {
-    Logo
+  components: { Issue },
+  transition (to, from) {
+    if (!from) return 'slide-right'
+    return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
+  },
+  async fetch ({ store }) {
+    await store.dispatch('getIssues')
+  },
+  computed: {
+    issues () {
+      return this.$store.state.issues.concat(this.$store.state.issues.concat(this.$store.state.issues))
+    }
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="sass">
+.issues-list
+  display: block
 </style>
