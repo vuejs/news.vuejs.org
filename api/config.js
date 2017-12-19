@@ -5,6 +5,7 @@ export default {
   contentTypes: {
     issues: 'issueNumber',
     categories: 'stories',
-    authors: 'authors'
+    authors: 'authors',
+    podcasts: 'podcast'
   }
 }

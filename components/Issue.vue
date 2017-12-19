@@ -1,11 +1,11 @@
 <template lang="pug">
 article.issue(:class="{ 'issue-large': isLarge }")
-  nuxt-link(:to="{ name: 'issues-number', params: { number: issue.fields.issueNumber } }")
+  nuxt-link(:to="{ name: 'issues-number', params: { number: issue.issueNumber } }")
     span.issue-date {{ issueDate }}
     h1.issue-header
-      span.issue-number {{ issue.fields.issueNumber }}
-      span.issue-title {{ issue.fields.title }}
-    p.issue-description {{ issue.fields.description }}
+      span.issue-number {{ issue.issueNumber }}
+      span.issue-title {{ issue.title }}
+    p.issue-description {{ issue.description }}
   .issue-player(v-if="isLarge")
     img(src="~assets/images/vue-play-button.svg" alt="Play button")
     | Player
@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     issueDate () {
-      return formatDate(this.issue.fields.publishedOn)
+      return formatDate(this.issue.publishedOn)
     }
   }
 }

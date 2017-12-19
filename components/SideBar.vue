@@ -18,11 +18,15 @@
     button.newsletter-button(type="submit") Subscribe
     small.small Previously known as Vue.js Newsletter
 
-  h2.sidebar-header Listen to our podcast
+  h2.sidebar-header Listen to the latest podcast
+  PodcastPlayer
 </template>
 
 <script>
+import PodcastPlayer from '~/components/PodcastPlayer'
+
 export default {
+  components: { PodcastPlayer },
   data () {
     return {
       email: ''

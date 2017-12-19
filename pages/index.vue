@@ -3,7 +3,7 @@
   Issue(
     v-for="(issue, index) of issues",
     :issue="issue",
-    :key="issue.fields.issueNumber",
+    :key="issue.issueNumber",
     :is-large="index === 0"
   )
 </template>
@@ -17,12 +17,23 @@ export default {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
   },
-  async fetch ({ store }) {
-    await store.dispatch('getIssues')
+  async fetch ({ store, isServer }) {
+    if (isServer) {
+      await Promise.all([
+        store.dispatch('getIssues'),
+        store.dispatch('getPodcasts')
+      ])
+    }
   },
   computed: {
     issues () {
       return this.$store.state.issues
+    }
+  },
+  mounted () {
+    if (!this.issues.length) {
+      this.$store.dispatch('getIssues')
+      this.$store.dispatch('getPodcasts')
     }
   }
 }

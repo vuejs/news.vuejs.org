@@ -14,6 +14,12 @@ export default {
     })
     return data.items
   },
+  async getPodcasts () {
+    const data = await client.getEntries({
+      content_type: config.contentTypes.podcasts
+    })
+    return data.items
+  },
   async getIssueByNumber (issueNumber) {
     const data = await client.getEntries({
       content_type: config.contentTypes.issues,

@@ -16,6 +16,13 @@ import api from '~/api'
 import Issue from '~/components/Issue'
 import Story from '~/components/Story'
 import Library from '~/components/Library'
+import { flattenIssue } from '~/helpers/parsers'
+
+function getTitle (issue) {
+  return issue
+    ? issue.title + ' | News — Vue.js'
+    : 'News – Vue.js'
+}
 
 export default {
   components: { Issue, Story, Library },
@@ -25,38 +32,40 @@ export default {
   },
   head () {
     return {
-      title: this.issue.fields.title + ' | News — Vue.js'
+      title: getTitle(this.issue)
     }
   },
   data () {
     return {
-      issue: {
-        fields: {
-          title: 'Vue.js News'
-        }
-      }
+      issue: null
     }
+  },
+  async fetch ({ store }) {
+    await store.dispatch('getPodcasts')
   },
   async asyncData ({ isServer, params }) {
     if (isServer) {
       const issue = await api.getIssueByNumber(params.number)
       return {
-        issue
+        issue: flattenIssue(issue)
       }
     }
   },
   computed: {
     stories () {
-      if (!this.issue.fields.stories) return []
-      return this.issue.fields.stories.filter(story => !story.fields.isLibrary)
+      if (!this.issue.stories) return []
+      return this.issue.stories.filter(story => !story.fields.isLibrary)
     },
     libraries () {
-      if (!this.issue.fields.stories) return []
-      return this.issue.fields.stories.filter(story => story.fields.isLibrary)
+      if (!this.issue.stories) return []
+      return this.issue.stories.filter(story => story.fields.isLibrary)
     }
   },
   async mounted () {
-    this.issue = await api.getIssueByNumber(this.$route.params.number)
+    if (!this.issue) {
+      const issue = await api.getIssueByNumber(this.$route.params.number)
+      this.issue = flattenIssue(issue)
+    }
   }
 }
 </script>
