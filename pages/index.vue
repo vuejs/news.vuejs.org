@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     issues () {
-      return this.$store.state.issues.concat(this.$store.state.issues.concat(this.$store.state.issues))
+      return this.$store.state.issues
     }
   }
 }

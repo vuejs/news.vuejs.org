@@ -3,7 +3,8 @@ import config from './config'
 
 const client = createClient({
   space: config.space,
-  accessToken: config.accessToken
+  accessToken: config.accessToken,
+  host: config.host
 })
 
 export default {

@@ -1,7 +1,8 @@
 module.exports = {
   env: {
-    SPACE: process.env.SPACE,
-    ACCESS_TOKEN: process.env.ACCESS_TOKEN
+    SPACE: process.env.SPACE || 'fvjzlvrkinc4',
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN || '4f4f9e133b04281c5b172963a693cc7881f8db9646426dd6bd179c646b6ee714',
+    HOST: process.env.HOST || 'preview.contentful.com'
   },
   /*
   ** Headers of the page

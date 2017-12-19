@@ -47,9 +47,11 @@ export default {
   },
   computed: {
     stories () {
+      if (!this.issue.fields.stories) return []
       return this.issue.fields.stories.filter(story => !story.fields.isLibrary)
     },
     libraries () {
+      if (!this.issue.fields.stories) return []
       return this.issue.fields.stories.filter(story => story.fields.isLibrary)
     }
   },
