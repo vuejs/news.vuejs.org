@@ -1,4 +1,20 @@
+const { createClient } = require('contentful')
+const apiConfig = require('./api/config')
+
 module.exports = {
+  generate: {
+    routes () {
+      const client = createClient({
+        space: apiConfig.space,
+        accessToken: apiConfig.accessToken,
+        host: apiConfig.host
+      })
+
+      return client.getEntries({
+        content_type: apiConfig.contentTypes.issues
+      }).then(data => data.items.map(item => `/issues/${item.fields.issueNumber}/`))
+    }
+  },
   env: {
     SPACE: process.env.SPACE || 'fvjzlvrkinc4',
     ACCESS_TOKEN: process.env.ACCESS_TOKEN || '4f4f9e133b04281c5b172963a693cc7881f8db9646426dd6bd179c646b6ee714',

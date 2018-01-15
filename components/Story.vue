@@ -1,7 +1,10 @@
 <template lang="pug">
 .story
-  h1.story-title
-    | {{ story.title }}
+  a(:href="story.url", target="_BLANK")
+    h1.story-title
+      | {{ story.title }}
+    .story-url
+      | {{ story.url }}
   p.story-description
     | {{ story.description }}
 </template>
@@ -17,12 +20,23 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import 'assets/branding'
+
 .story-title
   font-size: 24px
   line-height: 1.2
-  margin-bottom: 15px
+  transition: color 0.1s ease
+
+  &:hover
+    color: $color-green
+
+.story-url
+  margin-bottom: 10px
+  opacity: 0.8
+  font-weight: 600
 
 .story-description
   font-size: 18px
   line-height: 1.4
+  margin-bottom: 30px
 </style>

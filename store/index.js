@@ -7,7 +7,7 @@ const createStore = () => {
     state: {
       issues: [],
       podcasts: [],
-      currentPodcastId: 0
+      currentPodcastNumber: 0
     },
     actions: {
       async getIssues ({ commit, state }) {
@@ -20,11 +20,19 @@ const createStore = () => {
         const podcasts = await api.getPodcasts()
         const flatPodcasts = podcasts.map(flattenPodcast)
         commit('SET_PODCASTS', flatPodcasts)
-        commit('SET_CURRENT_PODCAST', flatPodcasts.slice(-1)[0].id)
+        commit('SET_CURRENT_PODCAST', flatPodcasts.slice(-1)[0].issueNumber)
+      },
+      playNextPodcast ({ commit, state }) {
+        const nextIssue = state.podcasts.find(podcast => podcast.issueNumber === state.currentPodcastNumber + 1)
+        if (nextIssue) {
+          commit('SET_CURRENT_PODCAST', nextIssue.issueNumber)
+        } else {
+          commit('SET_CURRENT_PODCAST', state.podcasts[0].issueNumber)
+        }
       }
     },
     getters: {
-      currentPodcast: state => state.podcasts.find(podcast => podcast.id === state.currentPodcastId)
+      currentPodcast: state => state.podcasts.find(podcast => podcast.issueNumber === state.currentPodcastNumber)
     },
     mutations: {
       SET_ISSUES (state, issues) {
@@ -33,8 +41,8 @@ const createStore = () => {
       SET_PODCASTS (state, podcasts) {
         state.podcasts = podcasts
       },
-      SET_CURRENT_PODCAST (state, id) {
-        state.currentPodcastId = id
+      SET_CURRENT_PODCAST (state, issueNumber) {
+        state.currentPodcastNumber = issueNumber
       }
     }
   })

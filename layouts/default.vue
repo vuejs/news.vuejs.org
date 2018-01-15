@@ -26,13 +26,15 @@ export default {
 </script>
 
 <style lang="sass">
+@import 'assets/branding'
+
 html
   font:
-    family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+    family: $primary-font-stack
     size: 15px
   background: #fff
   margin: 0
-  color: #34495e
+  color: $color-dark-blue
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
   -moz-osx-font-smoothing: grayscale
@@ -44,14 +46,14 @@ html
   margin: 0
 
 .container
-  padding-top: 60px
+  padding: 60px 0
   max-width: 1200px
   margin: 0 auto
   display: flex
 
 .issues-container,
 .sidebar-container
-  padding: 0 30px
+  padding: 0 30px 50px
 
 .issues-container
   width: 65%

@@ -5,12 +5,12 @@ article.issue(:class="{ 'issue-large': isLarge }")
     h1.issue-header
       span.issue-number {{ issue.issueNumber }}
       span.issue-title {{ issue.title }}
-    p.issue-description {{ issue.description }}
-  .issue-player(v-if="isLarge")
+  p.issue-description {{ issue.description }}
+  button.issue-action(v-if="isLarge", @click="playPodcast")
     img(src="~assets/images/vue-play-button.svg" alt="Play button")
-    | Player
+    | Play this issue
   .issue-actions(v-else)
-    button.issue-action(type="button")
+    button.issue-action(type="button", @click="playPodcast")
       img(src="~assets/images/vue-play-button.svg" alt="Play button")
       span Play
     button.issue-action(type="button")
@@ -42,11 +42,17 @@ export default {
     issueDate () {
       return formatDate(this.issue.publishedOn)
     }
+  },
+  methods: {
+    playPodcast () {
+      this.$store.commit('SET_CURRENT_PODCAST', this.issue.issueNumber)
+    }
   }
 }
 </script>
 
 <style lang="sass" scoped>
+@import 'assets/branding'
 $desktop-up: 'screen and (min-width: 1240px)'
 
 .issue
@@ -80,13 +86,13 @@ $desktop-up: 'screen and (min-width: 1240px)'
   cursor: pointer
 
   &:hover
-    color: #42b983
+    color: $color-green
 
 .issue-number
   font-family: 'Dosis'
   font-weight: 500
   font-size: 0.9em
-  color: #42b983
+  color: $color-green
   display: inline-block
   margin-right: 6px
 

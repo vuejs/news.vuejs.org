@@ -14,6 +14,9 @@ export function flattenIssue (issue) {
 export function flattenPodcast (podcast) {
   return {
     id: podcast.fields.id,
-    source: podcast.fields.source
+    source: podcast.fields.source,
+    title: podcast.fields.issue.fields.title,
+    issueNumber: podcast.fields.issue.fields.issueNumber,
+    publishedOn: podcast.fields.issue.fields.publishedOn
   }
 }

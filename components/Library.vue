@@ -1,9 +1,10 @@
 <template lang="pug">
 .library
-  h1.library-title
-    | {{ `${owner}/${repo}` }}
-  .library-stats
-    .library-stars ★ {{ stars }}
+  a(:href="library.url", target="_BLANK")
+    h1.library-title
+      | {{ `${owner}/${repo}` }}
+    .library-stats
+      .library-stars ★ {{ stars }}
   p.library-description
     | {{ library.description }}
 </template>
