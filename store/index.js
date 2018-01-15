@@ -2,16 +2,20 @@ import Vuex from 'vuex'
 import api from '../api/index'
 import { flattenIssue, flattenPodcast } from '~/helpers/parsers'
 
+function sortByIssueNumber (a, b) {
+  return a.issueNumber < b.issueNumber ? 1 : -1
+}
+
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      issues: [],
+      issuesList: [],
       podcasts: [],
       currentPodcastNumber: 0
     },
     actions: {
       async getIssues ({ commit, state }) {
-        if (state.issues.length !== 0) return false
+        if (state.issuesList.length !== 0) return false
         const issues = await api.getIssues()
         commit('SET_ISSUES', issues.map(flattenIssue))
       },
@@ -32,11 +36,12 @@ const createStore = () => {
       }
     },
     getters: {
-      currentPodcast: state => state.podcasts.find(podcast => podcast.issueNumber === state.currentPodcastNumber)
+      currentPodcast: state => state.podcasts.find(podcast => podcast.issueNumber === state.currentPodcastNumber),
+      issues: state => state.issuesList.sort(sortByIssueNumber)
     },
     mutations: {
       SET_ISSUES (state, issues) {
-        state.issues = issues
+        state.issuesList = issues
       },
       SET_PODCASTS (state, podcasts) {
         state.podcasts = podcasts

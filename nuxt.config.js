@@ -15,11 +15,9 @@ module.exports = {
       }).then(data => data.items.map(item => `/issues/${item.fields.issueNumber}/`))
     }
   },
-  env: {
-    SPACE: process.env.SPACE,
-    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
-    HOST: process.env.HOST
-  },
+  modules: [
+    '@nuxtjs/dotenv'
+  ],
   /*
   ** Headers of the page
   */
