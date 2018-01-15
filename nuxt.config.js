@@ -5,9 +5,8 @@ module.exports = {
   generate: {
     routes () {
       const client = createClient({
-        space: apiConfig.space,
-        accessToken: apiConfig.accessToken,
-        host: apiConfig.host
+        space: process.env.SPACE,
+        accessToken: process.env.ACCESS_TOKEN
       })
 
       return client.getEntries({

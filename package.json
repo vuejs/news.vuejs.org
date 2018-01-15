@@ -4,6 +4,9 @@
   "description": "Official Vue.js News",
   "author": "Damian Dulisz <damian.dulisz@gmail.com>",
   "private": true,
+  "engines": {
+    "node": ">=8.3.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
