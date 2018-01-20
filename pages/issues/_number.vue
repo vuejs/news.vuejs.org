@@ -4,9 +4,6 @@
 
   div(v-if="issue")
     Issue(:issue="issue", :is-large="true")
-    Story(v-for="(story, index) of stories", :story="story.fields", key="index")
-    h1.issue-libraries Libraries
-    Library(v-for="(library, index) of libraries", :library="library.fields", key="index")
   .issue-loading(v-else)
     | Loading!
 </template>
@@ -51,16 +48,6 @@ export default {
       }
     }
   },
-  computed: {
-    stories () {
-      if (!this.issue.stories) return []
-      return this.issue.stories.filter(story => !story.fields.isLibrary)
-    },
-    libraries () {
-      if (!this.issue.stories) return []
-      return this.issue.stories.filter(story => story.fields.isLibrary)
-    }
-  },
   async mounted () {
     if (!this.issue) {
       const issue = await api.getIssueByNumber(this.$route.params.number)
@@ -73,9 +60,6 @@ export default {
 <style lang="sass" scoped>
 .issue-wrapper
   position: relative
-
-.issue-libraries
-  margin: 20px 0 10px
 
 .go-back-link
   position: absolute

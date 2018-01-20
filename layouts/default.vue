@@ -4,6 +4,7 @@ div
   .container
     .issues-container
       nuxt
+      IssuesNav
     .sidebar-container
       SideBar
 </template>
@@ -11,11 +12,13 @@ div
 <script>
 import NavBar from '~/components/NavBar'
 import SideBar from '~/components/SideBar'
+import IssuesNav from '~/components/IssuesNav'
 
 export default {
   components: {
     NavBar,
-    SideBar
+    SideBar,
+    IssuesNav
   },
   head () {
     return {
@@ -27,6 +30,9 @@ export default {
 
 <style lang="sass">
 @import 'assets/branding'
+
+$medium-size: 1024px
+$medium-up: "only screen and (min-width:#{$medium-size})"
 
 html
   font:
@@ -56,10 +62,14 @@ html
   padding: 0 30px 50px
 
 .issues-container
-  width: 65%
+  width: 100%
+
+  @media #{$medium-up}
+    width: 65%
 
 .sidebar-container
-  width: 35%
+  @media #{$medium-up}
+    width: 35%
 
 a
   text-decoration: none

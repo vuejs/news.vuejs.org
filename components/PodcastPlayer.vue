@@ -23,6 +23,7 @@
 import PlayButton from './PlayButton'
 import ProgressBar from './ProgressBar'
 import { mapGetters } from 'vuex'
+import podcastBus from '~/helpers/podcastBus'
 
 export default {
   components: { PlayButton, ProgressBar },
@@ -81,6 +82,9 @@ export default {
         }
       })
     }
+    podcastBus.$on('play', () => {
+      this.isPaused = false
+    })
   }
 }
 </script>

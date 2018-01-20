@@ -1,6 +1,6 @@
 <template lang="pug">
 .story
-  a(:href="story.url", target="_BLANK")
+  a.story-link(:href="story.url", target="_BLANK")
     h1.story-title
       | {{ story.title }}
     .story-url
@@ -22,13 +22,16 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/branding'
 
+.story-link
+
+  &:hover
+    .story-title
+      color: $color-green
+
 .story-title
   font-size: 24px
   line-height: 1.2
   transition: color 0.1s ease
-
-  &:hover
-    color: $color-green
 
 .story-url
   margin-bottom: 10px

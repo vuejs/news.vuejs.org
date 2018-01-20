@@ -1,11 +1,6 @@
 <template lang="pug">
 .issues-list.slide-transition
-  Issue(
-    v-for="(issue, index) of issues",
-    :issue="issue",
-    :key="issue.issueNumber",
-    :is-large="index === 0"
-  )
+  Issue(:issue="issue")
 </template>
 
 <script>
@@ -28,6 +23,9 @@ export default {
   computed: {
     issues () {
       return this.$store.getters.issues
+    },
+    issue () {
+      return this.issues[0]
     }
   },
   mounted () {

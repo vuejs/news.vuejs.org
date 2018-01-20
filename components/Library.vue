@@ -1,10 +1,12 @@
 <template lang="pug">
 .library
-  a(:href="library.url", target="_BLANK")
+  a.library-link(:href="library.url", target="_BLANK")
     h1.library-title
       | {{ `${owner}/${repo}` }}
     .library-stats
       .library-stars ★ {{ stars }}
+    .library-url
+      | {{ library.url }}
   p.library-description
     | {{ library.description }}
 </template>
@@ -49,13 +51,32 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import 'assets/branding'
+
+.library
+  background: #fff
+  padding: 20px
+  margin: 0 -20px
+
+  &:hover
+    background: $light-grey
+
 .library-title
   font-size: 24px
   line-height: 1.2
   margin-bottom: 0
 
-.library-stats
-  margin: 5px 0
+.library-link
+  display: block
+
+  &:hover
+    .library-title
+      color: $color-green
+
+.library-stats,
+.library-url
+  display: inline-block
+  margin: 0 10px 5px 0
   font-weight: 600
   font-size: 16px
 

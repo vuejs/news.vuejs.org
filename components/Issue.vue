@@ -6,22 +6,19 @@ article.issue(:class="{ 'issue-large': isLarge }")
       span.issue-number {{ issue.issueNumber }}
       span.issue-title {{ issue.title }}
   p.issue-description {{ issue.description }}
-  button.issue-action(v-if="isLarge", @click="playPodcast")
-    img(src="~assets/images/vue-play-button.svg" alt="Play button")
-    | Play this issue
-  .issue-actions(v-else)
-    button.issue-action(type="button", @click="playPodcast")
-      img(src="~assets/images/vue-play-button.svg" alt="Play button")
-      span Play
-    button.issue-action(type="button")
-      img(src="~assets/images/vue-play-button.svg" alt="Play button")
-      span Read
-    button.issue-action(type="button")
-      img(src="~assets/images/vue-play-button.svg" alt="Play button")
-      span Share
+  PlayPodcastButton(@click.native="playPodcast")
+  h1.issue-section-header Stories
+  Story(v-for="(story, index) of stories", :story="story.fields", key="index")
+  h1.issue-section-header Libraries
+  Library(v-for="(library, index) of libraries", :library="library.fields", key="index")
 </template>
 
 <script>
+import Story from './Story'
+import Library from './Library'
+import PlayPodcastButton from './PlayPodcastButton'
+import podcastBus from '~/helpers/podcastBus'
+
 const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 function formatDate (publishedOn) {
   const date = new Date(publishedOn)
@@ -29,6 +26,7 @@ function formatDate (publishedOn) {
 }
 
 export default {
+  components: { Story, Library, PlayPodcastButton },
   props: {
     issue: {
       type: Object
@@ -41,11 +39,20 @@ export default {
   computed: {
     issueDate () {
       return formatDate(this.issue.publishedOn)
+    },
+    stories () {
+      if (!this.issue.stories) return []
+      return this.issue.stories.filter(story => !story.fields.isLibrary)
+    },
+    libraries () {
+      if (!this.issue.stories) return []
+      return this.issue.stories.filter(story => story.fields.isLibrary)
     }
   },
   methods: {
     playPodcast () {
       this.$store.commit('SET_CURRENT_PODCAST', this.issue.issueNumber)
+      podcastBus.$emit('play')
     }
   }
 }
@@ -113,32 +120,9 @@ $desktop-up: 'screen and (min-width: 1240px)'
   margin-top: 15px
   display: flex
 
-.issue-action
-  background: none
-  border: none
-  padding: 10px
-  margin-right: 30px
-  font:
-    size: 16px
-    weight: 600
-  color: #34495e
-  cursor: pointer
-
-  &:hover
-    opacity: 0.8
-
-  img
-    width: 20px
-    height: 20px
-    vertical-align: middle
-    margin-right: 10px
-    line-height: 30px
-    display: inline-block
-
-  span
-    display: inline-block
-    line-height: 30px
-    vertical-align: middle
+.issue-section-header
+  margin: 20px 0 10px
+  font-size: 28px
 
 .issue-player
   margin-top: 10px
