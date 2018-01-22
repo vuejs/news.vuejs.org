@@ -2,6 +2,12 @@ const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
 
 module.exports = {
+  modules: process.env.NODE_ENV !== 'production' ? ['@nuxtjs/dotenv'] : [],
+  env: {
+    SPACE: process.env.SPACE,
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+    HOST: process.env.HOST
+  },
   generate: {
     routes () {
       const client = createClient({
@@ -15,9 +21,6 @@ module.exports = {
       }).then(data => data.items.map(item => `/issues/${item.fields.issueNumber}/`))
     }
   },
-  modules: [
-    '@nuxtjs/dotenv'
-  ],
   /*
   ** Headers of the page
   */
@@ -43,8 +46,8 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

@@ -8,9 +8,9 @@
       .nav
         ul
           li
-            NuxtLink(to="/archive") Archives
+            nuxt-link(to="/archive") Archives
           li
-            NuxtLink(to="/about") About
+            nuxt-link(to="/about") About
 </template>
 
 <style lang="sass">

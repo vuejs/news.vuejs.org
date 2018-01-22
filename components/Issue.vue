@@ -5,10 +5,10 @@ article.issue
   PlayPodcastButton(@click.native="playPodcast")
   hr.hr
   h1.issue-section-header Stories
-  Story(v-for="(story, index) of stories", :story="story.fields", key="index")
+  Story(v-for="story of stories", :story="story", :key="story.url")
   hr.hr
   h1.issue-section-header Libraries
-  Library(v-for="(library, index) of libraries", :library="library.fields", key="index")
+  Library(v-for="library of libraries", :library="library", :key="library.url")
 </template>
 
 <script>
@@ -28,11 +28,15 @@ export default {
   computed: {
     stories () {
       if (!this.issue.stories) return []
-      return this.issue.stories.filter(story => !story.fields.isLibrary)
+      return this.issue.stories
+        .filter(story => !story.fields.isLibrary)
+        .map(story => story.fields)
     },
     libraries () {
       if (!this.issue.stories) return []
-      return this.issue.stories.filter(story => story.fields.isLibrary)
+      return this.issue.stories
+        .filter(story => story.fields.isLibrary)
+        .map(library => library.fields)
     }
   },
   methods: {

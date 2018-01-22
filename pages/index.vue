@@ -12,14 +12,6 @@ export default {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
   },
-  async fetch ({ store, isServer }) {
-    if (isServer) {
-      await Promise.all([
-        store.dispatch('getIssues'),
-        store.dispatch('getPodcasts')
-      ])
-    }
-  },
   computed: {
     issues () {
       return this.$store.getters.issues
