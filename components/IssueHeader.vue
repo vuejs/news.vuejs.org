@@ -1,8 +1,9 @@
 <template lang="pug">
-h1.issue-header
-  span.issue-number {{ issue.issueNumber }}
-  span.issue-date {{ issueDate }}
-  .issue-title {{ issue.title }}
+nuxt-link(:to="{ name: 'issues-number', params: { number: issue.issueNumber } }")
+  h1.issue-header
+    span.issue-number {{ issue.issueNumber }}
+    span.issue-date {{ issueDate }}
+    .issue-title {{ issue.title }}
 </template>
 
 <script>
@@ -27,7 +28,7 @@ export default {
 @import '~assets/branding'
 
 .issue-title
-  font-weight: 600
+  font-weight: 400
   font-size: 20px
   display: block
   margin-bottom: 5px

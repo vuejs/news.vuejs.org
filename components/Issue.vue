@@ -1,7 +1,6 @@
 <template lang="pug">
 article.issue
-  nuxt-link(:to="{ name: 'issues-number', params: { number: issue.issueNumber } }")
-    IssueHeader(:issue="issue")
+  IssueHeader(:issue="issue")
   p.issue-description {{ issue.description }}
   PlayPodcastButton(@click.native="playPodcast")
   hr.hr
