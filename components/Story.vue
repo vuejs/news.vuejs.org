@@ -42,4 +42,5 @@ export default {
   font-size: 18px
   line-height: 1.4
   margin-bottom: 30px
+  word-wrap: break-word
 </style>

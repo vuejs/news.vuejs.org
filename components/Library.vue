@@ -53,14 +53,6 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/branding'
 
-.library
-  background: #fff
-  padding: 20px
-  margin: 0 -20px
-
-  &:hover
-    background: $light-grey
-
 .library-title
   font-size: 24px
   line-height: 1.2

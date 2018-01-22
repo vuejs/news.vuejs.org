@@ -16,25 +16,11 @@ button.button.play-podcast-button
 <style lang="sass">
 @import 'assets/branding'
 
-.button
-  line-height: 30px
-  letter-spacing: 0.1em
-  font:
-    size: 14px
-    weight: 600
-  cursor: pointer
-  text-transform: uppercase
-  border-radius: 2em
-  border: none
-
-  &:hover
-    opacity: 0.8
-
 .play-podcast-button
   background-color: $color-green
   color: #fff
   padding: 5px 20px 5px 5px
-  margin: 20px 30px 20px 0
+  margin: 20px 30px 0 0
 
   img, svg
     width: 30px

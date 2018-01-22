@@ -1,13 +1,13 @@
 <template lang="pug">
 .issues-list.slide-transition
-  Issue(:issue="issue")
+  LastIssue
 </template>
 
 <script>
-import Issue from '~/components/Issue'
+import LastIssue from './issues/_number'
 
 export default {
-  components: { Issue },
+  components: { LastIssue },
   transition (to, from) {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
@@ -26,12 +26,6 @@ export default {
     },
     issue () {
       return this.issues[0]
-    }
-  },
-  mounted () {
-    if (!this.issues.length) {
-      this.$store.dispatch('getIssues')
-      this.$store.dispatch('getPodcasts')
     }
   }
 }

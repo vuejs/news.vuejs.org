@@ -2,9 +2,8 @@
 div
   NavBar
   .container
-    .issues-container
+    .content-container
       nuxt
-      IssuesNav
     .sidebar-container
       SideBar
 </template>
@@ -12,13 +11,11 @@ div
 <script>
 import NavBar from '~/components/NavBar'
 import SideBar from '~/components/SideBar'
-import IssuesNav from '~/components/IssuesNav'
 
 export default {
   components: {
     NavBar,
-    SideBar,
-    IssuesNav
+    SideBar
   },
   head () {
     return {
@@ -30,9 +27,6 @@ export default {
 
 <style lang="sass">
 @import 'assets/branding'
-
-$medium-size: 1024px
-$medium-up: "only screen and (min-width:#{$medium-size})"
 
 html
   font:
@@ -57,19 +51,22 @@ html
   margin: 0 auto
   display: flex
 
-.issues-container,
+.content-container,
 .sidebar-container
   padding: 0 30px 50px
 
-.issues-container
+.content-container
   width: 100%
 
   @media #{$medium-up}
     width: 65%
 
 .sidebar-container
+  width: 35%
+  display: none
+
   @media #{$medium-up}
-    width: 35%
+    display: block
 
 a
   text-decoration: none
@@ -91,4 +88,25 @@ a
 .slide-right-enter
   opacity: 0
   transform: translate(-50px, 0)
+
+.button
+  background: $light-grey
+  padding: 5px 20px
+  line-height: 30px
+  letter-spacing: 0.1em
+  font:
+    size: 13px
+    weight: 600
+  cursor: pointer
+  text-transform: uppercase
+  border-radius: 2em
+  border: none
+
+  &:hover
+    opacity: 0.8
+
+.hr
+  margin: 30px 0 20px
+  border: none
+  border-top: 1px solid darken($light-grey, 10%)
 </style>

@@ -14,6 +14,12 @@ const createStore = () => {
       currentPodcastNumber: 0
     },
     actions: {
+      nuxtServerInit ({ dispatch }) {
+        return Promise.all([
+          dispatch('getIssues'),
+          dispatch('getPodcasts')
+        ])
+      },
       async getIssues ({ commit, state }) {
         if (state.issuesList.length !== 0) return false
         const issues = await api.getIssues()

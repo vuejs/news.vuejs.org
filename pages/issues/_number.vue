@@ -1,11 +1,20 @@
 <template lang="pug">
-.issue-wrapper.slide-transition
-  nuxt-link.go-back-link(to="/") ← Go back
+.slide-transition
+  .issue-wrapper
+    nuxt-link.go-back-link(
+      v-if="$route.params.number"
+      to="/"
+    ) ← Go back
 
-  div(v-if="issue")
-    Issue(:issue="issue", :is-large="true")
-  .issue-loading(v-else)
-    | Loading!
+    transition(name="fade")
+      Issue(
+        v-if="issue"
+        :issue="issue"
+      )
+      .issue-loading(v-else)
+        Spinner
+        | Loading!
+  IssuesNav
 </template>
 
 <script>
@@ -13,23 +22,29 @@ import api from '~/api'
 import Issue from '~/components/Issue'
 import Story from '~/components/Story'
 import Library from '~/components/Library'
-import { flattenIssue } from '~/helpers/parsers'
+import Spinner from '~/components/Spinner'
+import { flattenIssue, parseDate } from '~/helpers/parsers'
+import IssuesNav from '~/components/IssuesNav'
 
-function getTitle (issue) {
+function getTitle (issue, issueDate) {
   return issue
-    ? issue.title + ' | News — Vue.js'
+    ? `#${issue.issueNumber} ${issueDate} | News — Vue.js`
     : 'News – Vue.js'
 }
 
+async function getIssue (issueNumber) {
+  return flattenIssue(await api.getIssueByNumber(issueNumber))
+}
+
 export default {
-  components: { Issue, Story, Library },
+  components: { Issue, Story, Library, Spinner, IssuesNav },
   transition (to, from) {
     if (!from) return 'slide-left'
     return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   },
   head () {
     return {
-      title: getTitle(this.issue)
+      title: getTitle(this.issue, this.issueDate)
     }
   },
   data () {
@@ -37,29 +52,52 @@ export default {
       issue: null
     }
   },
+  computed: {
+    issues () {
+      return this.$store.getters.issues
+    },
+    issueDate () {
+      return this.issue
+        ? parseDate(this.issue.publishedOn)
+        : ''
+    }
+  },
   async fetch ({ store }) {
     await store.dispatch('getPodcasts')
   },
-  async asyncData ({ isServer, params }) {
-    if (isServer) {
-      const issue = await api.getIssueByNumber(params.number)
+  async asyncData ({ isStatic, params }) {
+    if (isStatic) {
+      const issue = params.number
+        ? await getIssue(params.number)
+        : this.issues[0]
       return {
-        issue: flattenIssue(issue)
+        issue
       }
     }
   },
   async mounted () {
     if (!this.issue) {
-      const issue = await api.getIssueByNumber(this.$route.params.number)
-      this.issue = flattenIssue(issue)
+      this.issue = await getIssue(this.$route.params.number)
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
 .issue-wrapper
   position: relative
+  min-height: 400px
+
+.issue-loading
+  position: absolute
+  min-height: 400px
+  width: 100%
 
 .go-back-link
   position: absolute

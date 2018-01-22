@@ -1,3 +1,5 @@
+const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+
 export function flattenIssue (issue) {
   return {
     id: issue.sys.id,
@@ -19,4 +21,9 @@ export function flattenPodcast (podcast) {
     issueNumber: podcast.fields.issue.fields.issueNumber,
     publishedOn: podcast.fields.issue.fields.publishedOn
   }
+}
+
+export function parseDate (publishedOn) {
+  const date = new Date(publishedOn)
+  return date.toLocaleString('en-US', dateOptions)
 }

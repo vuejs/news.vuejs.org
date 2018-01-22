@@ -8,17 +8,45 @@
       a.link(href="") Discord channel
 
   h2.sidebar-header Get a weekly email
-  form.newsletter-form(@submit="subscribe")
+  form.newsletter-form(
+    id="revue-form"
+    name="revue-form"
+    target="_blank"
+    action="https://www.getrevue.co/profile/vuenewsletter/add_subscriber"
+    method="post"
+  )
     input.newsletter-input(
-      v-model="email",
-      type="text",
-      placeholder="Email address",
+      type="email"
+      name="member[email]"
+      id="member_email"
       required
+      placeholder="Email address",
     )
-    button.newsletter-button(type="submit") Subscribe
+    input.button.newsletter-button(
+      type="submit"
+      value="Subscribe"
+      name="member[subscribe]"
+      id="member_submit"
+    )
     small.small Previously known as Vue.js Newsletter
 
-  h2.sidebar-header Listen to the latest podcast
+  h2.sidebar-header Subscribe to the podcast
+  .podcast-list
+    a.button.podcast-subscribe(
+      href="https://itunes.apple.com/us/podcast/the-official-vue-news/id1329151772"
+      target="_blank"
+    )
+      | Apple Podcasts
+    a.button.podcast-subscribe(
+      href="https://subscribeonandroid.com/vuenews.fireside.fm/rss"
+      target="_blank"
+    )
+      | Android
+    a.button.podcast-subscribe(
+      href="https://vuenews.fireside.fm/rss"
+      target="_blank"
+    )
+      | RSS
   PodcastPlayer
 </template>
 
@@ -41,6 +69,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~assets/branding'
+
 .sidebar__box
   background: #f9f9f9
   padding: 30px
@@ -57,7 +87,7 @@ export default {
 
 .newsletter-input
   width: 100%
-  height: 44px
+  height: 46px
   padding: 10px 80px 10px 20px
   border-radius: 50px
   border: 1px solid #ccc
@@ -73,15 +103,9 @@ export default {
   padding: 4px 20px
   right: 4px
   top: 4px
-  height: 36px
-  background: #42b983
-  border: none
+  background: $color-green
   color: #fff
-  border-radius: 50px
-  font-family: 'Dosis'
-  font-size: 16px
   font-weight: 600
-  text-transform: uppercase
 
 .small
   display: block
@@ -91,4 +115,13 @@ export default {
   font-size: 20px
   font-weight: 600
   margin: 40px 0 10px
+
+.podcast-list
+  display: block
+
+.podcast-subscribe
+  font-size: 12px
+  padding: 5px 20px
+  margin: 0 10px 10px 0
+  display: inline-block
 </style>
