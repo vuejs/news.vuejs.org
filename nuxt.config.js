@@ -18,7 +18,9 @@ module.exports = {
 
       return client.getEntries({
         content_type: apiConfig.contentTypes.issues
-      }).then(data => data.items.map(item => `/issues/${item.fields.issueNumber}/`))
+      }).then(data =>
+        data.items.map(item => `/issues/${item.fields.issueNumber}/`)
+      )
     }
   },
   /*

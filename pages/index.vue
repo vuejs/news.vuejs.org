@@ -15,11 +15,8 @@ export default {
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
   },
   computed: {
-    issues () {
-      return this.$store.getters.issues
-    },
     issue () {
-      return this.issues[0]
+      return this.$store.getters.issues[0]
     }
   }
 }
