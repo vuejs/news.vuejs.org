@@ -1,13 +1,15 @@
 <template lang="pug">
 .issues-list.slide-transition
-  LastIssue
+  Issue(:issue="issue")
+  IssuesNav
 </template>
 
 <script>
-import LastIssue from './issues/_number'
+import Issue from '~/components/Issue'
+import IssuesNav from '~/components/IssuesNav'
 
 export default {
-  components: { LastIssue },
+  components: { Issue, IssuesNav },
   transition (to, from) {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'

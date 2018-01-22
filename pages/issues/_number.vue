@@ -18,22 +18,17 @@
 </template>
 
 <script>
-import api from '~/api'
 import Issue from '~/components/Issue'
 import Story from '~/components/Story'
 import Library from '~/components/Library'
 import Spinner from '~/components/Spinner'
-import { flattenIssue, parseDate } from '~/helpers/parsers'
+import { parseDate } from '~/helpers/parsers'
 import IssuesNav from '~/components/IssuesNav'
 
 function getTitle (issue, issueDate) {
   return issue
     ? `#${issue.issueNumber} ${issueDate} | News — Vue.js`
     : 'News – Vue.js'
-}
-
-async function getIssue (issueNumber) {
-  return flattenIssue(await api.getIssueByNumber(issueNumber))
 }
 
 export default {
@@ -47,37 +42,17 @@ export default {
       title: getTitle(this.issue, this.issueDate)
     }
   },
-  data () {
-    return {
-      issue: null
-    }
-  },
   computed: {
     issues () {
       return this.$store.getters.issues
+    },
+    issue () {
+      return this.issues.find(issue => issue.issueNumber === parseInt(this.$route.params.number))
     },
     issueDate () {
       return this.issue
         ? parseDate(this.issue.publishedOn)
         : ''
-    }
-  },
-  async fetch ({ store }) {
-    await store.dispatch('getPodcasts')
-  },
-  async asyncData ({ isStatic, params }) {
-    if (isStatic) {
-      const issue = params.number
-        ? await getIssue(params.number)
-        : this.issues[0]
-      return {
-        issue
-      }
-    }
-  },
-  async mounted () {
-    if (!this.issue) {
-      this.issue = await getIssue(this.$route.params.number)
     }
   }
 }

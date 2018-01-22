@@ -3,7 +3,7 @@
   h1.h1 Archive
   IssueHeader(
     v-for="issue of issues"
-    key="issue.issueNumber"
+    :key="issue.issueNumber"
     :issue="issue"
   )
 </template>
