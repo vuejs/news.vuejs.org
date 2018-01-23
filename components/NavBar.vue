@@ -14,6 +14,8 @@
 </template>
 
 <style lang="sass">
+@import 'assets/branding'
+
 .nav-bar
   display: block
   position: relative
@@ -30,10 +32,17 @@
   height: 60px
   box-shadow: 0 0 1px rgba(#000, .25)
 
+
 .nav-bar__inner
   max-width: 1200px
   margin: 0 auto
   position: relative
+
+  padding: 0 18px
+
+  @media #{$small-up}
+    padding-left: 30px
+    padding-right: 30px
 
 .nav-bar__home
   display: inline-block
@@ -42,7 +51,6 @@
   color: #2c3e50
   font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
   font-weight: 500
-  margin-left: 30px
 
 .nav-bar__logo
   vertical-align: middle
@@ -55,13 +63,16 @@
   margin: 0
   padding: 0
   position: absolute
-  right: 30px
+  right: 18px
   top: 0
   height: 40px
   line-height: 40px
 
+  @media #{$small-up}
+    right: 30px
+
   li
     display: inline-block
     position: relative
-    margin: 0 0.6em
+    margin: 0 0 0 1.2em
 </style>

@@ -54,9 +54,12 @@ export default {
 @import 'assets/branding'
 
 .library-title
-  font-size: 24px
+  font-size: 18px
   line-height: 1.2
   margin-bottom: 0
+
+  @media #{$small-up}
+    font-size: 24px
 
 .library-link
   display: block
@@ -67,12 +70,22 @@ export default {
 
 .library-stats,
 .library-url
+  opacity: 0.8
   display: inline-block
   margin: 0 10px 5px 0
-  font-weight: 600
-  font-size: 16px
+  font-size: 14px
+
+  @media #{$small-up}
+    font-size: 16px
+    font-weight: 600
 
 .library-description
-  font-size: 18px
+  font-size: 15px
   line-height: 1.4
+
+  @media #{$small-up}
+    font-size: 16px
+
+  @media #{$medium-up}
+    font-size: 18px
 </style>

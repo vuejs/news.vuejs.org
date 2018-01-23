@@ -28,6 +28,8 @@ export default {
 <style lang="sass">
 @import 'assets/branding'
 
+@import url('https://fonts.googleapis.com/css?family=Dosis|Source+Sans+Pro')
+
 html
   font:
     family: $primary-font-stack
@@ -53,7 +55,11 @@ html
 
 .content-container,
 .sidebar-container
-  padding: 0 30px 50px
+  padding: 0 18px 50px
+
+  @media #{$small-up}
+    padding-left: 30px
+    padding-right: 30px
 
 .content-container
   width: 100%

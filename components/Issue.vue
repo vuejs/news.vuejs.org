@@ -57,8 +57,14 @@ export default {
   border-bottom: 1px solid #eee
 
 .issue-description
-  font-size: 18px
+  font-size: 15px
   line-height: 1.4
+
+  @media #{$small-up}
+    font-size: 16px
+
+  @media #{$medium-up}
+    font-size: 18px
 
 .issue-actions
   margin-top: 15px
