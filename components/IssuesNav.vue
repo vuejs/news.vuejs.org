@@ -1,16 +1,16 @@
 <template lang="pug">
 .issues-nav
-  nuxt-link.issue-nav-link.issue-nav-link--previous(
-    v-if="nextIssue.exists"
-    :to="nextIssue.link"
-  ) ← Next issue
-  nuxt-link.issues-nav-archive(
-    to="/archive"
-  ) Archive
   nuxt-link.issue-nav-link.issue-nav-link--next(
     v-if="previousIssue.exists"
     :to="previousIssue.link"
-  ) Previous issue →
+    ) ← Previous issue
+  nuxt-link.issues-nav-archive(
+    to="/archive"
+  ) Archive
+  nuxt-link.issue-nav-link.issue-nav-link--previous(
+    v-if="nextIssue.exists"
+    :to="nextIssue.link"
+    ) Next issue →
 </template>
 
 <script>
@@ -86,8 +86,8 @@ export default {
   position: absolute
 
 .issue-nav-link--previous
-  left: 0
+  right: 0
 
 .issue-nav-link--next
-  right: 0
+  left: 0
 </style>

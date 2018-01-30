@@ -6,16 +6,19 @@ div
       nuxt
     .sidebar-container
       SideBar
+    PodcastPlayer
 </template>
 
 <script>
 import NavBar from '~/components/NavBar'
 import SideBar from '~/components/SideBar'
+import PodcastPlayer from '~/components/PodcastPlayer'
 
 export default {
   components: {
     NavBar,
-    SideBar
+    SideBar,
+    PodcastPlayer
   },
   head () {
     return {
@@ -27,7 +30,6 @@ export default {
 
 <style lang="sass">
 @import 'assets/branding'
-
 @import url('https://fonts.googleapis.com/css?family=Dosis|Source+Sans+Pro')
 
 html

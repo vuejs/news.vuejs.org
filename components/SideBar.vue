@@ -47,25 +47,9 @@
       target="_blank"
     )
       | RSS
-  PodcastPlayer
 </template>
 
 <script>
-import PodcastPlayer from '~/components/PodcastPlayer'
-
-export default {
-  components: { PodcastPlayer },
-  data () {
-    return {
-      email: ''
-    }
-  },
-  methods: {
-    subscribe () {
-      console.log('You just subscribed!')
-    }
-  }
-}
 </script>
 
 <style lang="sass">

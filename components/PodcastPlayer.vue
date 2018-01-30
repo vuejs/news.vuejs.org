@@ -7,26 +7,40 @@
     :src="podcast.source",
     @timeupdate="updateTime"
     @loadeddata="onLoaded"
+    @ended="nextPodcast"
   )
-  .podcast-play-button
-    PlayButton(:paused="isPaused", @toggle="togglePlayer")
-  .podcast-details
-    .podcast-number
-      | {{ '#' + podcast.issueNumber }}
-    nuxt-link.podcast-title(:to="{ name: 'issues-number', params: { number: podcast.issueNumber } }")
+  button.podcast-player-button(
+    title="Step 15s forward"
+    @click="stepBackward"
+  )
+    Icon(icon="step-backward")
+  button.podcast-player-button(
+    title="Play/Pause"
+    @click="togglePlayer"
+  )
+    Icon(:icon="isPaused ? 'play' : 'pause'")
+  button.podcast-player-button(
+    title="Step 15s backward"
+    @click="stepForward"
+  )
+    Icon(icon="step-forward")
+  nuxt-link.podcast-details(
+    :to="{ name: 'issues-number', params: { number: podcast.issueNumber } }"
+  )
+    span.podcast-number
+      | {{ '#' + podcast.issueNumber }} | {{ podcast.publishedOn }}
+    span.podcast-title
       | {{ podcast.title }}
-    .podcast-date
-      | {{ podcast.publishedOn }}
 </template>
 
 <script>
-import PlayButton from './PlayButton'
 import ProgressBar from './ProgressBar'
 import { mapGetters } from 'vuex'
 import podcastBus from '~/helpers/podcastBus'
+import Icon from '@fortawesome/vue-fontawesome'
 
 export default {
-  components: { PlayButton, ProgressBar },
+  components: { ProgressBar, Icon },
   data () {
     return {
       isPaused: true,
@@ -43,12 +57,11 @@ export default {
     togglePlayer () {
       this.isPaused = !this.isPaused
     },
-    setPosition (event) {
-      let tag = event.target
-      if (this.paused) return
-      const pos = tag.getBoundingClientRect()
-      const seekPos = (event.clientX - pos.left) / pos.width
-      this.audio.currentTime = parseInt(this.audio.duration * seekPos)
+    stepBackward () {
+      this.$refs.player.currentTime -= 15
+    },
+    stepForward () {
+      this.$refs.player.currentTime += 15
     },
     updateTime () {
       const currentTime = parseFloat(this.$refs.player.currentTime)
@@ -59,6 +72,9 @@ export default {
     },
     updateProgress (seekPos) {
       this.$refs.player.currentTime = parseInt(this.totalDuration * seekPos)
+    },
+    nextPodcast () {
+      this.$store.dispatch('playNextPodcast')
     }
   },
   watch: {
@@ -76,7 +92,7 @@ export default {
   mounted () {
     if (this.podcast) {
       this.$refs.player.src = this.podcast.source
-      this.$refs.player.addEventListener('canplay', (e) => {
+      this.$refs.player.addEventListener('canplay', () => {
         if (!this.isPaused) {
           this.$refs.player.play()
         }
@@ -99,7 +115,7 @@ export default {
   right: 0
   height: 60px
   display: flex
-  padding: 10px 20px
+  padding: 10px 10px
   background: darken($color-dark-blue, 10%)
   border-top: 1px solid #d0d0d0
 
@@ -115,33 +131,31 @@ export default {
   display: flex
   width: 100%
   align-items: center
+  color: $color-green
 
 .podcast-number
   font-family: $secondary-font-stack
   font-size: 32px
-  color: $color-green
   line-height: 32px
-  padding-right: 20px
-
-.podcast-play-button
   padding-right: 10px
-  margin-top: -5px
-
-.podcast-date
-  font-size: 16px
-  width: 100px
 
 .podcast-title
-  width: calc(100% - 60px)
-  font-size: 20px
+  font-size: 24px
   color: #fff
-  padding: 0
-  margin: 0
-  overflow: hidden
-  white-space: nowrap
-  text-overflow: ellipsis
+  display: none
 
-  &:hover
+  @media #{$medium-up}
+    display: inline-block
+
+.podcast-player-button
+  padding-right: 10px
+  background: none
+  border: none
+
+  svg
+    height: 28px
+    width: 28px
+    margin: 0 0 0 auto
     cursor: pointer
-    text-decoration: underline
+    color: $color-green
 </style>
