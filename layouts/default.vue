@@ -30,7 +30,6 @@ export default {
 
 <style lang="sass">
 @import 'assets/branding'
-@import url('https://fonts.googleapis.com/css?family=Dosis|Source+Sans+Pro')
 
 html
   font:
