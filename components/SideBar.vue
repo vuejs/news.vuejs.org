@@ -3,9 +3,10 @@
   .sidebar__box
     h1.h1 The Official Vue News
     p.p
-      | We exist to provide Vue developers with the latest news and tutorials to stay up-to-date with their technology. If you’d like to get invlovled please visit our
-      |
-      a.link(href="") Discord channel
+      | We exist to provide Vue developers with the latest news and tutorials to stay up-to-date with their technology.
+      //- |  If you’d like to get invlovled please visit our
+      //- |
+      //- a.link(href="") Discord channel
 
   h2.sidebar-header Get a weekly email
   form.newsletter-form(
