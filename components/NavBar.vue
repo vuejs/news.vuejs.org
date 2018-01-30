@@ -49,7 +49,7 @@
   font-size: 1.5em
   line-height: 40px
   color: #2c3e50
-  font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+  font-family: $secondary-font-stack
   font-weight: 500
 
 .nav-bar__logo

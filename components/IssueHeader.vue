@@ -45,7 +45,7 @@ export default {
     color: $color-green
 
 .issue-number
-  font-family: 'Dosis'
+  font-family: $secondary-font-stack
   font-weight: 500
   font-size: 0.9em
   color: $color-green

@@ -115,7 +115,7 @@ export default {
   right: 0
   height: 60px
   display: flex
-  padding: 10px 10px
+  padding: 10px
   background: darken($color-dark-blue, 10%)
   border-top: 1px solid #d0d0d0
 
@@ -132,17 +132,28 @@ export default {
   width: 100%
   align-items: center
   color: $color-green
+  justify-content: flex-end
+
+  @media #{$medium-up}
+    justify-content: flex-start
 
 .podcast-number
   font-family: $secondary-font-stack
-  font-size: 32px
+  font-size: 28px
   line-height: 32px
   padding-right: 10px
+
+  @media #{$medium-up}
+    font-size: 32px
 
 .podcast-title
   font-size: 24px
   color: #fff
   display: none
+  overflow: hidden
+  text-overflow: ellipsis
+  max-width: calc(100% - 250px)
+  white-space: nowrap
 
   @media #{$medium-up}
     display: inline-block

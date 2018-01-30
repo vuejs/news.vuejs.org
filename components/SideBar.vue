@@ -76,7 +76,7 @@
   border-radius: 50px
   border: 1px solid #ccc
   font-size: 18px
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-family: $primary-font-stack
 
   &:focus
     outline: none
