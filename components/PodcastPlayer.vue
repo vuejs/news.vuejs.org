@@ -56,6 +56,12 @@ export default {
   methods: {
     togglePlayer () {
       this.isPaused = !this.isPaused
+      // Couldn’t use watch, because of Safar’s autoplay policy
+      if (this.isPaused) {
+        this.$refs.player.pause()
+      } else {
+        this.$refs.player.play()
+      }
     },
     stepBackward () {
       this.$refs.player.currentTime -= 15
@@ -80,13 +86,6 @@ export default {
   watch: {
     podcast (newPodcast) {
       this.$refs.player.src = newPodcast.source
-    },
-    isPaused (isPaused) {
-      if (!isPaused) {
-        this.$refs.player.play()
-      } else {
-        this.$refs.player.pause()
-      }
     }
   },
   mounted () {
@@ -99,7 +98,7 @@ export default {
       })
     }
     podcastBus.$on('play', () => {
-      this.isPaused = false
+      this.$refs.player.play()
     })
   }
 }
