@@ -15,7 +15,7 @@ article.issue
 import Story from './Story'
 import Library from './Library'
 import PlayPodcastButton from './PlayPodcastButton'
-import podcastBus from '~/helpers/podcastBus'
+import eventBus from '~/helpers/eventBus'
 import IssueHeader from '~/components/IssueHeader'
 
 export default {
@@ -42,7 +42,7 @@ export default {
   methods: {
     playPodcast () {
       this.$store.commit('SET_CURRENT_PODCAST', this.issue.issueNumber)
-      podcastBus.$emit('play')
+      eventBus.$emit('play')
     }
   }
 }

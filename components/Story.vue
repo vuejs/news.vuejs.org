@@ -38,6 +38,7 @@ export default {
 
 .story-url
   margin-bottom: 10px
+  max-width: 100%
   opacity: 0.8
   font-weight: 400
   white-space: nowrap
@@ -46,9 +47,6 @@ export default {
 
   @media #{$small-up}
     font-weight: 600
-
-  @media #{$medium-up}
-    overflow: visible
 
 .story-description
   font-size: 15px

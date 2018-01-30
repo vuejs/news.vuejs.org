@@ -13,7 +13,7 @@
     title="Step 15s forward"
     @click="stepBackward"
   )
-    Icon(icon="step-backward")
+    Icon(icon="backward")
   button.podcast-player-button(
     title="Play/Pause"
     @click="togglePlayer"
@@ -23,7 +23,7 @@
     title="Step 15s backward"
     @click="stepForward"
   )
-    Icon(icon="step-forward")
+    Icon(icon="forward")
   nuxt-link.podcast-details(
     :to="{ name: 'issues-number', params: { number: podcast.issueNumber } }"
   )
@@ -36,7 +36,7 @@
 <script>
 import ProgressBar from './ProgressBar'
 import { mapGetters } from 'vuex'
-import podcastBus from '~/helpers/podcastBus'
+import eventBus from '~/helpers/eventBus'
 import Icon from '@fortawesome/vue-fontawesome'
 
 export default {
@@ -97,8 +97,9 @@ export default {
         }
       })
     }
-    podcastBus.$on('play', () => {
+    eventBus.$on('play', () => {
       this.$refs.player.play()
+      this.isPaused = false
     })
   }
 }
@@ -161,6 +162,9 @@ export default {
   padding-right: 10px
   background: none
   border: none
+
+  &:focus
+    outline: none
 
   svg
     height: 28px

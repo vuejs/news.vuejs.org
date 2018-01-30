@@ -7,6 +7,8 @@
         | Vue.js News
       .nav
         ul
+          li.nav-bar__subscribe-link
+            nuxt-link(to="/subscribe") Subscibe
           li
             nuxt-link(to="/archive") Archives
           li
@@ -31,7 +33,6 @@
   background: #fff
   height: 60px
   box-shadow: 0 0 1px rgba(#000, .25)
-
 
 .nav-bar__inner
   max-width: 1200px
@@ -74,5 +75,10 @@
   li
     display: inline-block
     position: relative
-    margin: 0 0 0 1.2em
+    margin: 0 0 0 1em
+
+  .nav-bar__subscribe-link
+
+    @media #{$medium-up}
+      display: none
 </style>
