@@ -20,6 +20,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.6",
     "@fortawesome/vue-fontawesome": "0.0.22",
     "@nuxtjs/dotenv": "^1.1.0",
+    "@nuxtjs/google-analytics": "^2.0.2",
     "axios": "^0.17.1",
     "contentful": "^5.0.5",
     "dotenv": "^4.0.0",
