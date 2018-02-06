@@ -4,11 +4,13 @@
     .nav-bar__inner
       nuxt-link.nav-bar__home(to="/")
         img.nav-bar__logo(src="~assets/images/logo.png")
-        | Vue.js News
+        span.nav-bar__logo-text Vue.js News
       .nav
         ul
           li.nav-bar__subscribe-link
             nuxt-link(to="/subscribe") Subscibe
+          li
+            nuxt-link(to="/submit") Submit
           li
             nuxt-link(to="/archive") Archives
           li
@@ -38,7 +40,6 @@
   max-width: 1200px
   margin: 0 auto
   position: relative
-
   padding: 0 18px
 
   @media #{$small-up}
@@ -58,6 +59,12 @@
   margin-right: 6px
   width: 40px
   height: 40px
+
+.nav-bar__logo-text
+  display: none
+
+  @media #{$small-up}
+    display: inline-block
 
 .nav
   list-style-type: none
