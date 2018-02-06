@@ -84,7 +84,7 @@ export default {
       this.$store.dispatch('playNextPodcast')
     },
     sendEvent () {
-      this.$ga.event('podcast', 'play', 'Podcast played', this.podcast.issueNumber)
+      this.$ga.event('podcast', 'play', this.podcast.issueNumber)
     }
   },
   watch: {

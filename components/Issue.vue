@@ -46,7 +46,7 @@ export default {
     }
   },
   mounted () {
-    this.$ga.event('issue', 'open', 'Opened issue', this.issue.issueNumber)
+    this.$ga.event('issue', 'open', this.issue.issueNumber)
   }
 }
 </script>
