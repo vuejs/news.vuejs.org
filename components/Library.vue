@@ -3,8 +3,9 @@
   a.library-link(:href="library.url", target="_BLANK")
     h1.library-title
       | {{ title }}
-    .library-stats(v-if="stars || stars === 0")
-      .library-stars ★ {{ stars }}
+    //- TODO: Uncomment once GitHub app has been created
+    //- .library-stats(v-if="stars || stars === 0")
+    //-   .library-stars ★ {{ stars }}
     .library-url
       | {{ library.url }}
   p.library-description
@@ -12,8 +13,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 function getRepoData (url) {
   // eslint-disable-next-line no-unused-vars
   const [repo, owner, ...rest] = url.replace(/\/$/, '').split('/').reverse()
@@ -47,16 +46,17 @@ export default {
     repo () {
       const { repo } = getRepoData(this.library.url)
       return repo
-    },
-    stars () {
-      if (!this.isGitHubRepo) return false
-      return this.githubStats ? this.githubStats.stargazers_count : 0
     }
+    // stars () {
+    //   if (!this.isGitHubRepo) return false
+    //   return this.githubStats ? this.githubStats.stargazers_count : 0
+    // }
   },
   async mounted () {
-    if (this.isGitHubRepo) {
-      this.githubStats = (await axios.get(`https://api.github.com/repos/${this.owner}/${this.repo}`)).data
-    }
+    // TODO: Uncomment once GitHub app has been created
+    // if (this.isGitHubRepo) {
+    //   this.githubStats = (await axios.get(`https://api.github.com/repos/${this.owner}/${this.repo}`)).data
+    // }
   }
 }
 </script>

@@ -45,8 +45,7 @@ export default {
     return {
       isPaused: true,
       progress: 0,
-      totalDuration: 0,
-      lastPlayedPodcast: null
+      totalDuration: 0
     }
   },
   computed: {
@@ -85,9 +84,7 @@ export default {
       this.$store.dispatch('playNextPodcast')
     },
     sendEvent () {
-      if (this.podcast.issueNumber === this.lastPlayedPodcast) return
       this.$ga.event('podcast', 'play', 'Podcast played', this.podcast.issueNumber)
-      this.lastPlayedPodcast = this.podcast.issueNumber
     }
   },
   watch: {
@@ -100,15 +97,15 @@ export default {
       this.$refs.player.src = this.podcast.source
       this.$refs.player.addEventListener('canplay', () => {
         if (!this.isPaused) {
-          this.$refs.player.play()
           this.sendEvent()
+          this.$refs.player.play()
         }
       })
     }
     eventBus.$on('play', () => {
+      this.sendEvent()
       this.$refs.player.play()
       this.isPaused = false
-      this.sendEvent()
     })
   }
 }
