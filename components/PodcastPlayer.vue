@@ -145,12 +145,12 @@ export default {
 
 .podcast-number
   font-family: $secondary-font-stack
-  font-size: 28px
+  font-size: 24px
   line-height: 32px
   padding-right: 10px
 
 .podcast-title
-  font-size: 24px
+  font-size: 18px
   color: #fff
   display: none
   overflow: hidden
@@ -170,13 +170,13 @@ export default {
     outline: none
 
   svg
-    height: 24px
-    width: 24px
+    height: 22px
+    width: 22px
     margin: 0 0 0 auto
     cursor: pointer
     color: $color-green
 
     @media #{$medium-up}
-      height: 28px
-      width: 28px
+      height: 24px
+      width: 24px
 </style>
