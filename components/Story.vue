@@ -1,6 +1,6 @@
 <template lang="pug">
 .story
-  a.story-link(:href="story.url", target="_BLANK")
+  a.story-link(:href="story.url", target="_blank", rel="noopener")
     h1.story-title
       | {{ story.title }}
     .story-author(v-if="story.author")

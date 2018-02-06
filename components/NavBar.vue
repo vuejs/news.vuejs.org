@@ -3,7 +3,7 @@
   .nav-bar__outside
     .nav-bar__inner
       nuxt-link.nav-bar__home(to="/")
-        img.nav-bar__logo(src="~assets/images/logo.png")
+        img.nav-bar__logo(src="~assets/images/logo.png", alt="Vue.js logo")
         span.nav-bar__logo-text Vue.js News
       .nav
         ul

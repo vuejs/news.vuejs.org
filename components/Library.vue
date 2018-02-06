@@ -1,6 +1,6 @@
 <template lang="pug">
 .library
-  a.library-link(:href="library.url", target="_BLANK")
+  a.library-link(:href="library.url", target="_blank", rel="noopener")
     h1.library-title
       | {{ library.title }}
     //- TODO: Uncomment once GitHub app has been created

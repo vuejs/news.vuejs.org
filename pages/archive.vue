@@ -9,7 +9,7 @@
   h2.h2
     | All older issues are available
     |
-    a(href="https://www.getrevue.co/profile/vuenewsletter", target="_BLANK")
+    a(href="https://www.getrevue.co/profile/vuenewsletter", target="_blank", rel="noopener")
       | here
     | .
 </template>

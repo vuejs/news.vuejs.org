@@ -29,24 +29,28 @@ div
     a.button.podcast-subscribe(
       href="https://itunes.apple.com/us/podcast/the-official-vue-news/id1329151772"
       target="_blank"
+      rel="noopener"
       @click="subscribe"
     )
       | Apple Podcasts
     a.button.podcast-subscribe(
       href="https://subscribeonandroid.com/vuenews.fireside.fm/rss"
       target="_blank"
+      rel="noopener"
       @click="subscribe"
     )
       | Android
     a.button.podcast-subscribe(
       href="https://www.stitcher.com/podcast/code-pop/the-official-vue-news"
       target="_blank"
+      rel="noopener"
       @click="subscribe"
     )
       | Stitcher
     a.button.podcast-subscribe(
       href="https://vuenews.fireside.fm/rss"
       target="_blank"
+      rel="noopener"
       @click="subscribe"
     )
       | RSS
