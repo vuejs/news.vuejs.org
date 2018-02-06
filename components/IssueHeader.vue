@@ -31,7 +31,7 @@ export default {
   font-weight: 400
   font-size: 20px
   display: block
-  margin-bottom: 5px
+  margin: 5px 0
 
 .issue-header
   position: relative

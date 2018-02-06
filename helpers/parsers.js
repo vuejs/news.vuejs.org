@@ -1,4 +1,10 @@
-const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const dateOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC'
+}
 
 export function flattenIssue (issue) {
   return {
