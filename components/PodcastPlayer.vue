@@ -13,7 +13,7 @@
     title="Step 15s forward"
     @click="stepBackward"
   )
-    Icon(icon="backward")
+    Icon(icon="fast-backward")
   button.podcast-player-button(
     title="Play/Pause"
     @click="togglePlayer"
@@ -23,7 +23,7 @@
     title="Step 15s backward"
     @click="stepForward"
   )
-    Icon(icon="forward")
+    Icon(icon="fast-forward")
   nuxt-link.podcast-details(
     :to="{ name: 'issues-number', params: { number: podcast.issueNumber } }"
   )
@@ -45,7 +45,8 @@ export default {
     return {
       isPaused: true,
       progress: 0,
-      totalDuration: 0
+      totalDuration: 0,
+      lastPlayedPodcast: null
     }
   },
   computed: {
@@ -61,6 +62,7 @@ export default {
         this.$refs.player.pause()
       } else {
         this.$refs.player.play()
+        this.sendEvent()
       }
     },
     stepBackward () {
@@ -81,6 +83,11 @@ export default {
     },
     nextPodcast () {
       this.$store.dispatch('playNextPodcast')
+    },
+    sendEvent () {
+      if (this.podcast.issueNumber === this.lastPlayedPodcast) return
+      this.$ga.event('podcast', 'play', 'Podcast played', this.podcast.issueNumber)
+      this.lastPlayedPodcast = this.podcast.issueNumber
     }
   },
   watch: {
@@ -94,12 +101,14 @@ export default {
       this.$refs.player.addEventListener('canplay', () => {
         if (!this.isPaused) {
           this.$refs.player.play()
+          this.sendEvent()
         }
       })
     }
     eventBus.$on('play', () => {
       this.$refs.player.play()
       this.isPaused = false
+      this.sendEvent()
     })
   }
 }
@@ -143,9 +152,6 @@ export default {
   line-height: 32px
   padding-right: 10px
 
-  @media #{$medium-up}
-    font-size: 32px
-
 .podcast-title
   font-size: 24px
   color: #fff
@@ -167,9 +173,13 @@ export default {
     outline: none
 
   svg
-    height: 28px
-    width: 28px
+    height: 24px
+    width: 24px
     margin: 0 0 0 auto
     cursor: pointer
     color: $color-green
+
+    @media #{$medium-up}
+      height: 28px
+      width: 28px
 </style>

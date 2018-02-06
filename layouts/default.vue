@@ -60,8 +60,10 @@ html
 .content-container,
 .sidebar-container
   padding: 0 18px 50px
+  overflow: hidden
 
   @media #{$small-up}
+    overflow: visible
     padding-left: 30px
     padding-right: 30px
 

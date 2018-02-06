@@ -44,6 +44,9 @@ export default {
       this.$store.commit('SET_CURRENT_PODCAST', this.issue.issueNumber)
       eventBus.$emit('play')
     }
+  },
+  mounted () {
+    this.$ga.event('issue', 'open', 'Opened issue', this.issue.issueNumber)
   }
 }
 </script>
@@ -71,8 +74,8 @@ export default {
   display: flex
 
 .issue-section-header
-  margin: 20px 0 10px
-  font-size: 28px
+  margin: 20px 0
+  font-size: 32px
 
 .issue-player
   margin-top: 10px

@@ -39,6 +39,12 @@ div
     )
       | Android
     a.button.podcast-subscribe(
+      href="https://www.stitcher.com/podcast/code-pop/the-official-vue-news"
+      target="_blank"
+      @click="subscribe"
+    )
+      | Stitcher
+    a.button.podcast-subscribe(
       href="https://vuenews.fireside.fm/rss"
       target="_blank"
       @click="subscribe"
@@ -51,6 +57,7 @@ export default {
   methods: {
     subscribe () {
       localStorage.setItem('subscribed', true)
+      this.$ga.event('podcast', 'subscribe', 'Subscribed to podcast', true)
     }
   }
 }

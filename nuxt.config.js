@@ -4,7 +4,7 @@ const apiConfig = require('./api/config')
 module.exports = {
   modules: process.env.NODE_ENV !== 'production'
     ? ['@nuxtjs/dotenv', ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]]
-    : [],
+    : [['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]],
   env: {
     SPACE: process.env.SPACE,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
