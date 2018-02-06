@@ -8,7 +8,7 @@
       .nav
         ul
           li.nav-bar__subscribe-link
-            nuxt-link(to="/subscribe") Subscibe
+            nuxt-link(to="/subscribe") Subscribe
           li
             nuxt-link(to="/submit") Submit
           li
