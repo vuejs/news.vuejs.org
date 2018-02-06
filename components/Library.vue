@@ -2,7 +2,7 @@
 .library
   a.library-link(:href="library.url", target="_BLANK")
     h1.library-title
-      | {{ title }}
+      | {{ library.title }}
     //- TODO: Uncomment once GitHub app has been created
     //- .library-stats(v-if="stars || stars === 0")
     //-   .library-stars ★ {{ stars }}

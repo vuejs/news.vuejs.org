@@ -3,8 +3,8 @@
   a.story-link(:href="story.url", target="_BLANK")
     h1.story-title
       | {{ story.title }}
-    .story-url
-      | {{ story.url }}
+    .story-author(v-if="story.author")
+      | {{ story.author }}
   p.story-description
     | {{ story.description }}
 </template>
@@ -36,17 +36,24 @@ export default {
   @media #{$small-up}
     font-size: 24px
 
-.story-url
-  margin-bottom: 10px
-  max-width: 100%
-  opacity: 0.8
-  font-weight: 400
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+.story-author
+  margin: 2px 0 7px 0
+  font-size: 18px
+  font-weight: 600
+  color: $color-dark-blue
 
-  @media #{$small-up}
-    font-weight: 600
+// .story-url
+//   margin-bottom: 10px
+//   margin-top: 5px
+//   max-width: 100%
+//   color: rgba($color-dark-blue, 0.8)
+//   font-weight: 400
+//   white-space: nowrap
+//   overflow: hidden
+//   text-overflow: ellipsis
+//
+//   @media #{$small-up}
+//     font-weight: 600
 
 .story-description
   font-size: 15px
