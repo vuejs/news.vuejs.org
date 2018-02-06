@@ -6,6 +6,12 @@
     :key="issue.issueNumber"
     :issue="issue"
   )
+  h2.h2
+    | All older issues are available
+    |
+    a(href="https://www.getrevue.co/profile/vuenewsletter", target="_BLANK")
+      | here
+    | .
 </template>
 
 <script>
@@ -27,5 +33,14 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+@import '~assets/branding'
+
+.h2
+  margin-top: 40px
+  padding-top: 40px
+  border-top: 1px solid $light-grey
+
+  a
+    color: $color-green
 </style>
