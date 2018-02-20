@@ -62,6 +62,7 @@ export default {
 .issue-description
   font-size: 15px
   line-height: 1.4
+  white-space: pre-line
 
   @media #{$small-up}
     font-size: 16px
