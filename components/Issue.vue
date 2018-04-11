@@ -1,7 +1,8 @@
 <template lang="pug">
 article.issue
   IssueHeader(:issue="issue")
-  p.issue-description {{ issue.description }}
+  .issue-description
+    MarkdownRenderer(:content="issue.description")
   PlayPodcastButton(@click.native="playPodcast")
   hr.hr
   h1.issue-section-header Stories
@@ -17,9 +18,10 @@ import Library from './Library'
 import PlayPodcastButton from './PlayPodcastButton'
 import eventBus from '~/helpers/eventBus'
 import IssueHeader from '~/components/IssueHeader'
+import MarkdownRenderer from '~/components/MarkdownRenderer'
 
 export default {
-  components: { Story, Library, PlayPodcastButton, IssueHeader },
+  components: { Story, Library, PlayPodcastButton, IssueHeader, MarkdownRenderer },
   props: {
     issue: {
       type: Object
@@ -58,17 +60,6 @@ export default {
   padding: 0 0 20px
   margin-bottom: 30px
   border-bottom: 1px solid #eee
-
-.issue-description
-  font-size: 15px
-  line-height: 1.4
-  white-space: pre-line
-
-  @media #{$small-up}
-    font-size: 16px
-
-  @media #{$medium-up}
-    font-size: 18px
 
 .issue-actions
   margin-top: 15px
