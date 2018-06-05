@@ -3,14 +3,18 @@
   a.story-link(:href="story.url", target="_blank", rel="noopener")
     h1.story-title
       | {{ story.title }}
-    .story-author(v-if="story.author")
-      | {{ story.author }}
+  .story-author(v-if="story.author")
+    | {{ story.author }}
+    span.story-sponsored(v-if="story.isSponsored") Sponsored
   p.story-description
-    | {{ story.description }}
+    MarkdownRenderer(:content="story.description")
 </template>
 
 <script>
+import MarkdownRenderer from '~/components/MarkdownRenderer'
+
 export default {
+  components: { MarkdownRenderer },
   props: {
     story: {
       type: Object
@@ -41,6 +45,14 @@ export default {
   font-size: 18px
   font-weight: 600
   color: $color-dark-blue
+
+.story-sponsored
+  color: #fff
+  background: #3283d4
+  padding: 2px 8px
+  margin-left: 10px
+  border-radius: 5px
+  font-size: 14px
 
 // .story-url
 //   margin-bottom: 10px
