@@ -25,8 +25,15 @@ module.exports = {
       welcomeNotification: {
         disable: true
       }
-    },
-    cnd: true
+    }
+  },
+  manifest: {
+    name: 'Official Vue.js News',
+    short_name: 'Vue.js News',
+    lang: 'en',
+    display: 'standalone',
+    background: '#fff',
+    description: ''
   },
   generate: {
     routes () {
