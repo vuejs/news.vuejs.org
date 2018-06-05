@@ -1,7 +1,11 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
 
-let modules = [['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }], '@nuxtjs/pwa']
+let modules = [
+  ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
+  '@nuxtjs/onesignal',
+  '@nuxtjs/pwa'
+]
 
 if (process.env.NODE_ENV !== 'production') {
   modules.push('@nuxtjs/dotenv')
@@ -13,6 +17,16 @@ module.exports = {
     SPACE: process.env.SPACE,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     HOST: process.env.HOST
+  },
+  oneSignal: {
+    init: {
+      appId: 'ec6b9be4-7cba-4a9a-bab3-224696be93c8',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    },
+    cnd: true
   },
   generate: {
     routes () {
