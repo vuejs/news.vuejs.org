@@ -1,6 +1,18 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
 
+function getIssues () {
+  const client = createClient({
+    space: apiConfig.space,
+    accessToken: apiConfig.accessToken,
+    host: apiConfig.host
+  })
+
+  return client.getEntries({
+    content_type: apiConfig.contentTypes.issues
+  })
+}
+
 let modules = [
   ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
   '@nuxtjs/onesignal',
@@ -37,15 +49,7 @@ module.exports = {
   },
   generate: {
     routes () {
-      const client = createClient({
-        space: apiConfig.space,
-        accessToken: apiConfig.accessToken,
-        host: apiConfig.host
-      })
-
-      return client.getEntries({
-        content_type: apiConfig.contentTypes.issues
-      }).then(data =>
+      return getIssues().then(data =>
         data.items.map(item => `/issues/${item.fields.issueNumber}/`)
       )
     }
