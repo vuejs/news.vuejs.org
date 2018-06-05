@@ -1,10 +1,14 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
 
+let modules = [['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }], '@nuxtjs/pwa']
+
+if (process.env.NODE_ENV !== 'production') {
+  modules.push('@nuxtjs/dotenv')
+}
+
 module.exports = {
-  modules: process.env.NODE_ENV !== 'production'
-    ? ['@nuxtjs/dotenv', ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]]
-    : [['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]],
+  modules,
   env: {
     SPACE: process.env.SPACE,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
