@@ -6,8 +6,10 @@
   .story-author(v-if="story.author")
     | {{ story.author }}
     span.story-sponsored(v-if="story.isSponsored") Sponsored
-  p.story-description
-    MarkdownRenderer(:content="story.description")
+  MarkdownRenderer.story-description(
+    v-if="story.description && story.description.length"
+    :content="story.description"
+  )
 </template>
 
 <script>

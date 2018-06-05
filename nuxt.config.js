@@ -1,5 +1,6 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
+const { flattenIssue } = require('./helpers/parsers')
 
 function getIssues () {
   const client = createClient({
@@ -13,10 +14,37 @@ function getIssues () {
   })
 }
 
+const create = async feed => {
+  feed.options = {
+    title: 'Vue.js News',
+    link: 'https://news.vuejs.org/feed.xml',
+    description: 'The Official Vue.js News',
+    image: 'http://news.vuejs.org/logo.png',
+    favicon: 'http://news.vuejs.org/logo.png',
+    author: {
+      name: 'Damian Dulisz',
+      email: 'damian@dulisz.com',
+      link: 'https://twitter.com/damiandulisz'
+    }
+  }
+
+  const { items } = await getIssues()
+
+  items.map(flattenIssue).forEach(issue => {
+    feed.addItem({
+      title: issue.name,
+      id: issue.issueNumber,
+      link: `https://news.vuejs.org/issues/${issue.issueNumber}`,
+      description: issue.description
+    })
+  })
+}
+
 let modules = [
   ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
   '@nuxtjs/onesignal',
-  '@nuxtjs/pwa'
+  '@nuxtjs/pwa',
+  '@nuxtjs/feed'
 ]
 
 if (process.env.NODE_ENV !== 'production') {
@@ -54,6 +82,14 @@ module.exports = {
       )
     }
   },
+  feed: [
+    {
+      path: 'feed.xml',
+      create,
+      cacheTime: 1000 * 60 * 10,
+      type: 'rss2'
+    }
+  ],
   /*
   ** Headers of the page
   */
