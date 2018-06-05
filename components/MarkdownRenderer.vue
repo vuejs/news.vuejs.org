@@ -28,6 +28,9 @@ export default {
   line-height: 1.4
   white-space: pre-line
 
+  ul
+    line-height: 1
+
   @media #{$small-up}
     font-size: 16px
 

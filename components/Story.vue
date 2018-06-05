@@ -72,7 +72,7 @@ export default {
 .story-description
   font-size: 15px
   line-height: 1.4
-  margin-bottom: 30px
+  margin-bottom: 10px
   word-wrap: break-word
 
   @media #{$small-up}
