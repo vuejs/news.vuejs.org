@@ -6,7 +6,7 @@ const dateOptions = {
   timeZone: 'UTC'
 }
 
-export function flattenIssue (issue) {
+function flattenIssue (issue) {
   return {
     id: issue.sys.id,
     issueNumber: issue.fields.issueNumber,
@@ -19,7 +19,7 @@ export function flattenIssue (issue) {
   }
 }
 
-export function flattenPodcast (podcast) {
+function flattenPodcast (podcast) {
   return {
     id: podcast.fields.id,
     source: podcast.fields.source,
@@ -29,7 +29,13 @@ export function flattenPodcast (podcast) {
   }
 }
 
-export function parseDate (publishedOn) {
+function parseDate (publishedOn) {
   const date = new Date(publishedOn)
   return date.toLocaleString('en-US', dateOptions)
+}
+
+module.exports = {
+  flattenIssue,
+  flattenPodcast,
+  parseDate
 }

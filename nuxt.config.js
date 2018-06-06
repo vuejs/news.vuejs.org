@@ -1,30 +1,95 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
+const { flattenIssue } = require('./helpers/parsers')
+
+function getIssues () {
+  const client = createClient({
+    space: apiConfig.space,
+    accessToken: apiConfig.accessToken,
+    host: apiConfig.host
+  })
+
+  return client.getEntries({
+    content_type: apiConfig.contentTypes.issues
+  })
+}
+
+const create = async feed => {
+  feed.options = {
+    title: 'Vue.js News',
+    link: 'https://news.vuejs.org/feed.xml',
+    description: 'The Official Vue.js News',
+    image: 'http://news.vuejs.org/logo.png',
+    favicon: 'http://news.vuejs.org/logo.png',
+    author: {
+      name: 'Damian Dulisz',
+      email: 'damian@dulisz.com',
+      link: 'https://twitter.com/damiandulisz'
+    }
+  }
+
+  const { items } = await getIssues()
+
+  items.map(flattenIssue).forEach(issue => {
+    feed.addItem({
+      title: issue.name,
+      id: issue.issueNumber,
+      link: `https://news.vuejs.org/issues/${issue.issueNumber}`,
+      description: issue.description
+    })
+  })
+}
+
+let modules = [
+  ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
+  '@nuxtjs/onesignal',
+  '@nuxtjs/pwa',
+  '@nuxtjs/feed'
+]
+
+if (process.env.NODE_ENV !== 'production') {
+  modules.push('@nuxtjs/dotenv')
+}
 
 module.exports = {
-  modules: process.env.NODE_ENV !== 'production'
-    ? ['@nuxtjs/dotenv', ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]]
-    : [['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }]],
+  modules,
   env: {
     SPACE: process.env.SPACE,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     HOST: process.env.HOST
   },
+  oneSignal: {
+    init: {
+      appId: 'ec6b9be4-7cba-4a9a-bab3-224696be93c8',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    }
+  },
+  manifest: {
+    name: 'Official Vue.js News',
+    short_name: 'Vue.js News',
+    lang: 'en',
+    display: 'standalone',
+    background: '#fff',
+    description: ''
+  },
   generate: {
     routes () {
-      const client = createClient({
-        space: apiConfig.space,
-        accessToken: apiConfig.accessToken,
-        host: apiConfig.host
-      })
-
-      return client.getEntries({
-        content_type: apiConfig.contentTypes.issues
-      }).then(data =>
+      return getIssues().then(data =>
         data.items.map(item => `/issues/${item.fields.issueNumber}/`)
       )
     }
   },
+  feed: [
+    {
+      path: 'feed.xml',
+      create,
+      cacheTime: 1000 * 60 * 10,
+      type: 'rss2'
+    }
+  ],
   /*
   ** Headers of the page
   */
