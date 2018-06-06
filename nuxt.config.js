@@ -73,7 +73,7 @@ module.exports = {
     lang: 'en',
     display: 'standalone',
     background: '#fff',
-    description: ''
+    description: 'Official Vue.js News'
   },
   generate: {
     routes () {
