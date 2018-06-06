@@ -32,5 +32,11 @@ export default {
       content_type: config.contentTypes.authors
     })
     return data.items
+  },
+  async getTags () {
+    const data = await client.getEntries({
+      content_type: config.contentTypes.tags
+    })
+    return data.items
   }
 }

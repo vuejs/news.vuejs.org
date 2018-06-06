@@ -4,8 +4,13 @@
     h1.story-title
       | {{ story.title }}
   .story-author(v-if="story.author")
+    span.tag.story-sponsored(v-if="story.isSponsored") Sponsored
     | {{ story.author }}
-    span.story-sponsored(v-if="story.isSponsored") Sponsored
+  .tags
+    span.tag(
+      v-for="tag of tags"
+    )
+      | {{ tag.name }}
   MarkdownRenderer.story-description(
     v-if="story.description && story.description.length"
     :content="story.description"
@@ -20,6 +25,14 @@ export default {
   props: {
     story: {
       type: Object
+    }
+  },
+  computed: {
+    tags () {
+      if (!this.story.tags) return []
+      return this.story.tags.map(
+        tagObj => this.$store.state.tags.find(tag => tag.id === tagObj.sys.id)
+      )
     }
   }
 }
@@ -48,13 +61,21 @@ export default {
   font-weight: 600
   color: $color-dark-blue
 
-.story-sponsored
-  color: #fff
-  background: #3283d4
-  padding: 2px 8px
-  margin-left: 10px
-  border-radius: 5px
+.tag
+  margin-right: 10px
   font-size: 14px
+  font-weight: 600
+  background: $color-green
+  padding: 2px 8px
+  color: #fff
+  border-radius: 5px
+  text-transform: uppercase
+
+.tags
+  margin-bottom: 5px
+
+.story-sponsored
+  background: #3283d4
 
 // .story-url
 //   margin-bottom: 10px

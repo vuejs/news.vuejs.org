@@ -6,6 +6,7 @@ module.exports = {
     issues: 'issueNumber',
     categories: 'stories',
     authors: 'authors',
-    podcasts: 'podcast'
+    podcasts: 'podcast',
+    tags: 'tag'
   }
 }
