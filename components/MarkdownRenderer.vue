@@ -36,7 +36,10 @@ mark
   white-space: pre-line
 
   ul
-    line-height: 1
+    line-height: 0.4
+
+  li
+    line-height: 1.2
 
   @media #{$small-up}
     font-size: 16px

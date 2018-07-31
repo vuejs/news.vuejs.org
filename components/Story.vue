@@ -6,6 +6,11 @@
       :story="story"
     )
   template(v-else)
+    template(v-if="story.image")
+      img.story-image(
+        :src="imageUrl"
+        :alt="story.title"
+      )
     a.story-link(:href="story.url", target="_blank", rel="noopener")
       h1.story-title
         | {{ story.title }}
@@ -67,6 +72,11 @@ export default {
         default:
           return false
       }
+    },
+    imageUrl () {
+      if (this.story.image) {
+        return `${this.story.image.fields.file.url}?fm=jpg&fl=progressive`
+      }
     }
   }
 }
@@ -110,6 +120,11 @@ export default {
 
 .story-sponsored
   background: #3283d4
+
+.story-image
+  max-width: 100%
+  margin-bottom: 10px
+  border-radius: 5px
 
 // .story-url
 //   margin-bottom: 10px
