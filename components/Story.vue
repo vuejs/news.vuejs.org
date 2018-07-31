@@ -7,13 +7,14 @@
     span.tag.story-sponsored(v-if="story.isSponsored") Sponsored
     | {{ story.author }}
   .tags
-    span.tag(
+    nuxt-link.tag(
       v-for="tag of tags"
+      :to="`/search?tags=${tag.name}`"
     )
       | {{ tag.name }}
   MarkdownRenderer.story-description(
     v-if="story.description && story.description.length"
-    :content="story.description"
+    :content="description"
   )
 </template>
 
@@ -25,6 +26,10 @@ export default {
   props: {
     story: {
       type: Object
+    },
+    query: {
+      type: String,
+      default: ''
     }
   },
   computed: {
@@ -33,6 +38,18 @@ export default {
       return this.story.tags.map(
         tagObj => this.$store.state.tags.find(tag => tag.id === tagObj.sys.id)
       )
+    },
+    description () {
+      return !this.queries.length
+        ? this.story.description
+        : this.queries.reduce((desc, query) => {
+          return desc.replace(new RegExp(query), `<mark>${query}</mark>`)
+        }, this.story.description)
+    },
+    queries () {
+      return this.query.trim().length
+        ? this.query.trim().split(' ')
+        : []
     }
   }
 }

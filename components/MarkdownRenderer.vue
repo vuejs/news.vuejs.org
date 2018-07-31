@@ -23,6 +23,13 @@ export default {
 <style lang="sass">
 @import 'assets/branding'
 
+mark
+  background: $color-blue
+  color: #fff
+  padding: 0 6px
+  font-weight: 700
+  border-radius: 5px
+
 .markdown
   font-size: 15px
   line-height: 1.4

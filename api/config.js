@@ -4,7 +4,7 @@ module.exports = {
   host: process.env.HOST,
   contentTypes: {
     issues: 'issueNumber',
-    categories: 'stories',
+    stories: 'stories',
     authors: 'authors',
     podcasts: 'podcast',
     tags: 'tag'
