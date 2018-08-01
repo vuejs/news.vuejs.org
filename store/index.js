@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import api from '../api/index'
-import { flattenIssue, flattenPodcast } from '~/helpers/parsers'
+import { flattenIssue, flattenPodcast, flattenTag } from '~/helpers/parsers'
 
 function sortByIssueNumber (a, b) {
   return a.issueNumber < b.issueNumber ? 1 : -1
@@ -11,14 +11,21 @@ const createStore = () => {
     state: {
       issuesList: [],
       podcasts: [],
-      currentPodcastNumber: 0
+      currentPodcastNumber: 0,
+      tags: []
     },
     actions: {
       nuxtServerInit ({ dispatch }) {
         return Promise.all([
           dispatch('getIssues'),
-          dispatch('getPodcasts')
+          dispatch('getPodcasts'),
+          dispatch('getTags')
         ])
+      },
+      async getTags ({ commit, state }) {
+        if (state.tags.length !== 0) return false
+        const tags = await api.getTags()
+        commit('SET_TAGS', tags.map(flattenTag))
       },
       async getIssues ({ commit, state }) {
         if (state.issuesList.length !== 0) return false
@@ -57,6 +64,9 @@ const createStore = () => {
       },
       SET_CURRENT_PODCAST (state, issueNumber) {
         state.currentPodcastNumber = issueNumber
+      },
+      SET_TAGS (state, tags) {
+        state.tags = tags
       }
     }
   })

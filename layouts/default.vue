@@ -33,6 +33,7 @@ export default {
 
 <style lang="sass">
 @import 'assets/branding'
+@import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 html
   font:

@@ -29,6 +29,13 @@ function flattenPodcast (podcast) {
   }
 }
 
+function flattenTag (tag) {
+  return {
+    id: tag.sys.id,
+    name: tag.fields.name
+  }
+}
+
 function parseDate (publishedOn) {
   const date = new Date(publishedOn)
   return date.toLocaleString('en-US', dateOptions)
@@ -37,5 +44,6 @@ function parseDate (publishedOn) {
 module.exports = {
   flattenIssue,
   flattenPodcast,
+  flattenTag,
   parseDate
 }

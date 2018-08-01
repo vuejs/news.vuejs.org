@@ -32,5 +32,28 @@ export default {
       content_type: config.contentTypes.authors
     })
     return data.items
+  },
+  async getTags () {
+    const data = await client.getEntries({
+      content_type: config.contentTypes.tags
+    })
+    return data.items
+  },
+  async getStoriesByContent (query = '', tags = []) {
+    let params = {
+      content_type: config.contentTypes.stories,
+      'query': query
+    }
+    if (tags.length) {
+      params = {
+        ...params,
+        'fields.tags[exists]': true,
+        'fields.tags.sys.id': tags.map(tag => tag.id).join(',')
+      }
+    }
+
+    const data = await client.getEntries(params)
+
+    return data.items
   }
 }

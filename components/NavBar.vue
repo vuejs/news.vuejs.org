@@ -12,6 +12,8 @@
           li
             nuxt-link(to="/submit") Submit
           li
+            nuxt-link(to="/search") Search
+          li
             nuxt-link(to="/archive") Archives
           li
             nuxt-link(to="/about") About
