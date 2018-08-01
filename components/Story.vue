@@ -1,21 +1,27 @@
 <template lang="pug">
 .story
-  a.story-link(:href="story.url", target="_blank", rel="noopener")
-    h1.story-title
-      | {{ story.title }}
-  .story-author(v-if="story.author")
-    span.tag.story-sponsored(v-if="story.isSponsored") Sponsored
-    | {{ story.author }}
-  .tags
-    nuxt-link.tag(
-      v-for="tag of tags"
-      :to="`/search?tags=${tag.name}`"
+  template(v-if="specialTypeStory")
+    component(
+      :is="specialTypeStory"
+      :story="story"
     )
-      | {{ tag.name }}
-  MarkdownRenderer.story-description(
-    v-if="story.description && story.description.length"
-    :content="description"
-  )
+  template(v-else)
+    a.story-link(:href="story.url", target="_blank", rel="noopener")
+      h1.story-title
+        | {{ story.title }}
+    .story-author(v-if="story.author")
+      span.tag.story-sponsored(v-if="story.isSponsored") Sponsored
+      | {{ story.author }}
+    .tags
+      nuxt-link.tag(
+        v-for="tag of tags"
+        :to="`/search?tags=${tag.name}`"
+      )
+        | {{ tag.name }}
+    MarkdownRenderer.story-description(
+      v-if="story.description && story.description.length"
+      :content="description"
+    )
 </template>
 
 <script>
@@ -39,6 +45,9 @@ export default {
         tagObj => this.$store.state.tags.find(tag => tag.id === tagObj.sys.id)
       )
     },
+    tagNames () {
+      return this.tags.map(tag => tag.name)
+    },
     description () {
       return !this.queries.length
         ? this.story.description
@@ -50,6 +59,14 @@ export default {
       return this.query.trim().length
         ? this.query.trim().split(' ')
         : []
+    },
+    specialTypeStory () {
+      switch (true) {
+        case this.tagNames.includes('tweet'):
+          return () => import('~/components/stories/TweetStory')
+        default:
+          return false
+      }
     }
   }
 }
