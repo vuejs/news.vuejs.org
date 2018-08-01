@@ -6,7 +6,7 @@
     v-model="query"
     type="text"
     placeholder="Type to search"
-    @keyup.enter="searchStories"
+    @keyup.enter="updateQuery"
   )
   Multiselect(
     :searchable="false"
@@ -22,7 +22,7 @@
   button.button.search-button(
     tabindex="0"
     type="button"
-    @click="searchStories"
+    @click="updateQuery"
   )
     | Search
   template(v-if="!isLoading")
