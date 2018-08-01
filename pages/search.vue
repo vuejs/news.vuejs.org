@@ -92,7 +92,7 @@ export default {
       this.query = this.$route.query.q
     }
 
-    if (this.query || this.selectedTagNames) {
+    if (this.query || this.selectedTagNames.length) {
       this.searchStories()
     }
   }
