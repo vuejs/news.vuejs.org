@@ -94,11 +94,22 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'news.vuejs.org',
+    title: 'Vue.js News',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Official Vue.js News' }
+      { hid: 'description', name: 'description', content: 'Read or listen the latest Vue.js news and discover resources.' },
+      { property: 'og:title', content: 'Official Vue.js News' },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:url', content: 'https://news.vuejs.org' },
+      { property: 'og:image', content: 'https://news.vuejs.org/logo.png' },
+      { property: 'og:description', content: 'Read or listen the latest Vue.js news and discover resources.' },
+      { 'name': 'twitter:card', content: 'summary' },
+      { 'name': 'twitter:site', content: '@VueNewsletter' },
+      { 'name': 'twitter:title', content: 'Official Vue.js News' },
+      { 'name': 'twitter:description', content: 'Read or listen the latest Vue.js news and discover resources.' },
+      { 'name': 'twitter:image', content: 'https://news.vuejs.org/logo.png' }
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },

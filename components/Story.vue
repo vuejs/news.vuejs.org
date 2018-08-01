@@ -20,6 +20,7 @@
     .tags
       nuxt-link.tag(
         v-for="tag of tags"
+        :key="tag.name"
         :to="`/search?tags=${tag.name}`"
       )
         | {{ tag.name }}
