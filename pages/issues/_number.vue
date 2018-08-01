@@ -39,7 +39,15 @@ export default {
   },
   head () {
     return {
-      title: getTitle(this.issue, this.issueDate)
+      title: getTitle(this.issue, this.issueDate),
+      meta: [
+        { property: 'og:title', content: getTitle(this.issue, this.issueDate) },
+        { property: 'og:url', content: `https://news.vuejs.org/issues/${this.issue.issueNumber}` },
+        { property: 'og:image', content: 'https://news.vuejs.org/logo.png' },
+        { property: 'og:description', content: this.issue.title },
+        { 'name': 'twitter:title', content: getTitle(this.issue, this.issueDate) },
+        { 'name': 'twitter:description', content: this.issue.title }
+      ]
     }
   },
   computed: {

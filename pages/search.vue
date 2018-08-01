@@ -28,6 +28,7 @@
   template(v-if="!isLoading")
     Story(
       v-for="story of stories"
+      :key="story.url"
       :story="story.fields"
       :query="query"
     )
@@ -56,6 +57,11 @@ export default {
     ...mapState(['tags']),
     selectedTags () {
       return this.tags.filter(tag => this.selectedTagNames.includes(tag.name))
+    }
+  },
+  head () {
+    return {
+      title: 'Search | News – Vue.js'
     }
   },
   methods: {
