@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Official Vue.js News",
   "author": "Damian Dulisz <damian.dulisz@gmail.com>",
-  "private": true,
+  "license": "MIT",
   "engines": {
     "node": ">=8.3.0"
   },
