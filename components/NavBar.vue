@@ -37,31 +37,34 @@
   background: #fff
   height: 60px
   box-shadow: 0 0 1px rgba(#000, .25)
+  height: 90px
 
-  @media #{$small-down}
-    height: 90px
+  @media #{$small-up}
+    height: auto
 
 .nav-bar__inner
   max-width: 1200px
   margin: 0 auto
   position: relative
   padding: 0 18px
+  display: flex
+  flex-direction: column
 
   @media #{$small-up}
     padding-left: 30px
     padding-right: 30px
 
-  @media #{$small-down}
-    display: flex
-    flex-direction: column
-
 .nav-bar__home
-  display: inline-block
+  display: flex
+  justify-content: center
   font-size: 1.5em
   line-height: 40px
   color: #2c3e50
   font-family: $secondary-font-stack
   font-weight: 500
+
+  @media #{$small-up}
+    justify-content: flex-start
 
 .nav-bar__logo
   vertical-align: middle
@@ -79,27 +82,35 @@
   list-style-type: none
   margin: 0
   padding: 0
-  position: absolute
-  right: 18px
-  top: 0
-  height: 40px
   line-height: 40px
-
-  @media #{$small-down}
-    display: flex
-    justify-content: center
-    align-items: center
-    right: 0
-    left: 0
-    top: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+  right: 0
+  left: 0
+  top: 40px
 
   @media #{$small-up}
     right: 30px
+    position: absolute
+    top: 0
+    left: auto
+    height: 40px
+
+  ul
+    padding-left: 0
+
+    @media #{$small-up}
+      padding-left: 40px
 
   li
     display: inline-block
     position: relative
     margin: 0 0 0 1em
+    font-size: 0.9rem
+
+    @media #{$small-up}
+      font-size: 1rem
 
   li:first-of-type
     margin: 0
