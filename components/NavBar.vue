@@ -38,6 +38,9 @@
   height: 60px
   box-shadow: 0 0 1px rgba(#000, .25)
 
+  @media #{$small-down}
+    height: 90px
+
 .nav-bar__inner
   max-width: 1200px
   margin: 0 auto
@@ -47,6 +50,10 @@
   @media #{$small-up}
     padding-left: 30px
     padding-right: 30px
+
+  @media #{$small-down}
+    display: flex
+    flex-direction: column
 
 .nav-bar__home
   display: inline-block
@@ -78,6 +85,14 @@
   height: 40px
   line-height: 40px
 
+  @media #{$small-down}
+    display: flex
+    justify-content: center
+    align-items: center
+    right: 0
+    left: 0
+    top: 40px
+
   @media #{$small-up}
     right: 30px
 
@@ -85,6 +100,9 @@
     display: inline-block
     position: relative
     margin: 0 0 0 1em
+
+  li:first-of-type
+    margin: 0
 
   .nav-bar__subscribe-link
 
