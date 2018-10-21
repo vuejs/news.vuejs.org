@@ -64,7 +64,7 @@
   font-weight: 500
 
   @media #{$small-up}
-    display: inline
+    justify-content: flex-start
 
 .nav-bar__logo
   vertical-align: middle
@@ -99,11 +99,22 @@
 
   ul
     padding: 0
+    position: absolute
+    top: 0
+    left: auto
+    height: 40px
+
+    @media #{$small-up}
+      padding-left: 40px
 
   li
     display: inline-block
     position: relative
     margin: 0 0 0 1em
+    font-size: 0.9rem
+
+    @media #{$small-up}
+      font-size: 1rem
 
   li:first-of-type
     margin: 0
