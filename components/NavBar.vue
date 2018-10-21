@@ -20,7 +20,7 @@
 </template>
 
 <style lang="sass">
-@import 'assets/branding'
+@import '../assets/branding'
 
 .nav-bar
   display: block
@@ -35,33 +35,36 @@
   padding: 10px 0
   top: 0
   background: #fff
-  height: 60px
+  height: 90px
   box-shadow: 0 0 1px rgba(#000, .25)
 
-  @media #{$small-down}
-    height: 90px
+  @media #{$small-up}
+    height: 60px
 
 .nav-bar__inner
   max-width: 1200px
   margin: 0 auto
   position: relative
-  padding: 0 18px
+  padding: 0
+  display: flex
+  flex-direction: column
 
   @media #{$small-up}
     padding-left: 30px
     padding-right: 30px
-
-  @media #{$small-down}
-    display: flex
-    flex-direction: column
+    display: block
 
 .nav-bar__home
-  display: inline-block
+  display: flex
+  justify-content: center
   font-size: 1.5em
   line-height: 40px
   color: #2c3e50
   font-family: $secondary-font-stack
   font-weight: 500
+
+  @media #{$small-up}
+    display: inline
 
 .nav-bar__logo
   vertical-align: middle
@@ -80,21 +83,22 @@
   margin: 0
   padding: 0
   position: absolute
-  right: 18px
-  top: 0
+  width: 100%
+  top: 40px
   height: 40px
   line-height: 40px
-
-  @media #{$small-down}
-    display: flex
-    justify-content: center
-    align-items: center
-    right: 0
-    left: 0
-    top: 40px
+  display: flex
+  justify-content: center
+  align-items: center
 
   @media #{$small-up}
     right: 30px
+    top: 0
+    display: block
+    width: unset
+
+  ul
+    padding: 0
 
   li
     display: inline-block
