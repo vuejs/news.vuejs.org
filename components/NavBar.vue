@@ -64,7 +64,7 @@
   font-weight: 500
 
   @media #{$small-up}
-    justify-content: flex-start
+    display: inline
 
 .nav-bar__logo
   vertical-align: middle
