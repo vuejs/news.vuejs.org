@@ -99,10 +99,6 @@
 
   ul
     padding: 0
-    position: absolute
-    top: 0
-    left: auto
-    height: 40px
 
     @media #{$small-up}
       padding-left: 40px
