@@ -1,5 +1,5 @@
 <template lang="pug">
-.podcast(v-if="podcast")
+.podcast(v-if="podcastExists")
   ProgressBar(:progress="progress", @update="updateProgress")
   audio.podcast-audio(
     id="player"
@@ -51,7 +51,10 @@ export default {
   computed: {
     ...mapGetters({
       podcast: 'currentPodcast'
-    })
+    }),
+    podcastExists () {
+      return this.podcast && this.podcast.source
+    }
   },
   methods: {
     togglePlayer () {
@@ -85,15 +88,8 @@ export default {
     },
     sendEvent () {
       this.$ga.event('Podcasts', 'play', `Issue #${this.podcast.issueNumber}`)
-    }
-  },
-  watch: {
-    podcast (newPodcast) {
-      this.$refs.player.src = newPodcast.source
-    }
-  },
-  mounted () {
-    if (this.podcast) {
+    },
+    initPlayer () {
       this.$refs.player.src = this.podcast.source
       this.$refs.player.addEventListener('canplay', () => {
         if (!this.isPaused) {
@@ -102,11 +98,30 @@ export default {
         }
       })
     }
+  },
+  watch: {
+    podcast (newPodcast) {
+      this.$nextTick(() => {
+        this.$refs.player.src = newPodcast.source
+      })
+    }
+  },
+  mounted () {
+    if (this.podcastExists) this.initPlayer()
+
     eventBus.$on('play', () => {
-      this.sendEvent()
-      this.$refs.player.play()
-      this.isPaused = false
+      this.$nextTick(() => {
+        if (this.podcastExists) {
+          this.initPlayer()
+          this.sendEvent()
+          this.$refs.player.play()
+          this.isPaused = false
+        }
+      })
     })
+  },
+  beforeDestroy () {
+    eventBus.$off('play')
   }
 }
 </script>

@@ -3,7 +3,7 @@ article.issue
   IssueHeader(:issue="issue")
   .issue-description
     MarkdownRenderer(:content="issue.description")
-  PlayPodcastButton(@click.native="playPodcast")
+  PlayPodcastButton(v-if="podcastExists", @click.native="playPodcast")
   hr.hr
   h1.issue-section-header Stories
   Story(v-for="story of stories", :story="story", :key="story.url")
@@ -39,6 +39,9 @@ export default {
       return this.issue.stories
         .filter(story => story.fields.isLibrary)
         .map(library => library.fields)
+    },
+    podcastExists () {
+      return !!this.issue.podcast.source
     }
   },
   methods: {
