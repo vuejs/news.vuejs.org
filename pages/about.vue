@@ -11,9 +11,6 @@
       a.link(href="https://twitter.com/damiandulisz") Damian Dulisz
       | (Vue Core Team)
     li
-      a.link(href="https://twitter.com/venticco") Krzysztof Jung
-      | (Monterail)
-    li
       a.link(href="https://twitter.com/greggpollack") Gregg Pollack
       | (Vue Mastery)
     li
@@ -22,9 +19,6 @@
   p.sponsors
     | The production of the newsletter and podcast is graciously sponsored by:
   p.sponsors.logos
-    a.logo-link.logo-monterail(href="https://www.monterail.com/")
-      img(src="~assets/images/monterail-logo.png")
-    span.logo-and and
     a.logo-link.logo-vuemastery(href="http://www.vuemastery.com/")
       img(src="~assets/images/vue-mastery-logo.png")
 </template>
