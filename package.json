@@ -5,7 +5,8 @@
   "author": "Damian Dulisz <damian.dulisz@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=8.3.0"
+    "node": "10.11.0",
+    "npm": "6.9.0"
   },
   "scripts": {
     "dev": "nuxt",
