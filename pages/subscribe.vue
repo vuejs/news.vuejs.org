@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SubscribeContent from '~/components/SubscribeContent'
+import SubscribeContent from '@/components/SubscribeContent'
 
 export default {
   components: { SubscribeContent }

@@ -16,7 +16,7 @@ button.button.play-podcast-button
 <style lang="sass">
 @import 'assets/branding'
 
-.play-podcast-button
+.button.play-podcast-button
   background-color: $color-green
   color: #fff
   padding: 5px 20px 5px 5px

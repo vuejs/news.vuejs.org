@@ -38,9 +38,9 @@
 
 <script>
 import api from '../api/index'
-import Story from '~/components/Story'
+import Story from '@/components/Story'
 import Multiselect from 'vue-multiselect'
-import Spinner from '~/components/Spinner'
+import Spinner from '@/components/Spinner'
 import { mapState } from 'vuex'
 
 export default {

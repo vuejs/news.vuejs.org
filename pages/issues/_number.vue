@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import Issue from '~/components/Issue'
-import Story from '~/components/Story'
-import Library from '~/components/Library'
-import Spinner from '~/components/Spinner'
-import { parseDate } from '~/helpers/parsers'
-import IssuesNav from '~/components/IssuesNav'
+import Issue from '@/components/Issue'
+import Story from '@/components/Story'
+import Library from '@/components/Library'
+import Spinner from '@/components/Spinner'
+import { parseDate } from '@/helpers/parsers'
+import IssuesNav from '@/components/IssuesNav'
 
 function getTitle (issue, issueDate) {
   return issue

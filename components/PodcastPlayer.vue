@@ -36,7 +36,7 @@
 <script>
 import ProgressBar from './ProgressBar'
 import { mapGetters } from 'vuex'
-import eventBus from '~/helpers/eventBus'
+import eventBus from '@/helpers/eventBus'
 import Icon from '@fortawesome/vue-fontawesome'
 
 export default {

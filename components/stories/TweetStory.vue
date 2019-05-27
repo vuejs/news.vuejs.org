@@ -9,7 +9,7 @@
 
 <script>
 import { Tweet } from 'vue-tweet-embed'
-import Spinner from '~/components/Spinner'
+import Spinner from '@/components/Spinner'
 
 export default {
   components: { Tweet, Spinner },

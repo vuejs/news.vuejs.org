@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import MarkdownRenderer from '~/components/MarkdownRenderer'
+import MarkdownRenderer from '@/components/MarkdownRenderer'
 
 export default {
   components: { MarkdownRenderer },
@@ -69,7 +69,7 @@ export default {
     specialTypeStory () {
       switch (true) {
         case this.tagNames.includes('tweet'):
-          return () => import('~/components/stories/TweetStory')
+          return () => import('@/components/stories/TweetStory')
         default:
           return false
       }

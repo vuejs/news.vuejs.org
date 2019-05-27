@@ -7,7 +7,7 @@ nuxt-link(:to="{ name: 'issues-number', params: { number: issue.issueNumber } }"
 </template>
 
 <script>
-import { parseDate } from '~/helpers/parsers'
+import { parseDate } from '@/helpers/parsers'
 
 export default {
   props: {

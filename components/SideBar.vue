@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SubscribeContent from '~/components/SubscribeContent'
+import SubscribeContent from '@/components/SubscribeContent'
 
 export default {
   components: { SubscribeContent }
@@ -30,7 +30,7 @@ export default {
 .sidebar-header
   font-size: 20px
   font-weight: 600
-  margin: 40px 0 10px
+  margin: 30px 0 10px
 
 .h1
   margin-bottom: 10px

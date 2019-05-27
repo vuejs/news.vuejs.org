@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   space: process.env.SPACE,
   accessToken: process.env.ACCESS_TOKEN,
   host: process.env.HOST,

@@ -48,7 +48,7 @@ export default {
 
 .podcast-progress
   height: 10px
-  background: linear-gradient(right, lighten($color-green, 5%), darken($color-green, 5%))
+  background: linear-gradient(to left, lighten($color-green, 5%), darken($color-green, 5%))
   pointer-events: none
   position: relative
 </style>

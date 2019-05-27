@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import Issue from '~/components/Issue'
-import IssuesNav from '~/components/IssuesNav'
+import Issue from '@/components/Issue'
+import IssuesNav from '@/components/IssuesNav'
 
 export default {
   components: { Issue, IssuesNav },

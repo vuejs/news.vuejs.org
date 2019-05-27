@@ -16,9 +16,9 @@ article.issue
 import Story from './Story'
 import Library from './Library'
 import PlayPodcastButton from './PlayPodcastButton'
-import eventBus from '~/helpers/eventBus'
-import IssueHeader from '~/components/IssueHeader'
-import MarkdownRenderer from '~/components/MarkdownRenderer'
+import eventBus from '@/helpers/eventBus'
+import IssueHeader from '@/components/IssueHeader'
+import MarkdownRenderer from '@/components/MarkdownRenderer'
 
 export default {
   components: { Story, Library, PlayPodcastButton, IssueHeader, MarkdownRenderer },

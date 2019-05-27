@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import IssueHeader from '~/components/IssueHeader'
+import IssueHeader from '@/components/IssueHeader'
 
 export default {
   components: {

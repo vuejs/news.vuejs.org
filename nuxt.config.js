@@ -1,12 +1,31 @@
-const { createClient } = require('contentful')
-const apiConfig = require('./api/config')
-const { flattenIssue } = require('./helpers/parsers')
+import { flattenIssue } from './helpers/parsers'
+import { createClient } from 'contentful'
+import apiConfig from './api/config'
+
+let modules = [
+  ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
+  '@nuxtjs/onesignal',
+  '@nuxtjs/pwa',
+  '@nuxtjs/feed'
+]
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+  modules.push('@nuxtjs/dotenv')
+}
 
 function getIssues () {
   const client = createClient({
-    space: apiConfig.space,
-    accessToken: apiConfig.accessToken,
-    host: apiConfig.host
+    space: process.env.SPACE,
+    accessToken: process.env.ACCESS_TOKEN,
+    host: process.env.HOST,
+    contentTypes: {
+      issues: 'issueNumber',
+      stories: 'stories',
+      authors: 'authors',
+      podcasts: 'podcast',
+      tags: 'tag'
+    }
   })
 
   return client.getEntries({
@@ -35,20 +54,10 @@ const create = async feed => {
       title: issue.name,
       id: issue.issueNumber,
       link: `https://news.vuejs.org/issues/${issue.issueNumber}`,
-      description: issue.description
+      description: issue.description,
+      content: issue.description
     })
   })
-}
-
-let modules = [
-  ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
-  '@nuxtjs/onesignal',
-  '@nuxtjs/pwa',
-  '@nuxtjs/feed'
-]
-
-if (process.env.NODE_ENV !== 'production') {
-  modules.push('@nuxtjs/dotenv')
 }
 
 module.exports = {
@@ -84,7 +93,7 @@ module.exports = {
   },
   feed: [
     {
-      path: 'feed.xml',
+      path: '/feed.xml',
       create,
       cacheTime: 1000 * 60 * 10,
       type: 'rss2'
@@ -117,7 +126,7 @@ module.exports = {
     ]
   },
   plugins: [
-    '~/plugins/font-awesome'
+    '@/plugins/font-awesome'
   ],
   css: [
     '@fortawesome/fontawesome/styles.css'

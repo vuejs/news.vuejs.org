@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Vue.js News</title>
+        <link>https://news.vuejs.org/feed.xml</link>
+        <description>The Official Vue.js News</description>
+        <lastBuildDate>Mon, 27 May 2019 10:16:40 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <image>
+            <title>Vue.js News</title>
+            <url>http://news.vuejs.org/logo.png</url>
+            <link>https://news.vuejs.org/feed.xml</link>
+        </image>
+        <item>
+            <link>https://news.vuejs.org/issues/109</link>
+            <guid>https://news.vuejs.org/issues/109</guid>
+            <description><![CDATA[Hello,
+
+this week highlight: A great [interview with Evan You](https://blog.patreon.com/vue-js-creator-evan-you/) on the history and growth of Vue.
+
+It’s also surprising (in a good way) that Vue has finally made it’s way into mainstream media in the form of an article on WIRED.
+
+Have you heard about the [JavaScript 30 challenge](https://javascript30.com/) by Wes Bos? There is now a [Vue version of it by Dave Follett](https://davefollett.io/categories/a-new-vue-on-javascript30/).
+
+Looking for ideas for a new learning project to learn Vue? [Robert Zehnder found his idea through his love for D&D](https://medium.com/@robertz/vue-js-d-d-combat-simulator-77e4a931d25c). 🐉
+
+*— Damian Dulisz 🔥 A Neutral Good Shaman 💧*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+this week highlight: A great [interview with Evan You](https://blog.patreon.com/vue-js-creator-evan-you/) on the history and growth of Vue.
+
+It’s also surprising (in a good way) that Vue has finally made it’s way into mainstream media in the form of an article on WIRED.
+
+Have you heard about the [JavaScript 30 challenge](https://javascript30.com/) by Wes Bos? There is now a [Vue version of it by Dave Follett](https://davefollett.io/categories/a-new-vue-on-javascript30/).
+
+Looking for ideas for a new learning project to learn Vue? [Robert Zehnder found his idea through his love for D&D](https://medium.com/@robertz/vue-js-d-d-combat-simulator-77e4a931d25c). 🐉
+
+*— Damian Dulisz 🔥 A Neutral Good Shaman 💧*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/92</link>
+            <guid>https://news.vuejs.org/issues/92</guid>
+            <description><![CDATA[Last week I’ve been attending a webinar by Guillaume Chau where he was explaining the new UI for Vue CLI. I’m truly amazed that just one person could prepare something that impressive. But you don’t have to believe my word only, instead [watch the recording of that webinar](https://cdn.livestorm.co/uploads/video/file/15468/25ed5719-7989-4c24-ad64-68dbdeb2667c.mp4?v=1524846699) yourself.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Last week I’ve been attending a webinar by Guillaume Chau where he was explaining the new UI for Vue CLI. I’m truly amazed that just one person could prepare something that impressive. But you don’t have to believe my word only, instead [watch the recording of that webinar](https://cdn.livestorm.co/uploads/video/file/15468/25ed5719-7989-4c24-ad64-68dbdeb2667c.mp4?v=1524846699) yourself.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/125</link>
+            <guid>https://news.vuejs.org/issues/125</guid>
+            <description><![CDATA[Hello everybody!
+
+Good to be back after the holidays break. I hope you had a great time during holidays and and an awesome New Year so far! 🎉
+
+We received plenty of submissions through our [submit-your-story](https://news.vuejs.org/submit) page (too much to put in just one issue), that’s why we will take a few weeks to get through all of them. Thanks to everyone who submitted a story this way by the way! 💚 It makes our work so much easier.
+
+As for New Year’s resolutions – here’s the [official Vue roadmap](https://github.com/vuejs/vue/projects/6) for the first 3 quarters of 2019. You can use it to track the progress on version 3.0.
+
+Cheers!
+*— Damian Dulisz & An Phan*]]></description>
+            <content:encoded><![CDATA[Hello everybody!
+
+Good to be back after the holidays break. I hope you had a great time during holidays and and an awesome New Year so far! 🎉
+
+We received plenty of submissions through our [submit-your-story](https://news.vuejs.org/submit) page (too much to put in just one issue), that’s why we will take a few weeks to get through all of them. Thanks to everyone who submitted a story this way by the way! 💚 It makes our work so much easier.
+
+As for New Year’s resolutions – here’s the [official Vue roadmap](https://github.com/vuejs/vue/projects/6) for the first 3 quarters of 2019. You can use it to track the progress on version 3.0.
+
+Cheers!
+*— Damian Dulisz & An Phan*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/119</link>
+            <guid>https://news.vuejs.org/issues/119</guid>
+            <description><![CDATA[Hello!
+
+If you're with a company using Vue successfully, Evan You wants to hear from you. Core Vue Member Chris Fritz has some new resources for us: an [example monolith application](https://github.com/chrisvfritz/vue-monolith-example) and the [hello-vue-components](https://github.com/chrisvfritz/hello-vue-components) library. And fresh out of the oven: NativeScript 5.0!
+
+*– Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+If you're with a company using Vue successfully, Evan You wants to hear from you. Core Vue Member Chris Fritz has some new resources for us: an [example monolith application](https://github.com/chrisvfritz/vue-monolith-example) and the [hello-vue-components](https://github.com/chrisvfritz/hello-vue-components) library. And fresh out of the oven: NativeScript 5.0!
+
+*– Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/102</link>
+            <guid>https://news.vuejs.org/issues/102</guid>
+            <description><![CDATA[Hey!
+
+Vue.js London conference has announced several new talks – you can check the speakers list [here](https://vuejs.london/schedule). Additionally, VueVixens will be running a two free half-day workshops among other workshops that happen a day before the conference. Here’s a [list of all the announced workshops](https://vuejs.london/workshops/).
+
+And as always – many new articles and tutorials. Dig in!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey!
+
+Vue.js London conference has announced several new talks – you can check the speakers list [here](https://vuejs.london/schedule). Additionally, VueVixens will be running a two free half-day workshops among other workshops that happen a day before the conference. Here’s a [list of all the announced workshops](https://vuejs.london/workshops/).
+
+And as always – many new articles and tutorials. Dig in!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/142</link>
+            <guid>https://news.vuejs.org/issues/142</guid>
+            <description><![CDATA[Hello,
+Great news Nuxt fans! [Nuxt v2.7](https://github.com/nuxt/nuxt.js/releases/tag/v2.7.0) has been released and it comes with some pretty amazing improvements. For example, using a calling console.log inside your application during SSR will still show that console log in your browser! This should make debugging so much easier!
+
+Also, the tickets for VueConfTO 2019 are finally on sale! The first batch of speakers has been announced and you can see them all on their [new website](https://vuetoronto.com/)!
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*
+]]></description>
+            <content:encoded><![CDATA[Hello,
+Great news Nuxt fans! [Nuxt v2.7](https://github.com/nuxt/nuxt.js/releases/tag/v2.7.0) has been released and it comes with some pretty amazing improvements. For example, using a calling console.log inside your application during SSR will still show that console log in your browser! This should make debugging so much easier!
+
+Also, the tickets for VueConfTO 2019 are finally on sale! The first batch of speakers has been announced and you can see them all on their [new website](https://vuetoronto.com/)!
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/81</link>
+            <guid>https://news.vuejs.org/issues/81</guid>
+            <description><![CDATA[This week you get a list of some of the upcoming Vue.js events around the world. 
+
+Interested in some of the backstory about Vue? Read the recent interview with Evan You.
+
+If you’re a VS Code user, make sure to read how to debug your Vue apps using running in Google Chrome straight inside your editor.
+
+Oh, and Vuetify just hit version 1.0! 🎉]]></description>
+            <content:encoded><![CDATA[This week you get a list of some of the upcoming Vue.js events around the world. 
+
+Interested in some of the backstory about Vue? Read the recent interview with Evan You.
+
+If you’re a VS Code user, make sure to read how to debug your Vue apps using running in Google Chrome straight inside your editor.
+
+Oh, and Vuetify just hit version 1.0! 🎉]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/85</link>
+            <guid>https://news.vuejs.org/issues/85</guid>
+            <description><![CDATA[Hello! Here we are with another collection of videos from the recent Vue.js Amasterdam conference. If I were to pick one highlight from those talks then I would say – you got to watch the demo from Eduardo’s talk!
+If you love the Vue.js docs like I do, now you got the chance to say thanks to the person responsible for keeping them as awesome as they are. 
+Chris Fritz just started a Patreon campaign where you can help him spent some more time on doing incredible work for the Vue community – even better docs, tooling, the official cookbook and more!
+— Damian]]></description>
+            <content:encoded><![CDATA[Hello! Here we are with another collection of videos from the recent Vue.js Amasterdam conference. If I were to pick one highlight from those talks then I would say – you got to watch the demo from Eduardo’s talk!
+If you love the Vue.js docs like I do, now you got the chance to say thanks to the person responsible for keeping them as awesome as they are. 
+Chris Fritz just started a Patreon campaign where you can help him spent some more time on doing incredible work for the Vue community – even better docs, tooling, the official cookbook and more!
+— Damian]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/113</link>
+            <guid>https://news.vuejs.org/issues/113</guid>
+            <description><![CDATA[Hello!
+
+Hope you don’t mind the two weeks break – Vue.js London was a blast! 💥
+
+Probably the most exciting news this week – the plans for the upcoming Vue.js 3.0 release! 🔥
+
+Unless you’re into mobile development. In that case I have an even better news – NativeScript-Vue 2.0 has been released!
+
+Speaking of releases – the long awaited Nuxt.js 2.0 version has finally been released! On stage. During the Vue.js London conference. Here’s proof.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Hope you don’t mind the two weeks break – Vue.js London was a blast! 💥
+
+Probably the most exciting news this week – the plans for the upcoming Vue.js 3.0 release! 🔥
+
+Unless you’re into mobile development. In that case I have an even better news – NativeScript-Vue 2.0 has been released!
+
+Speaking of releases – the long awaited Nuxt.js 2.0 version has finally been released! On stage. During the Vue.js London conference. Here’s proof.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/78</link>
+            <guid>https://news.vuejs.org/issues/78</guid>
+            <description><![CDATA[In this episode, we build a serverless checkout form, discuss best practices with token authentication & vuex, introduce the storybook.js dev environment, and look at style libraries like vue-material and Semantic UI.]]></description>
+            <content:encoded><![CDATA[In this episode, we build a serverless checkout form, discuss best practices with token authentication & vuex, introduce the storybook.js dev environment, and look at style libraries like vue-material and Semantic UI.]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/126</link>
+            <guid>https://news.vuejs.org/issues/126</guid>
+            <description><![CDATA[Hey there,
+
+As the work on Vue 3.0 goes forward we reached the point where the first of many RFCs (request for comment) has been created. The RFC process is here to provide a consistent way for introducing new features and breaking changes to the framework core in cooperation with the community.
+
+This RFC is specifically about scoped-slots and how they should look like in 3.0. If you’re interested – [take a look](https://github.com/vuejs/rfcs/pull/2).
+
+The biggest conferences of 2018 are back for the 2nd editions! In February, we will see each other back in Amsterdam for Vue.js Amsterdam. Then in March, the official VueConfUS takes place in Tampa, Florida.
+
+What you might have not known, is that just a month later, on 12th of April, there will be [VueDay in Verona, Italy](https://2019.vueday.it). If you’d like to speak there is still a chance – the CFP ends on 1st February.
+
+*Cheers,
+— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey there,
+
+As the work on Vue 3.0 goes forward we reached the point where the first of many RFCs (request for comment) has been created. The RFC process is here to provide a consistent way for introducing new features and breaking changes to the framework core in cooperation with the community.
+
+This RFC is specifically about scoped-slots and how they should look like in 3.0. If you’re interested – [take a look](https://github.com/vuejs/rfcs/pull/2).
+
+The biggest conferences of 2018 are back for the 2nd editions! In February, we will see each other back in Amsterdam for Vue.js Amsterdam. Then in March, the official VueConfUS takes place in Tampa, Florida.
+
+What you might have not known, is that just a month later, on 12th of April, there will be [VueDay in Verona, Italy](https://2019.vueday.it). If you’d like to speak there is still a chance – the CFP ends on 1st February.
+
+*Cheers,
+— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/122</link>
+            <guid>https://news.vuejs.org/issues/122</guid>
+            <description><![CDATA[The Official Vue News Podcast (the audio version of this newsletter) has been getting funnier and funnier as Adam and I get more relaxed in front of the microphones. So, if you have a few minutes on your commute to work, mowing the lawn, or washing your cat, maybe give it a listen using the links below.
+
+Thanks for reading & listening!
+
+*— Gregg Pollack*]]></description>
+            <content:encoded><![CDATA[The Official Vue News Podcast (the audio version of this newsletter) has been getting funnier and funnier as Adam and I get more relaxed in front of the microphones. So, if you have a few minutes on your commute to work, mowing the lawn, or washing your cat, maybe give it a listen using the links below.
+
+Thanks for reading & listening!
+
+*— Gregg Pollack*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/84</link>
+            <guid>https://news.vuejs.org/issues/84</guid>
+            <description><![CDATA[Vue.js Amsterdam released several new videos including the State of Vue.js 2018 by Evan You. That’s something you should definitely watch as it also includes a sweet intro to vue-cli 3.0. There are also lots of photos from the event – try to find yourself!
+
+One of my favourite projects – Vue Storefront – just hit the 1.0RC version. If you’re working with eCommerce, this is something for you!
+— Damian]]></description>
+            <content:encoded><![CDATA[Vue.js Amsterdam released several new videos including the State of Vue.js 2018 by Evan You. That’s something you should definitely watch as it also includes a sweet intro to vue-cli 3.0. There are also lots of photos from the event – try to find yourself!
+
+One of my favourite projects – Vue Storefront – just hit the 1.0RC version. If you’re working with eCommerce, this is something for you!
+— Damian]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/75</link>
+            <guid>https://news.vuejs.org/issues/75</guid>
+            <description><![CDATA[Happy New Year!
+
+2017 was an awesome year for Vue and I hope it was the same for you. You can read a nicely written summary of how Vue performed in 2017 in this article by Kevin Peters.
+To start the year we have some great news for you – the eslint-plugin-vue v4.0 has been officially released! Additionally, Prettier is now supporting Vue’s single-file components thanks to a recent PR by Vjeux.
+
+I’m pretty sure 2018 will be even better than last year. Stay tuned for more exciting announcements soon!]]></description>
+            <content:encoded><![CDATA[Happy New Year!
+
+2017 was an awesome year for Vue and I hope it was the same for you. You can read a nicely written summary of how Vue performed in 2017 in this article by Kevin Peters.
+To start the year we have some great news for you – the eslint-plugin-vue v4.0 has been officially released! Additionally, Prettier is now supporting Vue’s single-file components thanks to a recent PR by Vjeux.
+
+I’m pretty sure 2018 will be even better than last year. Stay tuned for more exciting announcements soon!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/95</link>
+            <guid>https://news.vuejs.org/issues/95</guid>
+            <description><![CDATA[I just learned about [Vuido](https://github.com/mimecorg/vuido) – a fork of Vue that makes it possible to create native desktop applications without the need for Electron. 🔥
+Underneath it uses libui, a GUI library written in C. Though it’s still in its early stages I’m incredibly impressed by the work Michał Męciński (the author) has done. I wonder what possibilities it might open.
+
+There’s also a very nice [summary](https://blog.webf.zone/vue-js-considerations-and-tricks-fa7e0e4bb7bb?gi=c43d2e67a509) of some of the design decisions behind Vue written by Harshal Patil. The article additionally includes links to issues with the discussions about some of those decisions.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[I just learned about [Vuido](https://github.com/mimecorg/vuido) – a fork of Vue that makes it possible to create native desktop applications without the need for Electron. 🔥
+Underneath it uses libui, a GUI library written in C. Though it’s still in its early stages I’m incredibly impressed by the work Michał Męciński (the author) has done. I wonder what possibilities it might open.
+
+There’s also a very nice [summary](https://blog.webf.zone/vue-js-considerations-and-tricks-fa7e0e4bb7bb?gi=c43d2e67a509) of some of the design decisions behind Vue written by Harshal Patil. The article additionally includes links to issues with the discussions about some of those decisions.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/87</link>
+            <guid>https://news.vuejs.org/issues/87</guid>
+            <description><![CDATA[So... VueConf US is happening right now! For me, that’s probably the biggest FOMO moment of my life.
+No worries though – we will let you know once the video recordings are published.
+
+If I had to pick one article that you should read this week it would be the one by Adam Wathan about Renderless Components. 
+It is an in-depth tutorial on how to push the idea of scoped slots even further to create incredibly flexible components without enforcing any layout at all. Must-read!
+
+— Damian ]]></description>
+            <content:encoded><![CDATA[So... VueConf US is happening right now! For me, that’s probably the biggest FOMO moment of my life.
+No worries though – we will let you know once the video recordings are published.
+
+If I had to pick one article that you should read this week it would be the one by Adam Wathan about Renderless Components. 
+It is an in-depth tutorial on how to push the idea of scoped slots even further to create incredibly flexible components without enforcing any layout at all. Must-read!
+
+— Damian ]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/94</link>
+            <guid>https://news.vuejs.org/issues/94</guid>
+            <description><![CDATA[Great news – since the latest beta release, Vue CLI 3.0 is now using webpack 4! As always, if you’re using the beta version, please let us know of any issues you spot by submitting those on the [project’s GitHub issue board](https://github.com/vuejs/vue-cli/issues)!
+
+Just 3 weeks until the very first [Vue Contributor Days – read the introduction post](https://medium.com/@thisdotmedia/introducing-vue-contributor-days-2a281f16042d)!]]></description>
+            <content:encoded><![CDATA[Great news – since the latest beta release, Vue CLI 3.0 is now using webpack 4! As always, if you’re using the beta version, please let us know of any issues you spot by submitting those on the [project’s GitHub issue board](https://github.com/vuejs/vue-cli/issues)!
+
+Just 3 weeks until the very first [Vue Contributor Days – read the introduction post](https://medium.com/@thisdotmedia/introducing-vue-contributor-days-2a281f16042d)!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/73</link>
+            <guid>https://news.vuejs.org/issues/73</guid>
+            <description><![CDATA[Hey there, 
+
+how are you doing? 
+
+Have you already seen the results of the State of JavaScript 2017 survey? As expected – React still dominates the market, but what’s worth looking into is how Vue’s results have changed since last year. 
+
+First of all, in 2016 around 25% of the surveyed developers hadn’t heard about Vue.js – now that’s down to 5%.  Secondly, the overall percentage of people that want to learn Vue is now close to 45%. That’s right – almost half of all 28,000+ surveyed developers want to learn Vue.
+Additionally, the satisfaction rate is incredibly high – more than 90% of those that used Vue, want to use it again!
+
+Those statistics are on par with React’s, leaving everything else far behind. I’m super excited what the next year will be like for Vue!
+
+Recently we have sent you many articles and tutorials regarding testing in Vue.js. But those were usually more about how to do it, rather than what to test and when. Roman Kuba (who you might remember from his awesome VueConf talk) answers the questions in his recent article.
+
+Read on!]]></description>
+            <content:encoded><![CDATA[Hey there, 
+
+how are you doing? 
+
+Have you already seen the results of the State of JavaScript 2017 survey? As expected – React still dominates the market, but what’s worth looking into is how Vue’s results have changed since last year. 
+
+First of all, in 2016 around 25% of the surveyed developers hadn’t heard about Vue.js – now that’s down to 5%.  Secondly, the overall percentage of people that want to learn Vue is now close to 45%. That’s right – almost half of all 28,000+ surveyed developers want to learn Vue.
+Additionally, the satisfaction rate is incredibly high – more than 90% of those that used Vue, want to use it again!
+
+Those statistics are on par with React’s, leaving everything else far behind. I’m super excited what the next year will be like for Vue!
+
+Recently we have sent you many articles and tutorials regarding testing in Vue.js. But those were usually more about how to do it, rather than what to test and when. Roman Kuba (who you might remember from his awesome VueConf talk) answers the questions in his recent article.
+
+Read on!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/116</link>
+            <guid>https://news.vuejs.org/issues/116</guid>
+            <description><![CDATA[Hello,
+
+Do you know the [Views on Vue](https://devchat.tv/views-on-vue/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) podcast? In the last week episode, the guests talked about contributing to open-source. Check it out if you’re interested in this topic!
+
+I’m very happy to let you know that I will be doing a full-day workshop in Warsaw, Poland on the 3rd of December. The workshop is titled "[Ridiculously Reusable Components in Vue.js](https://frontend-con.io/product/vuejs/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter)" and focuses on efficient component design patterns that make the components easy to refactor and scale. All while avoiding premature optimisations.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+Do you know the [Views on Vue](https://devchat.tv/views-on-vue/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) podcast? In the last week episode, the guests talked about contributing to open-source. Check it out if you’re interested in this topic!
+
+I’m very happy to let you know that I will be doing a full-day workshop in Warsaw, Poland on the 3rd of December. The workshop is titled "[Ridiculously Reusable Components in Vue.js](https://frontend-con.io/product/vuejs/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter)" and focuses on efficient component design patterns that make the components easy to refactor and scale. All while avoiding premature optimisations.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/96</link>
+            <guid>https://news.vuejs.org/issues/96</guid>
+            <description><![CDATA[If you’re interested in contributing to the Vue ecosystem, better start planning your schedule for next Wednesday because [Vue Contributor Day](https://www.thisdot.co/events/attend-vue-contributor-days) is just around the corner.
+
+[EGOIST](https://github.com/egoist), who you might know as a notorious library author (600 repositories and counting) has released a new framework called [Saber.js](https://github.com/egoist/saber.js) for building static websites based on Vue.js. It works similar to VuePress though it’s probably more for general use cases as it does not enforce any theme system. 
+
+Also, [Krutie Patel](https://twitter.com/KrutiePatel) made an [awesome diagram](https://twitter.com/KrutiePatel/status/1000022559184764930) describing all the lifecycle hooks in a Nuxt.js app.
+
+Enjoy!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[If you’re interested in contributing to the Vue ecosystem, better start planning your schedule for next Wednesday because [Vue Contributor Day](https://www.thisdot.co/events/attend-vue-contributor-days) is just around the corner.
+
+[EGOIST](https://github.com/egoist), who you might know as a notorious library author (600 repositories and counting) has released a new framework called [Saber.js](https://github.com/egoist/saber.js) for building static websites based on Vue.js. It works similar to VuePress though it’s probably more for general use cases as it does not enforce any theme system. 
+
+Also, [Krutie Patel](https://twitter.com/KrutiePatel) made an [awesome diagram](https://twitter.com/KrutiePatel/status/1000022559184764930) describing all the lifecycle hooks in a Nuxt.js app.
+
+Enjoy!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/93</link>
+            <guid>https://news.vuejs.org/issues/93</guid>
+            <description><![CDATA[Wondering what’s coming up for the 2.6.0 release of Vue? Join Evan You during the [upcoming webinar on the 29th of May](https://www.crowdcast.io/e/vue/register). Besides v2.6.0, Evan will also give a tour of some of the recent additions to the Vue ecosystem – the Vue CLI v3 and VuePress.
+
+Vue Vixens – now have a [Patreon campaign](https://www.patreon.com/vuevixens), where you can sponsor their activities.
+
+Also, [4 new VueConf US videos](https://www.vuemastery.com/conferences/vueconf-2018/a-react-point-of-vue-divya-sasidharan/) are here! Check them out!
+
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Wondering what’s coming up for the 2.6.0 release of Vue? Join Evan You during the [upcoming webinar on the 29th of May](https://www.crowdcast.io/e/vue/register). Besides v2.6.0, Evan will also give a tour of some of the recent additions to the Vue ecosystem – the Vue CLI v3 and VuePress.
+
+Vue Vixens – now have a [Patreon campaign](https://www.patreon.com/vuevixens), where you can sponsor their activities.
+
+Also, [4 new VueConf US videos](https://www.vuemastery.com/conferences/vueconf-2018/a-react-point-of-vue-divya-sasidharan/) are here! Check them out!
+
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/129</link>
+            <guid>https://news.vuejs.org/issues/129</guid>
+            <description><![CDATA[Hello!
+
+What a week! 🎉
+
+The 3rd of February was the 5th anniversary of Vue! Then the day after, on the 4th – [Vue v2.6 was officialy released](https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e) with tons of new features. And today we are celebrating the first day of the [Year of the Pig](https://chinesenewyear.net/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) according to the traditional Chinese calendar.
+
+Given that Vue was first released in 2014, it means Vue’s Chinese zodiac sign is a Horse! And you know what – I’m also a horse. Coincidence? I don’t think so! 🙃
+
+Happy new year!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+What a week! 🎉
+
+The 3rd of February was the 5th anniversary of Vue! Then the day after, on the 4th – [Vue v2.6 was officialy released](https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e) with tons of new features. And today we are celebrating the first day of the [Year of the Pig](https://chinesenewyear.net/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) according to the traditional Chinese calendar.
+
+Given that Vue was first released in 2014, it means Vue’s Chinese zodiac sign is a Horse! And you know what – I’m also a horse. Coincidence? I don’t think so! 🙃
+
+Happy new year!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/130</link>
+            <guid>https://news.vuejs.org/issues/130</guid>
+            <description><![CDATA[Hello!
+
+Some interesting news this week, especially if you’re also working with Java. That’s because JHipster, a development platform for developing Java apps that use modern web frameworks for their front-end has now a blueprint for Vue.js. Still in beta, but looks very promising.
+
+There’s also a [great article about the introduction of “hooks”](https://css-tricks.com/what-hooks-mean-for-vue/) (inspired by React hooks) and what they mean for Vue.js, written by Sarah Drasner.
+
+By the way – our news team (that is me, Gregg and Adam), will be in Amsterdam this week at the Vue.js Amsterdam conference. Come and say hi!
+
+See you!
+*— Damian Dulisz*
+]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Some interesting news this week, especially if you’re also working with Java. That’s because JHipster, a development platform for developing Java apps that use modern web frameworks for their front-end has now a blueprint for Vue.js. Still in beta, but looks very promising.
+
+There’s also a [great article about the introduction of “hooks”](https://css-tricks.com/what-hooks-mean-for-vue/) (inspired by React hooks) and what they mean for Vue.js, written by Sarah Drasner.
+
+By the way – our news team (that is me, Gregg and Adam), will be in Amsterdam this week at the Vue.js Amsterdam conference. Come and say hi!
+
+See you!
+*— Damian Dulisz*
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/136</link>
+            <guid>https://news.vuejs.org/issues/136</guid>
+            <description><![CDATA[Hey,
+
+what an amazing week! Just got back home from VueConf.us. It was such a great conference. Interesting presentations, amazing people and so much [fun](https://twitter.com/jenlooper/status/1111353454465830912) in general. 🦄💃
+
+As for news: The new 5.0 version of Vue.js Devtools has been released! It comes with 2 new tabs – routing and performance, which allows you to measure your application for potential bottlenecks. It also ships with dark mode support 🌒.
+
+Also, there are 2 RFCs to Vue:
+
+One is the [advanced reactivity API](https://github.com/vuejs/rfcs/pull/22), which I’m extremely excited about. It should allow you to create observable objects, watchers and computed properties, without actually creating a new Vue instance. This might prove extremely useful, especially for library authors. I imagine Vuelidate could benefit from it a lot.
+
+The 2nd RFC is about [dynamic lifecycle hooks injection](https://github.com/vuejs/rfcs/pull/23). This should make it possible for you to conditionally add or remove lifecycle hooks within your component’s code.
+
+Oh, and [12 talks from Vue.js Amsterdam](https://www.youtube.com/playlist?list=PLCxzy-hmQq9ECHOwbRrbBx0VEoqWM02CA&utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) are already available. Check them out!
+
+Cheers,
+
+Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Hey,
+
+what an amazing week! Just got back home from VueConf.us. It was such a great conference. Interesting presentations, amazing people and so much [fun](https://twitter.com/jenlooper/status/1111353454465830912) in general. 🦄💃
+
+As for news: The new 5.0 version of Vue.js Devtools has been released! It comes with 2 new tabs – routing and performance, which allows you to measure your application for potential bottlenecks. It also ships with dark mode support 🌒.
+
+Also, there are 2 RFCs to Vue:
+
+One is the [advanced reactivity API](https://github.com/vuejs/rfcs/pull/22), which I’m extremely excited about. It should allow you to create observable objects, watchers and computed properties, without actually creating a new Vue instance. This might prove extremely useful, especially for library authors. I imagine Vuelidate could benefit from it a lot.
+
+The 2nd RFC is about [dynamic lifecycle hooks injection](https://github.com/vuejs/rfcs/pull/23). This should make it possible for you to conditionally add or remove lifecycle hooks within your component’s code.
+
+Oh, and [12 talks from Vue.js Amsterdam](https://www.youtube.com/playlist?list=PLCxzy-hmQq9ECHOwbRrbBx0VEoqWM02CA&utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) are already available. Check them out!
+
+Cheers,
+
+Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/127</link>
+            <guid>https://news.vuejs.org/issues/127</guid>
+            <description><![CDATA[Hey,
+
+if you’re interested in the RFC process of Vue 3.0 check out the [two new proposals](https://github.com/vuejs/rfcs/pulls) related to the way filters work and dynamic directive arguments.
+
+If you think about participating in the VueConf US, you might want to check out the one of the [workshops](https://vueconf.us/workshops) that will happen during the first day. Also, if you identify yourself as a women, you might want to check out the free VueVixens workshop too!
+
+Have a great week,
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Hey,
+
+if you’re interested in the RFC process of Vue 3.0 check out the [two new proposals](https://github.com/vuejs/rfcs/pulls) related to the way filters work and dynamic directive arguments.
+
+If you think about participating in the VueConf US, you might want to check out the one of the [workshops](https://vueconf.us/workshops) that will happen during the first day. Also, if you identify yourself as a women, you might want to check out the free VueVixens workshop too!
+
+Have a great week,
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/100</link>
+            <guid>https://news.vuejs.org/issues/100</guid>
+            <description><![CDATA[In case you haven’t noticed, this is the 100th issue! 🎉
+
+It means we’re doing this for around 700 days now! And since last week, we passed the 10,000 subscribers mark! It has been an awesome journey so far and I’m extremely grateful to everyone involved in making the Official Vue News what it is now. This includes Evan You (for creating Vue), Krzysztof Jung (for starting it with me), Monterail (for the constant financial support), Gregg Pollack and Adam Jahr from Vue Mastery (for bringing it to the next level) and all the other people that helped along the way! This wouldn’t be possible without your help.
+
+I really hope we can do this for the next 700 days. 💚
+
+Until then, enjoy this week's stories!
+
+Btw, you can now get tickets for Vue.js London conference!
+
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[In case you haven’t noticed, this is the 100th issue! 🎉
+
+It means we’re doing this for around 700 days now! And since last week, we passed the 10,000 subscribers mark! It has been an awesome journey so far and I’m extremely grateful to everyone involved in making the Official Vue News what it is now. This includes Evan You (for creating Vue), Krzysztof Jung (for starting it with me), Monterail (for the constant financial support), Gregg Pollack and Adam Jahr from Vue Mastery (for bringing it to the next level) and all the other people that helped along the way! This wouldn’t be possible without your help.
+
+I really hope we can do this for the next 700 days. 💚
+
+Until then, enjoy this week's stories!
+
+Btw, you can now get tickets for Vue.js London conference!
+
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/139</link>
+            <guid>https://news.vuejs.org/issues/139</guid>
+            <description><![CDATA[Hello,
+
+I hope you had a great week! This week we’ve got lots of great content for you. 😃
+
+First, Vue Mastery has released [12 talks from the recent VueConf US](https://www.vuemastery.com/conferences/vueconf-us-2019/)! So many great presentations. You definitely don’t want to miss them.
+
+Secondly, if you look for another source of quality Vue content, you might want to check out the [Views on Vue podcast](https://devchat.tv/views-on-vue/). The podcast follows a different form than ours, as it contains interviews and discussions on a few selected topics with the invited guests. I’ve been one of those guests a few weeks ago and it was an amazing experience!
+
+And if you don’t have the time and are only looking for some quick tips, recently VueDose has published [a series of useful tricks](https://twitter.com/VueDose/status/1120246791985876992). Check them out.
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*
+
+*P.S. Thanks to [Ben Hong](https://twitter.com/bencodezen) for the help with this week’s issue. *👏]]></description>
+            <content:encoded><![CDATA[Hello,
+
+I hope you had a great week! This week we’ve got lots of great content for you. 😃
+
+First, Vue Mastery has released [12 talks from the recent VueConf US](https://www.vuemastery.com/conferences/vueconf-us-2019/)! So many great presentations. You definitely don’t want to miss them.
+
+Secondly, if you look for another source of quality Vue content, you might want to check out the [Views on Vue podcast](https://devchat.tv/views-on-vue/). The podcast follows a different form than ours, as it contains interviews and discussions on a few selected topics with the invited guests. I’ve been one of those guests a few weeks ago and it was an amazing experience!
+
+And if you don’t have the time and are only looking for some quick tips, recently VueDose has published [a series of useful tricks](https://twitter.com/VueDose/status/1120246791985876992). Check them out.
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*
+
+*P.S. Thanks to [Ben Hong](https://twitter.com/bencodezen) for the help with this week’s issue. *👏]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/111</link>
+            <guid>https://news.vuejs.org/issues/111</guid>
+            <description><![CDATA[Hello,
+
+it’s incredible how much momentum NativeScript-Vue is getting since the initial announcement at Vue.js Amsterdam this year. Just half a year later, Jen Looper is already talking about the [2.0 release](https://dev.to/vuevixens/a-sneak-peek-of-nativescript-vue-20-k7j). 🔥
+
+If you’re looking for learning materials – here’s a really [good list](https://medium.com/hypefactors/a-brief-review-of-vue-learning-resources-state-of-2018-9f9ea0a08a89) by Dobromir Hristov with some of the available materials in 2018. One extra advice from me – join the [official Vue.js Discord server](https://chat.vuejs.org). Thousands of other likeminded developers ready to talk and help you on your journey! 🤖
+
+Speaking of the Discord channel – last weekend we had a Q&A session with me and Chris Fritz about best practices. Check out the [transcription here](https://vue-land.js.org/q-and-a/).
+
+Enjoy,
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+it’s incredible how much momentum NativeScript-Vue is getting since the initial announcement at Vue.js Amsterdam this year. Just half a year later, Jen Looper is already talking about the [2.0 release](https://dev.to/vuevixens/a-sneak-peek-of-nativescript-vue-20-k7j). 🔥
+
+If you’re looking for learning materials – here’s a really [good list](https://medium.com/hypefactors/a-brief-review-of-vue-learning-resources-state-of-2018-9f9ea0a08a89) by Dobromir Hristov with some of the available materials in 2018. One extra advice from me – join the [official Vue.js Discord server](https://chat.vuejs.org). Thousands of other likeminded developers ready to talk and help you on your journey! 🤖
+
+Speaking of the Discord channel – last weekend we had a Q&A session with me and Chris Fritz about best practices. Check out the [transcription here](https://vue-land.js.org/q-and-a/).
+
+Enjoy,
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/89</link>
+            <guid>https://news.vuejs.org/issues/89</guid>
+            <description><![CDATA[Hello!
+
+Last week, you might have seen a pretty viral [tweet by Guillaume Chau](https://twitter.com/Akryum/status/981541152620011521) giving a sneak peek of a project he’s been working on recently. For those of you wondering what exactly is it gonna be – that’s the new interface for Vue-cli 3.x.
+
+Here is a comment by Guillaume about the incoming changes to the Vue-cli:
+
+> Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be able to select features like routing, Vuex or Typescript, then add and upgrade building blocks called "vue-cli plugins". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!
+*— Guillaume Chau*
+
+[![vue-cli-3x](//images.ctfassets.net/fvjzlvrkinc4/6ho0jBCqv6qEOMYYGUuYwe/8d819772914b0ecdf6469a82323fafad/vue-cli-3x.png)
+*Starting new projects with Vue-cli 3.x*](https://images.ctfassets.net/fvjzlvrkinc4/6ho0jBCqv6qEOMYYGUuYwe/8d819772914b0ecdf6469a82323fafad/vue-cli-3x.png)
+
+Truth be told, I’m not sure if this can be called a CLI tool anymore. 🤔
+
+Enjoy!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Last week, you might have seen a pretty viral [tweet by Guillaume Chau](https://twitter.com/Akryum/status/981541152620011521) giving a sneak peek of a project he’s been working on recently. For those of you wondering what exactly is it gonna be – that’s the new interface for Vue-cli 3.x.
+
+Here is a comment by Guillaume about the incoming changes to the Vue-cli:
+
+> Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be able to select features like routing, Vuex or Typescript, then add and upgrade building blocks called "vue-cli plugins". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!
+*— Guillaume Chau*
+
+[![vue-cli-3x](//images.ctfassets.net/fvjzlvrkinc4/6ho0jBCqv6qEOMYYGUuYwe/8d819772914b0ecdf6469a82323fafad/vue-cli-3x.png)
+*Starting new projects with Vue-cli 3.x*](https://images.ctfassets.net/fvjzlvrkinc4/6ho0jBCqv6qEOMYYGUuYwe/8d819772914b0ecdf6469a82323fafad/vue-cli-3x.png)
+
+Truth be told, I’m not sure if this can be called a CLI tool anymore. 🤔
+
+Enjoy!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/112</link>
+            <guid>https://news.vuejs.org/issues/112</guid>
+            <description><![CDATA[Hello,
+are you ready for Vue.js London? I’ve got a special little something for you. If you happen to be there, come and say hi! 👋
+Great news for all NativeScript developers! The new beta.2 release of Vue.js Devtools now ships with a basic support for NativeScript apps! How cool is that?
+This week we get two very nice articles about Nuxt.js by [Krutie Patel](https://medium.com/@krutie/universal-application-code-structure-in-nuxt-js-4cd014cc0baa?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) and [Kevin Ball](https://zendev.com/2018/09/17/frontend-architecture-lessons-from-nuxt-js.html?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter). The first one includes beautiful diagrams describing how the framework is working underneath. 😍
+Enjoy!]]></description>
+            <content:encoded><![CDATA[Hello,
+are you ready for Vue.js London? I’ve got a special little something for you. If you happen to be there, come and say hi! 👋
+Great news for all NativeScript developers! The new beta.2 release of Vue.js Devtools now ships with a basic support for NativeScript apps! How cool is that?
+This week we get two very nice articles about Nuxt.js by [Krutie Patel](https://medium.com/@krutie/universal-application-code-structure-in-nuxt-js-4cd014cc0baa?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) and [Kevin Ball](https://zendev.com/2018/09/17/frontend-architecture-lessons-from-nuxt-js.html?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter). The first one includes beautiful diagrams describing how the framework is working underneath. 😍
+Enjoy!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/98</link>
+            <guid>https://news.vuejs.org/issues/98</guid>
+            <description><![CDATA[Hey! 
+
+If you watched the recent [Vue Contributor Day stream](https://www.youtube.com/watch?utm_campaign=Revue+newsletter&utm_medium=Newsletter&utm_source=Vue.js+News&v=U38s3O1hh9k) you might have already learnt that our webpage has become a PWA. This means you can install it on your devices that support it. Not just that, you can subscribe to push notifications to get even more updates. We're also working on improving the RSS feed, which you can subscribe to by clicking [here](http://news.vuejs.org/feed.xml).
+
+Also, [Vue.js London](https://vuejs.london/) is happening! For now, you can follow them on Twitter @vue_london or subscribe to their email list. Expect more information in around 2-3 weeks.
+
+Wow – we got soo many submissions this week through our [submit form](https://news.vuejs.org/submit) that we had to split them in two! If your story can’t be found in this issue, no worries – it should appear next week.
+
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Hey! 
+
+If you watched the recent [Vue Contributor Day stream](https://www.youtube.com/watch?utm_campaign=Revue+newsletter&utm_medium=Newsletter&utm_source=Vue.js+News&v=U38s3O1hh9k) you might have already learnt that our webpage has become a PWA. This means you can install it on your devices that support it. Not just that, you can subscribe to push notifications to get even more updates. We're also working on improving the RSS feed, which you can subscribe to by clicking [here](http://news.vuejs.org/feed.xml).
+
+Also, [Vue.js London](https://vuejs.london/) is happening! For now, you can follow them on Twitter @vue_london or subscribe to their email list. Expect more information in around 2-3 weeks.
+
+Wow – we got soo many submissions this week through our [submit form](https://news.vuejs.org/submit) that we had to split them in two! If your story can’t be found in this issue, no worries – it should appear next week.
+
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/76</link>
+            <guid>https://news.vuejs.org/issues/76</guid>
+            <description><![CDATA[Hey everyone,
+
+
+This week has been truly incredible.
+The day I was waiting for so long finally came – after eleven release candidates the Nuxt.js v1.0 has been released! If you have waited for the stable release before using it in your production app, wait no longer.
+Turns out that NASA is using Vue.js for at least one of their apps. They are looking for a front-end developer skilled with Vue to join them. This is your chance to work for everyone’s favorite space agency.
+Read on!]]></description>
+            <content:encoded><![CDATA[Hey everyone,
+
+
+This week has been truly incredible.
+The day I was waiting for so long finally came – after eleven release candidates the Nuxt.js v1.0 has been released! If you have waited for the stable release before using it in your production app, wait no longer.
+Turns out that NASA is using Vue.js for at least one of their apps. They are looking for a front-end developer skilled with Vue to join them. This is your chance to work for everyone’s favorite space agency.
+Read on!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/134</link>
+            <guid>https://news.vuejs.org/issues/134</guid>
+            <description><![CDATA[Hello!
+
+Great news for all server-side-rendering-enthusiasts out there! With Vue v2.6 the SSR data-fetching has been rewritten and now supports "pausing" during rendering, so that additional asynchronous data can be fetched. This opens the possibility to make requests not only in the route components, but in essentially any component that is being rendered. [Check out the new guide](https://ssr.vuejs.org/guide/data.html). 🚀
+
+Don’t go crazy though. Every request in a sequence increases the time before the page will be rendered, so keep that in mind.
+
+By the way, in just 2 weeks, me, Gregg and Adam will be at [VueConf.US](http://vueconf.us/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) in Tampa, Florida. Come and say hi to us! If you still don’t have your ticket there *shameless plug* you can get a $100 discount per ticket when using the VUEMASTERY100 code.
+
+Btw. the first talk from Vue.js Amsterdam is here – [Guillaume Chau with "Create a Vue CLI Plugin"](https://www.youtube.com/watch?feature=youtu.be&utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter&v=9V4CUbTZj9E).
+
+Cheers,
+
+— Damian Dulisz & Phan An]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Great news for all server-side-rendering-enthusiasts out there! With Vue v2.6 the SSR data-fetching has been rewritten and now supports "pausing" during rendering, so that additional asynchronous data can be fetched. This opens the possibility to make requests not only in the route components, but in essentially any component that is being rendered. [Check out the new guide](https://ssr.vuejs.org/guide/data.html). 🚀
+
+Don’t go crazy though. Every request in a sequence increases the time before the page will be rendered, so keep that in mind.
+
+By the way, in just 2 weeks, me, Gregg and Adam will be at [VueConf.US](http://vueconf.us/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) in Tampa, Florida. Come and say hi to us! If you still don’t have your ticket there *shameless plug* you can get a $100 discount per ticket when using the VUEMASTERY100 code.
+
+Btw. the first talk from Vue.js Amsterdam is here – [Guillaume Chau with "Create a Vue CLI Plugin"](https://www.youtube.com/watch?feature=youtu.be&utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter&v=9V4CUbTZj9E).
+
+Cheers,
+
+— Damian Dulisz & Phan An]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/91</link>
+            <guid>https://news.vuejs.org/issues/91</guid>
+            <description><![CDATA[Hey! 
+
+🎉 I’m happy to announce that the Vue Loader v15.0 has just been released! [Check out the updated docs](https://vue-loader.vuejs.org/)!
+
+Keep in mind that the new release comes with several breaking changes, so if you’re on a project bootstrapped with the vue-cli 2.x, you should probably not update to the new version if you’re not ready to migrate your webpack config. Of course, the documentation includes a migration guide.
+
+As promised, here are the [3 new recordings from the recent VueConf US conference](https://www.vuemastery.com/conferences/vueconf-2018/serverless-functions-and-vue-sarah-drasner).
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey! 
+
+🎉 I’m happy to announce that the Vue Loader v15.0 has just been released! [Check out the updated docs](https://vue-loader.vuejs.org/)!
+
+Keep in mind that the new release comes with several breaking changes, so if you’re on a project bootstrapped with the vue-cli 2.x, you should probably not update to the new version if you’re not ready to migrate your webpack config. Of course, the documentation includes a migration guide.
+
+As promised, here are the [3 new recordings from the recent VueConf US conference](https://www.vuemastery.com/conferences/vueconf-2018/serverless-functions-and-vue-sarah-drasner).
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/138</link>
+            <guid>https://news.vuejs.org/issues/138</guid>
+            <description><![CDATA[Hello,
+
+I’m honored to let you know that [Natalia Tepluhina](https://twitter.com/N_Tepluhina/) is now officially a Vue.js core team member! 🎉 She’s been doing an amazing job contributing to the Vue core documentation as well as several official libraries like the vue-cli.
+
+Congratulations! 👏
+
+Also, most of the non-trivial breaking changes that are coming to Vue 3.0 has already been published as RFCs. You can read them all [here](https://github.com/vuejs/rfcs/pulls?q=is%3Apr+is%3Aopen+label%3A%22breaking+change%22).
+
+[Vue.js London](https://vuejs.london/) was amazing last year and it’s back this year for an encore! Are you planning to attend? Then go grab a super early bird ticket while you still can.
+
+Cheers,
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+I’m honored to let you know that [Natalia Tepluhina](https://twitter.com/N_Tepluhina/) is now officially a Vue.js core team member! 🎉 She’s been doing an amazing job contributing to the Vue core documentation as well as several official libraries like the vue-cli.
+
+Congratulations! 👏
+
+Also, most of the non-trivial breaking changes that are coming to Vue 3.0 has already been published as RFCs. You can read them all [here](https://github.com/vuejs/rfcs/pulls?q=is%3Apr+is%3Aopen+label%3A%22breaking+change%22).
+
+[Vue.js London](https://vuejs.london/) was amazing last year and it’s back this year for an encore! Are you planning to attend? Then go grab a super early bird ticket while you still can.
+
+Cheers,
+
+*— [Damian Dulisz](https://twitter.com/damiandulisz)*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/124</link>
+            <guid>https://news.vuejs.org/issues/124</guid>
+            <description><![CDATA[Hey!
+
+More videos from VueConf Toronto are available. Check out the talks by Evan You and John Leider – the creator of Vuetify.
+
+Also, Quasar is getting close to the 1.0 release and there are multiple new changes coming as it stabilises its API. Read the sneak peek.
+
+The holiday season is coming and I would like you to know that we will be taking 2 weeks off before we return with more news and articles in 2019! In the meantime, enjoy the holidays and I wish you a vuetiful New Year! 🎉
+
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey!
+
+More videos from VueConf Toronto are available. Check out the talks by Evan You and John Leider – the creator of Vuetify.
+
+Also, Quasar is getting close to the 1.0 release and there are multiple new changes coming as it stabilises its API. Read the sneak peek.
+
+The holiday season is coming and I would like you to know that we will be taking 2 weeks off before we return with more news and articles in 2019! In the meantime, enjoy the holidays and I wish you a vuetiful New Year! 🎉
+
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/101</link>
+            <guid>https://news.vuejs.org/issues/101</guid>
+            <description><![CDATA[A great week for the Vue ecosystem! [Vue-Storefront](https://www.vuestorefront.io/), the largest eCommerce-related Vue open-source project I know about, [has hit the 1.0 version](https://medium.com/@piotrkarwatka/vue-storefront-1-0-1e6c9cfe8075). This means it is now officially stable and production ready. That’s great to hear since I personally believe that having a PWA-based front app might be the next big thing for online stores.
+
+Also, Ilkwon Sim has [released a repo](https://github.com/learn-vuejs/vue-patterns) that includes a dozen useful Vue-patterns and tricks that can be used when you just need that quick look at the reference of things like scoped slots syntax.
+
+As you might know, Vue.js Roadtrip Paris happened last week and we got 4 presentations for you to check out!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[A great week for the Vue ecosystem! [Vue-Storefront](https://www.vuestorefront.io/), the largest eCommerce-related Vue open-source project I know about, [has hit the 1.0 version](https://medium.com/@piotrkarwatka/vue-storefront-1-0-1e6c9cfe8075). This means it is now officially stable and production ready. That’s great to hear since I personally believe that having a PWA-based front app might be the next big thing for online stores.
+
+Also, Ilkwon Sim has [released a repo](https://github.com/learn-vuejs/vue-patterns) that includes a dozen useful Vue-patterns and tricks that can be used when you just need that quick look at the reference of things like scoped slots syntax.
+
+As you might know, Vue.js Roadtrip Paris happened last week and we got 4 presentations for you to check out!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/99</link>
+            <guid>https://news.vuejs.org/issues/99</guid>
+            <description><![CDATA[Hey,
+
+do you know that Vue has a Discord server called Vue-Land? Do you know that this particular server just had its first anniversary? If you don’t, go to [chat.vuejs.org](https://chat.vuejs.org) and join the 35000 users from all over the world. It’s a great place to get help with your code problems, discuss possible solutions or simply help others.
+
+Speaking of communities and helping others – [CMTY v0.3](https://cmty.app/meta/cmty/releases/v0.3.0) has just been released. It’s a platform that makes it easier to build and manage communities around open-source projects. Created by the Chopin brothers – the creators of Nuxt.js.
+
+Oh, and you might want to check the new [Mand Mobile UI-kit](https://didi.github.io/mand-mobile/). It looks really neat!]]></description>
+            <content:encoded><![CDATA[Hey,
+
+do you know that Vue has a Discord server called Vue-Land? Do you know that this particular server just had its first anniversary? If you don’t, go to [chat.vuejs.org](https://chat.vuejs.org) and join the 35000 users from all over the world. It’s a great place to get help with your code problems, discuss possible solutions or simply help others.
+
+Speaking of communities and helping others – [CMTY v0.3](https://cmty.app/meta/cmty/releases/v0.3.0) has just been released. It’s a platform that makes it easier to build and manage communities around open-source projects. Created by the Chopin brothers – the creators of Nuxt.js.
+
+Oh, and you might want to check the new [Mand Mobile UI-kit](https://didi.github.io/mand-mobile/). It looks really neat!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/79</link>
+            <guid>https://news.vuejs.org/issues/79</guid>
+            <description><![CDATA[This week Vue-cli 3.0 is now in alpha, setting up code analyzing + formating + auto-fixing, why not to use Vue.component, easy integration testing, creating charts, a simple modal with scoped slots, Nuxt Authentication from Scratch, and using Cosmic.js as a backend.]]></description>
+            <content:encoded><![CDATA[This week Vue-cli 3.0 is now in alpha, setting up code analyzing + formating + auto-fixing, why not to use Vue.component, easy integration testing, creating charts, a simple modal with scoped slots, Nuxt Authentication from Scratch, and using Cosmic.js as a backend.]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/107</link>
+            <guid>https://news.vuejs.org/issues/107</guid>
+            <description><![CDATA[Hey,
+
+finally – [the Vue CLI 3.0 has been released](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb)! If you still haven’t had the chance to try it – it’s about time you do.
+
+Also, as promised – [here’s the summary from the Vue.js sprint](https://medium.com/the-vue-point/the-first-vue-js-sprint-summary-10c260bf642a). There are also two recordings from the Vue.js Core Team Summit. [The talk](https://www.youtube.com/watch?v=Cpc9AZg2KOM&feature=youtu.be) from Guillaume Chau doing an introduction to Vue CLI 3.0 (and its UI). The [second talk](https://www.youtube.com/watch?v=cpK6vGkeb5s) involved a twist – Chris Fritz behaved like a teacher and invited the rest of the core team on stage to ask them questions.
+
+Cheers!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey,
+
+finally – [the Vue CLI 3.0 has been released](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb)! If you still haven’t had the chance to try it – it’s about time you do.
+
+Also, as promised – [here’s the summary from the Vue.js sprint](https://medium.com/the-vue-point/the-first-vue-js-sprint-summary-10c260bf642a). There are also two recordings from the Vue.js Core Team Summit. [The talk](https://www.youtube.com/watch?v=Cpc9AZg2KOM&feature=youtu.be) from Guillaume Chau doing an introduction to Vue CLI 3.0 (and its UI). The [second talk](https://www.youtube.com/watch?v=cpK6vGkeb5s) involved a twist – Chris Fritz behaved like a teacher and invited the rest of the core team on stage to ask them questions.
+
+Cheers!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/131</link>
+            <guid>https://news.vuejs.org/issues/131</guid>
+            <description><![CDATA[Hey!
+
+I have to tell you, Vue.js Amsterdam was a blast! 🚀 I’ve seen plenty of great talks, met lots of awesome people and had so much fun. I feel I’m still recovering from it (and the cold that I caught 🥶). Check out this [awesome Twitter thread](https://twitter.com/tomquinonero/status/1096207213721542658) with most of the slides from the talks. Thanks [@tomquinonero](https://twitter.com/tomquinonero/)!
+
+As you probably noticed, there’s no podcast this week since apparently both Gregg and Adam are also recovering from the conference. Tough times. However, if you miss their voices already, make sure to check on [VueMastery.com](https://www.vuemastery.com/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) starting tomorrow (February 22–24) for a full weekend where all courses are free! 🎉
+
+Enjoy,
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Hey!
+
+I have to tell you, Vue.js Amsterdam was a blast! 🚀 I’ve seen plenty of great talks, met lots of awesome people and had so much fun. I feel I’m still recovering from it (and the cold that I caught 🥶). Check out this [awesome Twitter thread](https://twitter.com/tomquinonero/status/1096207213721542658) with most of the slides from the talks. Thanks [@tomquinonero](https://twitter.com/tomquinonero/)!
+
+As you probably noticed, there’s no podcast this week since apparently both Gregg and Adam are also recovering from the conference. Tough times. However, if you miss their voices already, make sure to check on [VueMastery.com](https://www.vuemastery.com/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) starting tomorrow (February 22–24) for a full weekend where all courses are free! 🎉
+
+Enjoy,
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/110</link>
+            <guid>https://news.vuejs.org/issues/110</guid>
+            <description><![CDATA[I’m so excited – just 3 more weeks until the Vue.js London conference. The lineup looks so awesome! 😍Most of the Vue News team (Me, Gregg and Adam) will also be there so feel free to come and say hi!
+
+In case you still haven’t made up your mind about going to the conference – we got a sweet promo code for you! It will save you 50 GBP off all tickets for the conference. This includes workshops. Just go to the ticket page and enter the following discount code: 50EVTUSRIR.
+
+Just a few days ago Guillaume Chau has released the 5.0-beta version of Vue.js Devtools. If you were wondering about all the improvements that we’ve been working on during the last Vue.js Sprint, you can try them right now.
+
+Cheers!
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[I’m so excited – just 3 more weeks until the Vue.js London conference. The lineup looks so awesome! 😍Most of the Vue News team (Me, Gregg and Adam) will also be there so feel free to come and say hi!
+
+In case you still haven’t made up your mind about going to the conference – we got a sweet promo code for you! It will save you 50 GBP off all tickets for the conference. This includes workshops. Just go to the ticket page and enter the following discount code: 50EVTUSRIR.
+
+Just a few days ago Guillaume Chau has released the 5.0-beta version of Vue.js Devtools. If you were wondering about all the improvements that we’ve been working on during the last Vue.js Sprint, you can try them right now.
+
+Cheers!
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/104</link>
+            <guid>https://news.vuejs.org/issues/104</guid>
+            <description><![CDATA[I’m very happy to announce that along with several other Vue core team members we will be organising a free community meetup in Wrocław, Poland on Thursday next week (August 2nd). The meetup is to be called the [Vue.js Core Team Summit](https://www.meetup.com/Vue-js-Poland/events/253095286/) and we intent to organise those meetups whenever we’re gathering for the Vue sprint. 
+
+Wondering what’s a Vue sprint? It’s a special week where members of the core team gather together in one place and work on different Vue tools and libraries like Vue-Devtools.
+
+I will let you know about all the things we will be working on next week!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[I’m very happy to announce that along with several other Vue core team members we will be organising a free community meetup in Wrocław, Poland on Thursday next week (August 2nd). The meetup is to be called the [Vue.js Core Team Summit](https://www.meetup.com/Vue-js-Poland/events/253095286/) and we intent to organise those meetups whenever we’re gathering for the Vue sprint. 
+
+Wondering what’s a Vue sprint? It’s a special week where members of the core team gather together in one place and work on different Vue tools and libraries like Vue-Devtools.
+
+I will let you know about all the things we will be working on next week!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/108</link>
+            <guid>https://news.vuejs.org/issues/108</guid>
+            <description><![CDATA[Hello,
+if you had the chance to meet Chris Fritz, you might have noticed he has a really good radio voice. 😅 For those that don’t know – it’s a skill he quite often utilises on the [Views on Vue podcast](https://devchat.tv/views-on-vue/) where he’s one of the hosts. Unlike ours, this one is a few times longer and involves discussions between the hosts and sometimes – special guests.
+
+My friend Krzysztof Jung – the co-creator of this newsletter – has recently written an [amazing article](https://www.monterail.com/blog/3d-editor-vue.js-reactive-entity-system) about building a “3D interior design app” with Vue.js and BabylonJS. A must read, especially if you’re also into gamedev.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+if you had the chance to meet Chris Fritz, you might have noticed he has a really good radio voice. 😅 For those that don’t know – it’s a skill he quite often utilises on the [Views on Vue podcast](https://devchat.tv/views-on-vue/) where he’s one of the hosts. Unlike ours, this one is a few times longer and involves discussions between the hosts and sometimes – special guests.
+
+My friend Krzysztof Jung – the co-creator of this newsletter – has recently written an [amazing article](https://www.monterail.com/blog/3d-editor-vue.js-reactive-entity-system) about building a “3D interior design app” with Vue.js and BabylonJS. A must read, especially if you’re also into gamedev.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/97</link>
+            <guid>https://news.vuejs.org/issues/97</guid>
+            <description><![CDATA[I can’t believe I only now learned about [VueMeetups.org](https://vuemeetups.org) – a very nice initiative by Ben Hong. It’s the biggest list of Vue meetups around the world that I have ever seen. Try it out, you might just find one near you.
+
+Also, with the latest beta release of [Vue-CLI you can take the brand new UI for a spin](https://twitter.com/Akryum/status/1001893636194390016)! Just update vue-cli and run `vue ui` in your console. As always, feedback is welcome.
+
+Oh, and Krutie Patel is at it again – with a [brand new infographic explaining](https://twitter.com/KrutiePatel/status/1002781159997100033/photo/1) Nuxt.js modules, serverMiddleware and plugins. Check it out!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[I can’t believe I only now learned about [VueMeetups.org](https://vuemeetups.org) – a very nice initiative by Ben Hong. It’s the biggest list of Vue meetups around the world that I have ever seen. Try it out, you might just find one near you.
+
+Also, with the latest beta release of [Vue-CLI you can take the brand new UI for a spin](https://twitter.com/Akryum/status/1001893636194390016)! Just update vue-cli and run `vue ui` in your console. As always, feedback is welcome.
+
+Oh, and Krutie Patel is at it again – with a [brand new infographic explaining](https://twitter.com/KrutiePatel/status/1002781159997100033/photo/1) Nuxt.js modules, serverMiddleware and plugins. Check it out!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/83</link>
+            <guid>https://news.vuejs.org/issues/83</guid>
+            <description><![CDATA[🔥 Two Vue.js Amsterdam/Frontend Love videos are here! 🔥 
+
+Make sure to check out the talks by Sarah Drasner “Animating Vue How capable and elegant is Vue js in terms of animation” and Roman Kuba “Scaling Vue in an existing stack”. 
+
+Ever since I saw Higher-Order Components I wanted to use them (mostly because of the aesthetics of composition), until I learned that they don’t really solve anything you can’t solve with mixins and both solutions come with similar cons. If you’re still wondering about this topic, I would suggest to watch (https://www.youtube.com/watch?v=BcVAq3YFiuc) awesome talk about render props, which is basically how scoped slots work in Vue.]]></description>
+            <content:encoded><![CDATA[🔥 Two Vue.js Amsterdam/Frontend Love videos are here! 🔥 
+
+Make sure to check out the talks by Sarah Drasner “Animating Vue How capable and elegant is Vue js in terms of animation” and Roman Kuba “Scaling Vue in an existing stack”. 
+
+Ever since I saw Higher-Order Components I wanted to use them (mostly because of the aesthetics of composition), until I learned that they don’t really solve anything you can’t solve with mixins and both solutions come with similar cons. If you’re still wondering about this topic, I would suggest to watch (https://www.youtube.com/watch?v=BcVAq3YFiuc) awesome talk about render props, which is basically how scoped slots work in Vue.]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/118</link>
+            <guid>https://news.vuejs.org/issues/118</guid>
+            <description><![CDATA[Hello,
+
+great news – Prettier now fully supports Vue templates. 🎉This means auto-formatting for template features like v-for, slot-scope and event handlers. All thanks to the awesome work by [@ikatyang](https://github.com/ikatyang). 👏
+
+Just a week until [VueConf Toronto](https://vuetoronto.com)! I’m looking at the fantastic line-up of speakers right now and I wish I could attend. 😥 It’s going to be a great event!
+
+Speaking of events – there are multiple incoming VueVixens workshops in the next 30 days that you might be interested in – check out this [tweet by Natalia Tepluhina](https://twitter.com/N_Tepluhina/status/1056855189125296128) for details.
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+great news – Prettier now fully supports Vue templates. 🎉This means auto-formatting for template features like v-for, slot-scope and event handlers. All thanks to the awesome work by [@ikatyang](https://github.com/ikatyang). 👏
+
+Just a week until [VueConf Toronto](https://vuetoronto.com)! I’m looking at the fantastic line-up of speakers right now and I wish I could attend. 😥 It’s going to be a great event!
+
+Speaking of events – there are multiple incoming VueVixens workshops in the next 30 days that you might be interested in – check out this [tweet by Natalia Tepluhina](https://twitter.com/N_Tepluhina/status/1056855189125296128) for details.
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/117</link>
+            <guid>https://news.vuejs.org/issues/117</guid>
+            <description><![CDATA[Hello!
+Recently there’s a lot of buzz around Hooks – a new experimental addition to React, introduced by Dan Abramov a few days ago.
+Evan being Evan jumped right in on the idea and created [Vue-Hooks](https://github.com/yyx990803/vue-hooks) – a library that implements hooks for Vue in less than 100 lines of code.
+So what are hooks exactly? It’s an alternative pattern to solve the code-sharing/reusability problem that is usually solved with mixins, higher-order components or render props (think scoped slots or renderless components).
+Hooks should help you extract shared logic that you wouldn’t be able to easily extract otherwise. If you ask me, hooks might become the go-to solution for working with different kinds of API calls and integrating services like real-time databases or chats. Maybe a new Apollo integration? Time will tell.
+
+*— Damian Dulisz*
+
+*P.S. Keep in mind the Vue-Hooks library is totally not production ready!*]]></description>
+            <content:encoded><![CDATA[Hello!
+Recently there’s a lot of buzz around Hooks – a new experimental addition to React, introduced by Dan Abramov a few days ago.
+Evan being Evan jumped right in on the idea and created [Vue-Hooks](https://github.com/yyx990803/vue-hooks) – a library that implements hooks for Vue in less than 100 lines of code.
+So what are hooks exactly? It’s an alternative pattern to solve the code-sharing/reusability problem that is usually solved with mixins, higher-order components or render props (think scoped slots or renderless components).
+Hooks should help you extract shared logic that you wouldn’t be able to easily extract otherwise. If you ask me, hooks might become the go-to solution for working with different kinds of API calls and integrating services like real-time databases or chats. Maybe a new Apollo integration? Time will tell.
+
+*— Damian Dulisz*
+
+*P.S. Keep in mind the Vue-Hooks library is totally not production ready!*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/77</link>
+            <guid>https://news.vuejs.org/issues/77</guid>
+            <description><![CDATA[Vue Devtools 4.0, accessibility, not over-engineering components, Grid Layout, render prop, SFC w/ TypeScript, and creating a Vue Plugin.]]></description>
+            <content:encoded><![CDATA[Vue Devtools 4.0, accessibility, not over-engineering components, Grid Layout, render prop, SFC w/ TypeScript, and creating a Vue Plugin.]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/132</link>
+            <guid>https://news.vuejs.org/issues/132</guid>
+            <description><![CDATA[Hey,
+
+I hope you’re great! I’ve got some pretty neat updates for you, especially if you’re using VS Code and Vetur. Because if you do, you have to see [the GIF in that tweet](https://twitter.com/octref/status/1097607993246416896). The tool now autosuggests available props and attrs for the components that you use 🤯.
+
+Also, Thorsten Lünborg AKA “Linusborg”, also known as the person closes to a real life-support for Vue, has [started his Ko-fi page](https://ko-fi.com/linusborg). This means, if he ever helped you (and if you use the official Vue forums, I’m pretty sure he did) you can now buy him a coffee there. ☕️
+
+Enjoy,
+*— Damian Dulisz*
+]]></description>
+            <content:encoded><![CDATA[Hey,
+
+I hope you’re great! I’ve got some pretty neat updates for you, especially if you’re using VS Code and Vetur. Because if you do, you have to see [the GIF in that tweet](https://twitter.com/octref/status/1097607993246416896). The tool now autosuggests available props and attrs for the components that you use 🤯.
+
+Also, Thorsten Lünborg AKA “Linusborg”, also known as the person closes to a real life-support for Vue, has [started his Ko-fi page](https://ko-fi.com/linusborg). This means, if he ever helped you (and if you use the official Vue forums, I’m pretty sure he did) you can now buy him a coffee there. ☕️
+
+Enjoy,
+*— Damian Dulisz*
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/80</link>
+            <guid>https://news.vuejs.org/issues/80</guid>
+            <description><![CDATA[Welcome to the 80th issue of the Official Vue.js Newsletter. This week we have "Using Cloud Firestore, end-to-end testing with TestCafe, native mobile with Weex, parent/child lifecycle hooks, free Vuex course, valid email checking, 10 things to love about Vue, canceling promises, and Laravel API CRUD."
+Enjoy, Comment and Share!]]></description>
+            <content:encoded><![CDATA[Welcome to the 80th issue of the Official Vue.js Newsletter. This week we have "Using Cloud Firestore, end-to-end testing with TestCafe, native mobile with Weex, parent/child lifecycle hooks, free Vuex course, valid email checking, 10 things to love about Vue, canceling promises, and Laravel API CRUD."
+Enjoy, Comment and Share!]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/90</link>
+            <guid>https://news.vuejs.org/issues/90</guid>
+            <description><![CDATA[Hi!
+
+Great news – [Evan You has just launched VuePress](https://vuepress.vuejs.org)! As the name might suggest, it’s a tool focused on publishing content. Similar to Gatsby and Jekyll it’s a markdown powered static site generator. But here’s the twist – once loaded it becomes an SPA.
+
+It might help you start your own blog or build a neat documentation for your project. It comes built-in with Vue-powered custom theme system, markdown extensions, the possibility to use Vue components inside markdown files, as well as PWA support and Google Analytics integration.
+
+SEO friendly out of the box!
+
+Additionally – [the first batch of VueConf US videos has been published](https://www.vuemastery.com/conferences/vueconf-2018/opening-keynote-evan-you/). Check it out!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hi!
+
+Great news – [Evan You has just launched VuePress](https://vuepress.vuejs.org)! As the name might suggest, it’s a tool focused on publishing content. Similar to Gatsby and Jekyll it’s a markdown powered static site generator. But here’s the twist – once loaded it becomes an SPA.
+
+It might help you start your own blog or build a neat documentation for your project. It comes built-in with Vue-powered custom theme system, markdown extensions, the possibility to use Vue components inside markdown files, as well as PWA support and Google Analytics integration.
+
+SEO friendly out of the box!
+
+Additionally – [the first batch of VueConf US videos has been published](https://www.vuemastery.com/conferences/vueconf-2018/opening-keynote-evan-you/). Check it out!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/135</link>
+            <guid>https://news.vuejs.org/issues/135</guid>
+            <description><![CDATA[Hello,
+
+Do you like the new Vue-CLI? Can we still call it new? Well if you do, you will probably like the incoming v4 even more, because it should open the way for plugins to run codemods when upgrading to a new version of a plugin. This should make updating your app dependencies so much easier and quicker. [Here’s the v4.0 roadmap](https://github.com/vuejs/vue-cli/issues/3649?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter).
+
+Make sure to read the [new tutorial written by Cher Scarlett about building a Spotify-powered Vue app](https://www.smashingmagazine.com/2019/03/spotify-app-vue-nuxt-javascript/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) – one of the best articles I’ve seen in months! 🎧
+
+There’s also a new RFC for introducing the Fetch hook in the upcoming 3.0 release of Nuxt.js. [Read more about it here](https://github.com/nuxt/rfcs/issues/27?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter).
+
+Also, FYI there’s a high chance we will be skipping next week issue due to VueConf.us. Come and say hi though if you’re there! 👋
+
+See you,
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+Do you like the new Vue-CLI? Can we still call it new? Well if you do, you will probably like the incoming v4 even more, because it should open the way for plugins to run codemods when upgrading to a new version of a plugin. This should make updating your app dependencies so much easier and quicker. [Here’s the v4.0 roadmap](https://github.com/vuejs/vue-cli/issues/3649?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter).
+
+Make sure to read the [new tutorial written by Cher Scarlett about building a Spotify-powered Vue app](https://www.smashingmagazine.com/2019/03/spotify-app-vue-nuxt-javascript/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) – one of the best articles I’ve seen in months! 🎧
+
+There’s also a new RFC for introducing the Fetch hook in the upcoming 3.0 release of Nuxt.js. [Read more about it here](https://github.com/nuxt/rfcs/issues/27?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter).
+
+Also, FYI there’s a high chance we will be skipping next week issue due to VueConf.us. Come and say hi though if you’re there! 👋
+
+See you,
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/128</link>
+            <guid>https://news.vuejs.org/issues/128</guid>
+            <description><![CDATA[Hello,
+
+great news this week. New [Vue.js core library beta](https://github.com/vuejs/vue/releases/tag/v2.6.0-beta.2?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) has been released and includes some of the recently discussed (RFCs) changes like the new v-slot syntax.
+
+Also, Nuxt.js has hit the [version 2.4.0](https://dev.to/nuxt/nuxtjs-v240-is-out-typescript-smart-prefetching-and-more-18d?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) with the long awaited TypeScript support and smart prefetching. Congrats to the whole Nuxt.js team!
+
+Always wanted to attend one of the VueVixens workshops but didn’t had the chance? You can now do [those workshops](https://vuevixens.github.io/docs/workshop/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) yourself at home. The workshop website also includes some mini and nano exercises to polish up your Vue skills.
+
+
+Oh, and if you – by any chance – would like to show your support for my work on this newsletter, the Vue.js News website or one of the libraries that I started, you can do that now by [getting me a cup of coffee](https://www.buymeacoffee.com/DamianDulisz?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter)! ☕️ Thanks!
+
+*— Damian Dulisz*
+]]></description>
+            <content:encoded><![CDATA[Hello,
+
+great news this week. New [Vue.js core library beta](https://github.com/vuejs/vue/releases/tag/v2.6.0-beta.2?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) has been released and includes some of the recently discussed (RFCs) changes like the new v-slot syntax.
+
+Also, Nuxt.js has hit the [version 2.4.0](https://dev.to/nuxt/nuxtjs-v240-is-out-typescript-smart-prefetching-and-more-18d?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) with the long awaited TypeScript support and smart prefetching. Congrats to the whole Nuxt.js team!
+
+Always wanted to attend one of the VueVixens workshops but didn’t had the chance? You can now do [those workshops](https://vuevixens.github.io/docs/workshop/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) yourself at home. The workshop website also includes some mini and nano exercises to polish up your Vue skills.
+
+
+Oh, and if you – by any chance – would like to show your support for my work on this newsletter, the Vue.js News website or one of the libraries that I started, you can do that now by [getting me a cup of coffee](https://www.buymeacoffee.com/DamianDulisz?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter)! ☕️ Thanks!
+
+*— Damian Dulisz*
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/88</link>
+            <guid>https://news.vuejs.org/issues/88</guid>
+            <description><![CDATA[This week comes with a huge rework of the Components section of the Vue.js Documentation. Here are some reasons behind the rewrite as explained by Chris Fritz and Sarah Drasner.
+
+> “Ughh… the components page is so long!! I just couldn’t get through the whole thing.” We used to hear that complaint a lot and it was fair. That’s why Sarah and I teamed up to completely reorganize and rewrite it, with improved examples, more detailed explanations, and a more cohesive flow. Now it’s both easier to master the basics of components and less intimidating to take that deeper dive into some more advanced feature
+*— Chris Fritz*
+
+> Even if you’ve read through the components page before, you might want to give it another look. There are some clarifications that might ease your understanding, or even sections that used to be buried but now stand on their own. Enjoy!
+*— Sarah Drasner*
+
+Would you like to know what’s planned for the near future of Vue.js? Watch the 5 minutes interview with several VueConf US speakers recorded last week during the conference.
+Spoiler alert: Nuxt.js 2.0 is coming!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[This week comes with a huge rework of the Components section of the Vue.js Documentation. Here are some reasons behind the rewrite as explained by Chris Fritz and Sarah Drasner.
+
+> “Ughh… the components page is so long!! I just couldn’t get through the whole thing.” We used to hear that complaint a lot and it was fair. That’s why Sarah and I teamed up to completely reorganize and rewrite it, with improved examples, more detailed explanations, and a more cohesive flow. Now it’s both easier to master the basics of components and less intimidating to take that deeper dive into some more advanced feature
+*— Chris Fritz*
+
+> Even if you’ve read through the components page before, you might want to give it another look. There are some clarifications that might ease your understanding, or even sections that used to be buried but now stand on their own. Enjoy!
+*— Sarah Drasner*
+
+Would you like to know what’s planned for the near future of Vue.js? Watch the 5 minutes interview with several VueConf US speakers recorded last week during the conference.
+Spoiler alert: Nuxt.js 2.0 is coming!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/74</link>
+            <guid>https://news.vuejs.org/issues/74</guid>
+            <description><![CDATA[Hey folks!
+
+Still wondering if Nuxt.js is something you should use? Make sure to read the story of Pariksha told by Krutie Patel! Really great write-up.
+
+If you only had one chance to introduce someone new to Vue, I would recommend watching the brand new video at Vuejs.org recorded by Gregg Pollack and Adam Jahr. It’s been a long time since I saw a video that could teach you the basics of Vue in just around 5 minutes. Keep watching to the very end – there’s an additional message from Evan You!
+
+As for resources – in case you’re having a hard time debugging mobile Vue apps, you might want to take a look at the vue-inspector library. 
+
+Enjoy!
+]]></description>
+            <content:encoded><![CDATA[Hey folks!
+
+Still wondering if Nuxt.js is something you should use? Make sure to read the story of Pariksha told by Krutie Patel! Really great write-up.
+
+If you only had one chance to introduce someone new to Vue, I would recommend watching the brand new video at Vuejs.org recorded by Gregg Pollack and Adam Jahr. It’s been a long time since I saw a video that could teach you the basics of Vue in just around 5 minutes. Keep watching to the very end – there’s an additional message from Evan You!
+
+As for resources – in case you’re having a hard time debugging mobile Vue apps, you might want to take a look at the vue-inspector library. 
+
+Enjoy!
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/121</link>
+            <guid>https://news.vuejs.org/issues/121</guid>
+            <description><![CDATA[Hello!
+
+Important news this week – due to a [security vulnerability](https://github.com/dominictarr/event-stream/issues/116) found in a package called __*flatmap-stream*__ it is highly recommended to reinstall the global version of Vue-CLI using those commands:
+
+__For Yarn users:__
+
+```
+yarn global remove @vue/cli 
+yarn global add @vue/cli
+```
+
+
+
+__For Npm users:__
+
+```
+npm uninstall -g @vue/cli 
+npm install -g @vue/cli
+```
+
+
+It’s also recommended that you check your other projects for the malicious version of the library by using `yarn why flatmap-stream` or `npm list -g event-stream flatmap-stream`.
+
+Solution provided by the awesome [Guillaume Chau](https://twitter.com/Akryum/status/1067357616844808192). 👏
+
+— Damian Dulisz]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Important news this week – due to a [security vulnerability](https://github.com/dominictarr/event-stream/issues/116) found in a package called __*flatmap-stream*__ it is highly recommended to reinstall the global version of Vue-CLI using those commands:
+
+__For Yarn users:__
+
+```
+yarn global remove @vue/cli 
+yarn global add @vue/cli
+```
+
+
+
+__For Npm users:__
+
+```
+npm uninstall -g @vue/cli 
+npm install -g @vue/cli
+```
+
+
+It’s also recommended that you check your other projects for the malicious version of the library by using `yarn why flatmap-stream` or `npm list -g event-stream flatmap-stream`.
+
+Solution provided by the awesome [Guillaume Chau](https://twitter.com/Akryum/status/1067357616844808192). 👏
+
+— Damian Dulisz]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/137</link>
+            <guid>https://news.vuejs.org/issues/137</guid>
+            <description><![CDATA[Hello,
+
+VueConf.us was complete blast, but that’s not the only North American conference that’s worth visiting. There’s another conference called VueConf.TO in Toronto, Canada. And I heard it’s pretty amazing! It’s happening in November and if you would like to speak there, here’s the [call for paper](https://vuetoronto.com/call-for-papers/)!
+
+If you don’t want to wait until November, or you’re simply based in Europe – make sure to check out the [VueDay conference in Alicante](https://vueday.org/), Spain! The date is Friday, May 31.
+
+There are few new releases: Nuxt.js [v2.6](https://github.com/nuxt/nuxt.js/releases/tag/v2.6.0), Portal-Vue [v2.0](https://portal-vue.linusb.org/), Vue-Router [v3.0.3](https://github.com/vuejs/vue-router/releases/tag/v3.0.3).
+
+— *[Damian Dulisz](https://twitter.com/DamianDulisz) & [Phan An](https://twitter.com/notphanan)*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+VueConf.us was complete blast, but that’s not the only North American conference that’s worth visiting. There’s another conference called VueConf.TO in Toronto, Canada. And I heard it’s pretty amazing! It’s happening in November and if you would like to speak there, here’s the [call for paper](https://vuetoronto.com/call-for-papers/)!
+
+If you don’t want to wait until November, or you’re simply based in Europe – make sure to check out the [VueDay conference in Alicante](https://vueday.org/), Spain! The date is Friday, May 31.
+
+There are few new releases: Nuxt.js [v2.6](https://github.com/nuxt/nuxt.js/releases/tag/v2.6.0), Portal-Vue [v2.0](https://portal-vue.linusb.org/), Vue-Router [v3.0.3](https://github.com/vuejs/vue-router/releases/tag/v3.0.3).
+
+— *[Damian Dulisz](https://twitter.com/DamianDulisz) & [Phan An](https://twitter.com/notphanan)*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/115</link>
+            <guid>https://news.vuejs.org/issues/115</guid>
+            <description><![CDATA[Hello,
+
+great news for all Nuxt.js fans! The Chopin brothers (Alexandre and Sebastien) will be doing a Q&A session on the [Official Vue.js Chat](https://vue-land.js.org). If you got any questions for them, for example related to the recently published Nuxt.js 2.0 – here’s a great chance to ask those. The Q&A will start on __October 20th at 4pm UTC__.
+
+Were you looking for something similar to GatsbyJS but for Vue?
+
+Look no further! Here’s [Gridsome](https://gridsome.org/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter), a blazing-fast static site generator powered by Vue.js and GraphQL that can fetch data from any CMS you want.
+
+Enjoy,
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+great news for all Nuxt.js fans! The Chopin brothers (Alexandre and Sebastien) will be doing a Q&A session on the [Official Vue.js Chat](https://vue-land.js.org). If you got any questions for them, for example related to the recently published Nuxt.js 2.0 – here’s a great chance to ask those. The Q&A will start on __October 20th at 4pm UTC__.
+
+Were you looking for something similar to GatsbyJS but for Vue?
+
+Look no further! Here’s [Gridsome](https://gridsome.org/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter), a blazing-fast static site generator powered by Vue.js and GraphQL that can fetch data from any CMS you want.
+
+Enjoy,
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/114</link>
+            <guid>https://news.vuejs.org/issues/114</guid>
+            <description><![CDATA[Hello!
+
+Filip Rakowski from the VueStorefront team is building a [list of more advanced learning resources for Vue.js](https://github.com/filrak/vuejs-advanced-learning/blob/master/README.md). It already includes some great links so make sure to check it out. You’re also all invited to create Pull Requests with your suggested content.
+
+Also, Guillaume has released a new beta version of vue-virtual-scroller. Here’s the [new demo page](https://akryum.github.io/vue-virtual-scroller/). It now supports scrolling elements with dynamic height. Great improvement!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Filip Rakowski from the VueStorefront team is building a [list of more advanced learning resources for Vue.js](https://github.com/filrak/vuejs-advanced-learning/blob/master/README.md). It already includes some great links so make sure to check it out. You’re also all invited to create Pull Requests with your suggested content.
+
+Also, Guillaume has released a new beta version of vue-virtual-scroller. Here’s the [new demo page](https://akryum.github.io/vue-virtual-scroller/). It now supports scrolling elements with dynamic height. Great improvement!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/86</link>
+            <guid>https://news.vuejs.org/issues/86</guid>
+            <description><![CDATA[🎉 The Official Vue.js Cookbook is now live! 🎉
+
+For those wondering – what does a "cookbook" mean in context of web frameworks? It’s a collection of approachable tutorials that solve specific programming problems. The list of available recipes is still relatively small, but no worries, I got the feeling it will grow pretty soon, so better keep it bookmarked. 
+Interested in contributing? Start by filing an issue under the tag "cookbook idea".
+
+Do you want to know the secrets of Vue.js consultants? 🤫
+Chris Fritz breaks the silence and shares some of the incredibly useful patterns that will boost your productivity!
+
+— Damian]]></description>
+            <content:encoded><![CDATA[🎉 The Official Vue.js Cookbook is now live! 🎉
+
+For those wondering – what does a "cookbook" mean in context of web frameworks? It’s a collection of approachable tutorials that solve specific programming problems. The list of available recipes is still relatively small, but no worries, I got the feeling it will grow pretty soon, so better keep it bookmarked. 
+Interested in contributing? Start by filing an issue under the tag "cookbook idea".
+
+Do you want to know the secrets of Vue.js consultants? 🤫
+Chris Fritz breaks the silence and shares some of the incredibly useful patterns that will boost your productivity!
+
+— Damian]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/82</link>
+            <guid>https://news.vuejs.org/issues/82</guid>
+            <description><![CDATA[Still waiting for Native Mobile Apps written in Vue? Wait no longer! NativeScript-Vue just hit version 1.0 and has new docs. 🚀
+
+Vue.js Amsterdam was a blast! 💥 More than 1000 people gathered in Theater Amsterdam last week to see some incredible talks. We will let you know as soon as the recordings become available. 
+
+For now you can check out the slides from Guillaume Chau’s presentation titled: “Apollo, GraphQL and Vue: The Ultimate Stack”.
+
+Also, if you identify yourself as a women you can totally get a scholarship ticket for the upcoming VueConf US thanks to the Vue Vixens 🦊 initiative! Just fill out this form (https://ladeezfirstmedia.typeform.com/to/MRM5cV).
+— Damian]]></description>
+            <content:encoded><![CDATA[Still waiting for Native Mobile Apps written in Vue? Wait no longer! NativeScript-Vue just hit version 1.0 and has new docs. 🚀
+
+Vue.js Amsterdam was a blast! 💥 More than 1000 people gathered in Theater Amsterdam last week to see some incredible talks. We will let you know as soon as the recordings become available. 
+
+For now you can check out the slides from Guillaume Chau’s presentation titled: “Apollo, GraphQL and Vue: The Ultimate Stack”.
+
+Also, if you identify yourself as a women you can totally get a scholarship ticket for the upcoming VueConf US thanks to the Vue Vixens 🦊 initiative! Just fill out this form (https://ladeezfirstmedia.typeform.com/to/MRM5cV).
+— Damian]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/123</link>
+            <guid>https://news.vuejs.org/issues/123</guid>
+            <description><![CDATA[Hello!
+
+Great news – Vue 2.5.18 is out now for you to use with version 2.6 underway. If you would like to check out how the works are going, provide your insight or help out, take a look at the [2.6 project board](https://github.com/vuejs/vue/projects/4) on GitHub.
+
+Also, the new version 5.0 of the [eslint-plugin-vue](https://vuejs.github.io/eslint-plugin-vue) has been released. It covers even more rules from the [official style guide](https://vuejs.org/v2/style-guide)! Upgrade to the new version and improve your codebase with ease.
+
+Enjoy,
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Great news – Vue 2.5.18 is out now for you to use with version 2.6 underway. If you would like to check out how the works are going, provide your insight or help out, take a look at the [2.6 project board](https://github.com/vuejs/vue/projects/4) on GitHub.
+
+Also, the new version 5.0 of the [eslint-plugin-vue](https://vuejs.github.io/eslint-plugin-vue) has been released. It covers even more rules from the [official style guide](https://vuejs.org/v2/style-guide)! Upgrade to the new version and improve your codebase with ease.
+
+Enjoy,
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/133</link>
+            <guid>https://news.vuejs.org/issues/133</guid>
+            <description><![CDATA[Hello,
+
+how are you doing? Evan You has published a [new request for comments](https://github.com/vuejs/rfcs/pull/17?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) regarding the introduction of native class API support. If you have any opinions on the topic, check out the RFC. Don’t worry though, this won’t affect the current object-based syntax. The change will however, make it unnecessary to use third party libraries like vue-class-component.
+
+Do you remember the State of Vue.js? Monterail released it back in 2017, and this week they published an [updated 2019 version](https://www.monterail.com/state-of-vuejs-report?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) with new interviews, case studies and an article by Evan You. Check it out.
+
+Cheers,
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+how are you doing? Evan You has published a [new request for comments](https://github.com/vuejs/rfcs/pull/17?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) regarding the introduction of native class API support. If you have any opinions on the topic, check out the RFC. Don’t worry though, this won’t affect the current object-based syntax. The change will however, make it unnecessary to use third party libraries like vue-class-component.
+
+Do you remember the State of Vue.js? Monterail released it back in 2017, and this week they published an [updated 2019 version](https://www.monterail.com/state-of-vuejs-report?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter) with new interviews, case studies and an article by Evan You. Check it out.
+
+Cheers,
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/140</link>
+            <guid>https://news.vuejs.org/issues/140</guid>
+            <description><![CDATA[Hello!
+
+Whoa, there is so much content this week we had a really hard time picking up the articles (some of them might show up next week).
+
+First of all, [Vuex got a new release](https://github.com/vuejs/vuex/releases/tag/v3.1.1) which will definitely make the NativeScript devs happy, since now it supports debugging with the remote Vue Devtools. 🎉
+
+The [Vue-CLI v4.0.0-alpha](https://github.com/vuejs/vue-cli/releases/tag/v4.0.0-alpha.0) has also been released with several meaningful changes like bumping the versions on webpack-chain, core-js, ESLint, and workbox in the PWA plugin. Take it for a spin and let us know of any issues.
+
+Also, [Natalia](https://twitter.com/N_Tepluhina) has written an [amazing article](https://dev.to/n_tepluhina/apollo-state-management-in-vue-application-8k0) on managing state when using Apollo and is probably a must read those of you considering using Apollo in your project.
+
+Cheers,
+
+*— [Damian Dulisz](http://twitter.com/damiandulisz)*]]></description>
+            <content:encoded><![CDATA[Hello!
+
+Whoa, there is so much content this week we had a really hard time picking up the articles (some of them might show up next week).
+
+First of all, [Vuex got a new release](https://github.com/vuejs/vuex/releases/tag/v3.1.1) which will definitely make the NativeScript devs happy, since now it supports debugging with the remote Vue Devtools. 🎉
+
+The [Vue-CLI v4.0.0-alpha](https://github.com/vuejs/vue-cli/releases/tag/v4.0.0-alpha.0) has also been released with several meaningful changes like bumping the versions on webpack-chain, core-js, ESLint, and workbox in the PWA plugin. Take it for a spin and let us know of any issues.
+
+Also, [Natalia](https://twitter.com/N_Tepluhina) has written an [amazing article](https://dev.to/n_tepluhina/apollo-state-management-in-vue-application-8k0) on managing state when using Apollo and is probably a must read those of you considering using Apollo in your project.
+
+Cheers,
+
+*— [Damian Dulisz](http://twitter.com/damiandulisz)*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/141</link>
+            <guid>https://news.vuejs.org/issues/141</guid>
+            <description><![CDATA[Hello!
+
+There is quite a spread of articles this week that should be of interest to a variety of skill level. From migrating to Vue from jQuery to building component libraries with Lerna, Storybook, and npm.
+
+We also have a couple of new releases: Vetur 0.20.0 and Gridsome 0.6!
+
+Cheers,
+
+— [Ben Hong](https://twitter.com/bencodezen?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter "Ben Hong's Twitter Profile")]]></description>
+            <content:encoded><![CDATA[Hello!
+
+There is quite a spread of articles this week that should be of interest to a variety of skill level. From migrating to Vue from jQuery to building component libraries with Lerna, Storybook, and npm.
+
+We also have a couple of new releases: Vetur 0.20.0 and Gridsome 0.6!
+
+Cheers,
+
+— [Ben Hong](https://twitter.com/bencodezen?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter "Ben Hong's Twitter Profile")]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/106</link>
+            <guid>https://news.vuejs.org/issues/106</guid>
+            <description><![CDATA[Hey there,
+
+the Vue.js Sprint has already ended – it was truly a amazing week. 8 people, 6 days, ~10h of work per day). We managed to make significant progress on several projects, most notably, but not limited to, the Vue Devtools.
+
+There’s also an updated version of the this website where you can now search through all the stories we published. See __Search__ link in navbar.
+
+Other projects like the eslint-plugin-vue have also seen additional improvements.
+
+We also managed to organise a rather large meet-up for the local community which gathered around 130 people. Talks were recorded and are expected to be published by next week.
+
+All this is thanks to you and your continuous support on [Open Collective](https://opencollective.com/vuejs/). 💚❤️💛 I will be writing a more detailed article about what exactly has been done, hopefully by the end of the week.
+
+Great news for everyone living in South and Central America – A new Vue conference called [Vue.js Summit](https://vuejssummit.com/) is coming to Säo Paulo, Brazil in late August. Check it out!
+
+Also, [VueConf TO](https://vuetoronto.com/tickets/) early bird tickets are available now! Many great talks and workshops there.
+
+*— Damian Dulisz*
+
+*PS Really sorry for the slight delay – moving places is never easy. *🏡]]></description>
+            <content:encoded><![CDATA[Hey there,
+
+the Vue.js Sprint has already ended – it was truly a amazing week. 8 people, 6 days, ~10h of work per day). We managed to make significant progress on several projects, most notably, but not limited to, the Vue Devtools.
+
+There’s also an updated version of the this website where you can now search through all the stories we published. See __Search__ link in navbar.
+
+Other projects like the eslint-plugin-vue have also seen additional improvements.
+
+We also managed to organise a rather large meet-up for the local community which gathered around 130 people. Talks were recorded and are expected to be published by next week.
+
+All this is thanks to you and your continuous support on [Open Collective](https://opencollective.com/vuejs/). 💚❤️💛 I will be writing a more detailed article about what exactly has been done, hopefully by the end of the week.
+
+Great news for everyone living in South and Central America – A new Vue conference called [Vue.js Summit](https://vuejssummit.com/) is coming to Säo Paulo, Brazil in late August. Check it out!
+
+Also, [VueConf TO](https://vuetoronto.com/tickets/) early bird tickets are available now! Many great talks and workshops there.
+
+*— Damian Dulisz*
+
+*PS Really sorry for the slight delay – moving places is never easy. *🏡]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/120</link>
+            <guid>https://news.vuejs.org/issues/120</guid>
+            <description><![CDATA[Hello,
+
+what an insane week! Tons of conference content including slides from the VueConf Toronto conference, as well as 3 new videos from Connect.Tech event from the Vue.js path.
+
+There’s also a [great article](https://medium.com/vue-mastery/evan-you-previews-vue-js-3-0-ab063dec3547) by Gregg and Adam that sums up Evan’s talk about Vue.js 3.0.
+
+The results from the [State of JavaScript 2018](https://2018.stateofjs.com/introduction) survey are here! As anticipated – Vue’s adoption is increasing drastically and has the highest satisfaction rate out there among front-end frameworks!
+
+Also, please welcome [An Phan](https://twitter.com/notphanan), a fellow Vue.js core team member and the creator of [koel](https://github.com/phanan/koel), as he joins our News team! Great to have you on board!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hello,
+
+what an insane week! Tons of conference content including slides from the VueConf Toronto conference, as well as 3 new videos from Connect.Tech event from the Vue.js path.
+
+There’s also a [great article](https://medium.com/vue-mastery/evan-you-previews-vue-js-3-0-ab063dec3547) by Gregg and Adam that sums up Evan’s talk about Vue.js 3.0.
+
+The results from the [State of JavaScript 2018](https://2018.stateofjs.com/introduction) survey are here! As anticipated – Vue’s adoption is increasing drastically and has the highest satisfaction rate out there among front-end frameworks!
+
+Also, please welcome [An Phan](https://twitter.com/notphanan), a fellow Vue.js core team member and the creator of [koel](https://github.com/phanan/koel), as he joins our News team! Great to have you on board!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/105</link>
+            <guid>https://news.vuejs.org/issues/105</guid>
+            <description><![CDATA[Hey,
+
+I have some great news from the front – we’re still alive and kicking! 
+
+The Vue.js Sprint is going very well and we already made significant progress on a number of tasks. Those include finishing some new eslint-plugin-vue rules, adding those to a brand new eslint config tab inside the Vue CLI UI. There are also __huge performance improvements__ to both the events and Vuex tabs inside the Vue Devtools. Oh and did I mention the [Beta release](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)?
+
+I personally worked on the News 2.0 release which will include support for tags for every story we publish along with a way to search through all the stories we published.
+
+Of course that’s not all we did and we still got 3 days before us. You can expect a proper summary of the whole sprint around next week!
+
+Also, if you identify as a woman, you might be interested [in this tweet by VueVixens](https://twitter.com/VueVixens/status/1024007626231820288)!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey,
+
+I have some great news from the front – we’re still alive and kicking! 
+
+The Vue.js Sprint is going very well and we already made significant progress on a number of tasks. Those include finishing some new eslint-plugin-vue rules, adding those to a brand new eslint config tab inside the Vue CLI UI. There are also __huge performance improvements__ to both the events and Vuex tabs inside the Vue Devtools. Oh and did I mention the [Beta release](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)?
+
+I personally worked on the News 2.0 release which will include support for tags for every story we publish along with a way to search through all the stories we published.
+
+Of course that’s not all we did and we still got 3 days before us. You can expect a proper summary of the whole sprint around next week!
+
+Also, if you identify as a woman, you might be interested [in this tweet by VueVixens](https://twitter.com/VueVixens/status/1024007626231820288)!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+        <item>
+            <link>https://news.vuejs.org/issues/103</link>
+            <guid>https://news.vuejs.org/issues/103</guid>
+            <description><![CDATA[Hey,
+
+I’m happy to announce that VueConf is coming to Toronto, Canada 🇨🇦, November 2018! The website is still being prepared and should launch next week along with the tickets, but you can already follow them on Twitter __[@VueToronto](https://twitter.com/VueToronto)__.
+
+Enjoy!
+
+*— Damian Dulisz*]]></description>
+            <content:encoded><![CDATA[Hey,
+
+I’m happy to announce that VueConf is coming to Toronto, Canada 🇨🇦, November 2018! The website is still being prepared and should launch next week along with the tickets, but you can already follow them on Twitter __[@VueToronto](https://twitter.com/VueToronto)__.
+
+Enjoy!
+
+*— Damian Dulisz*]]></content:encoded>
+        </item>
+    </channel>
+</rss>

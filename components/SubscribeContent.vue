@@ -24,6 +24,15 @@ div
     )
     small.small Previously known as Vue.js Newsletter
 
+  h2.sidebar-header Or subscribe using
+  a.button.podcast-subscribe(
+    href="https://news.vuejs.org/feed.xml"
+    target="_blank"
+    rel="noopener"
+    @click="subscribe"
+  )
+    | RSS
+
   h2.sidebar-header Subscribe to the podcast
   .podcast-list
     a.button.podcast-subscribe(
@@ -53,7 +62,7 @@ div
       rel="noopener"
       @click="subscribe"
     )
-      | RSS
+      | Podcast RSS
 </template>
 
 <script>
@@ -86,7 +95,7 @@ export default {
     outline: none
     border-color: #42b983
 
-.newsletter-button
+.button.newsletter-button
   position: absolute
   padding: 4px 20px
   right: 4px
