@@ -32,6 +32,7 @@
     "node-sass": "^4.7.2",
     "nuxt": "^2.7.0",
     "pug": "^2.0.0-rc.4",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^6.0.6",
     "vue-multiselect": "^2.1.0",
     "vue-tweet-embed": "^2.1.1"
@@ -47,7 +48,6 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "prettier": "1.14.3",
-    "pug-plain-loader": "^1.0.0"
+    "prettier": "1.14.3"
   }
 }
