@@ -21,8 +21,9 @@
   p.sponsors.logos
     a.logo-link.logo-vuemastery(href="http://www.vuemastery.com/")
       img(src="~assets/images/vue-mastery-logo.png")
+  p.sponsors.logos
     a.logo-link.logo-vuemastery(href="https://www.nativescript.org/vue?utm_source=vuejsnewsletter&utm_medium=email&utm_campaign=nativescript-awareness")
-      img(style="max-width: 180px", src="https://cdn.discordapp.com/attachments/491313387129667594/602523039229542400/nativescript-logo.png")
+      img(style="height: 150px;", src="https://cdn.discordapp.com/attachments/491313387129667594/602523039229542400/nativescript-logo.png")
 </template>
 
 <script>
