@@ -4,7 +4,7 @@ import apiConfig from './api/config'
 
 let modules = [
   ['@nuxtjs/google-analytics', { id: 'UA-78373326-4' }],
-  '@nuxtjs/onesignal',
+  // '@nuxtjs/onesignal',
   '@nuxtjs/pwa',
   '@nuxtjs/feed'
 ]
@@ -67,15 +67,15 @@ module.exports = {
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     HOST: process.env.HOST
   },
-  oneSignal: {
-    init: {
-      appId: 'ef270e2f-4469-4a50-965f-0ba7ea1d936f',
-      allowLocalhostAsSecureOrigin: true,
-      welcomeNotification: {
-        disable: true
-      }
-    }
-  },
+  // oneSignal: {
+  //   init: {
+  //     appId: 'ef270e2f-4469-4a50-965f-0ba7ea1d936f',
+  //     allowLocalhostAsSecureOrigin: true,
+  //     welcomeNotification: {
+  //       disable: true
+  //     }
+  //   }
+  // },
   manifest: {
     name: 'Official Vue.js News',
     short_name: 'Vue.js News',
@@ -85,6 +85,7 @@ module.exports = {
     description: 'Official Vue.js News'
   },
   generate: {
+    interval: 100,
     routes () {
       return getIssues().then(data =>
         data.items.map(item => `/issues/${item.fields.issueNumber}/`)
