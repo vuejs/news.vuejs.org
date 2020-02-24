@@ -103,6 +103,7 @@ export default {
   background: $color-green
   color: #fff
   font-weight: 600
+  -webkit-appearance: none
 
 .small
   display: block
