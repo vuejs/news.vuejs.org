@@ -10,20 +10,32 @@
     li
       a.link(href="https://twitter.com/damiandulisz") Damian Dulisz
       | (Vue Core Team)
-    li
-      a.link(href="https://twitter.com/greggpollack") Gregg Pollack
-      | (Vue Mastery)
-    li
-      a.link(href="https://twitter.com/AdamJahr") Adam Jahr
-      | (Vue Mastery)
-  p.sponsors
-    | The production of the newsletter and podcast is graciously sponsored by:
+
+  h2.h2 Sponsors
+  p.section
+    | Help the project and become a
+    |
+    a.link(href="https://github.com/sponsors/shentao") sponsor
+    | using GitHub Sponsors.
+
+  h3.h3 Gold
   p.sponsors.logos
-    a.logo-link.logo-vuemastery(href="http://www.vuemastery.com/")
-      img(src="~assets/images/vue-mastery-logo.png")
+    a.logo-link.logo-vuemastery(href="https://us.vuejs.org/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter")
+      img(src="https://cdn.discordapp.com/attachments/560524372897562636/636900780481445888/ef278f141a55e3f44f50b8dbc1f9ca17.png" alt="VueConf.us" width="260px")
+    a.logo-link.logo-vuemastery(href="https://vueschool.io?utm_source=dmd&utm_medium=link&friend=vuenews")
+      img(src="https://cdn.discordapp.com/attachments/491313387129667594/678936303089483786/vueschool.png" alt="Vue School" width="320")
+
+  h3.h3 Silver
   p.sponsors.logos
-    a.logo-link.logo-vuemastery(href="https://www.nativescript.org/vue?utm_source=vuejsnewsletter&utm_medium=email&utm_campaign=nativescript-awareness")
-      img(style="height: 150px;", src="https://cdn.discordapp.com/attachments/491313387129667594/602523039229542400/nativescript-logo.png")
+    a.logo-link.logo-vuemastery(href="https://www.storyblok.com/developers?utm_source=newsletter&utm_medium=logo&utm_campaign=vuejs-newsletter")
+      img(src="https://a.storyblok.com/f/51376/3856x824/fea44d52a9/colored-full.png" alt="Storyblok" width="240px")
+
+  h3.h3 Bronze
+  p.sponsors.logos
+    a.logo-link.logo-vuemastery(href="https://www.vuemastery.com/")
+      img(src="https://cdn.discordapp.com/attachments/258614093362102272/557267759130607630/Vue-Mastery-Big.png" alt="Vue Mastery" width="180px")
+    a.logo-link.logo-vuemastery(href="https://vuejobs.com/")
+      img(src="https://cdn.discordapp.com/attachments/560524372897562636/636900598700179456/vuejobs-logo.png" alt="Vue Jobs" width="140px")
 </template>
 
 <script>
@@ -38,9 +50,18 @@ export default {
 <style lang="sass" scoped>
 @import '~assets/branding'
 
+.h2
+  margin: 40px 0 10px
+  font-size: 1.6rem
+
+.h3
+  font-size: 1.4rem
+  margin-bottom: 20px
+  margin-top: 40px
+
 .link
   color: $color-green
-  margin-right: 8px
+  margin-right: 3px
 
 .section, .list, .sponsors
   margin-bottom: 18px
@@ -60,21 +81,12 @@ export default {
 
 .logo-link
   position: relative
+  margin: 15px
 
-  img
-    height: 2.4em
 
 @media #{$mini-only}
   .logo-and
     display: block
     position: relative
     top: 0.6em
-
-.logo-monterail
-  top: 0.6em
-  margin-right: 1em
-
-.logo-vuemastery
-  top: 0.5em
-  margin-left: 0.8em
 </style>
