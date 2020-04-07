@@ -20,8 +20,6 @@
 
   h3.h3 Gold
   p.sponsors.logos
-    a.logo-link.logo-vuemastery(href="https://us.vuejs.org/?utm_campaign=Vue.js%20News&utm_medium=email&utm_source=Revue%20newsletter")
-      img(src="https://cdn.discordapp.com/attachments/560524372897562636/636900780481445888/ef278f141a55e3f44f50b8dbc1f9ca17.png" alt="VueConf.us" width="260px")
     a.logo-link.logo-vuemastery(href="https://vueschool.io?utm_source=dmd&utm_medium=link&friend=vuenews")
       img(src="https://cdn.discordapp.com/attachments/491313387129667594/678936303089483786/vueschool.png" alt="Vue School" width="320")
 
