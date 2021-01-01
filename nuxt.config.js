@@ -51,7 +51,8 @@ const create = async feed => {
 
   items.map(flattenIssue).forEach(issue => {
     feed.addItem({
-      title: issue.name,
+      title: `#${issue.issueNumber} - ${issue.title}`,
+      date: new Date(issue.publishedOn),
       id: issue.issueNumber,
       link: `https://news.vuejs.org/issues/${issue.issueNumber}`,
       description: issue.description,
