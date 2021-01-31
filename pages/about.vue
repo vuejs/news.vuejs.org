@@ -20,8 +20,8 @@
 
   h3.h3 Gold
   p.sponsors.logos
-    a.logo-link.logo-vuemastery(href="https://vueschool.io?utm_source=dmd&utm_medium=link&friend=vuenews")
-      img(src="https://cdn.discordapp.com/attachments/491313387129667594/678936303089483786/vueschool.png" alt="Vue School" width="320")
+    a.logo-link.logo-vuemastery(href="https://vuejs.amsterdam/?utm_source=newsletter&utm_medium=logo&utm_campaign=vuejs-newsletter")
+      img(src="https://camo.githubusercontent.com/d70ce43e50f085dcaaba44706e75107b0f86ad6ab45d7cd75ec2d877db543d86/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3739333538333739373435343530333937362f3739333538333833313336393634363132302f7675656a73616d7374657264616d2e706e67" alt="Vue.js Amsterdam" width="320")
 
   h3.h3 Silver
   p.sponsors.logos
