@@ -29,7 +29,7 @@
     "contentful": "^5.0.5",
     "dotenv": "^4.0.0",
     "marked": "^0.3.19",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.7.0",
     "pug": "^2.0.0-rc.4",
     "pug-plain-loader": "^1.0.0",
