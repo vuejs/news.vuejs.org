@@ -4,22 +4,21 @@
   IssuesNav
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from 'vue'
 import Issue from '@/components/Issue'
 import IssuesNav from '@/components/IssuesNav'
 
-export default {
-  components: { Issue, IssuesNav },
-  transition (to, from) {
+const store = useStore()
+
+const issue = computed(() => store.issues[0])
+
+definePageMeta({
+  transition: (to, from) => {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
-  },
-  computed: {
-    issue () {
-      return this.$store.getters.issues[0]
-    }
   }
-}
+})
 </script>
 
 <style lang="sass">

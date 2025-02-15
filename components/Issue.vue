@@ -3,7 +3,7 @@ article.issue
   IssueHeader(:issue="issue")
   .issue-description
     MarkdownRenderer(:content="issue.description")
-  PlayPodcastButton(v-if="podcastExists", @click.native="playPodcast")
+  //- PlayPodcastButton(v-if="podcastExists", @click="playPodcast")
   hr.hr
   h1.issue-section-header Stories
   Story(v-for="story of stories", :story="story", :key="story.url")
@@ -12,52 +12,53 @@ article.issue
   Library(v-for="library of libraries", :library="library", :key="library.url")
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from 'vue'
 import Story from './Story'
 import Library from './Library'
 import PlayPodcastButton from './PlayPodcastButton'
-import eventBus from '@/helpers/eventBus'
 import IssueHeader from '@/components/IssueHeader'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 
-export default {
-  components: { Story, Library, PlayPodcastButton, IssueHeader, MarkdownRenderer },
-  props: {
-    issue: {
-      type: Object
-    }
-  },
-  computed: {
-    stories () {
-      if (!this.issue.stories) return []
-      return this.issue.stories
-        .filter(story => !story.fields.isLibrary)
-        .map(story => story.fields)
-    },
-    libraries () {
-      if (!this.issue.stories) return []
-      return this.issue.stories
-        .filter(story => story.fields.isLibrary)
-        .map(library => library.fields)
-    },
-    podcastExists () {
-      return !!this.issue.podcast.source
-    }
-  },
-  methods: {
-    playPodcast () {
-      this.$store.commit('SET_CURRENT_PODCAST', this.issue.issueNumber)
-      eventBus.$emit('play')
-    }
-  },
-  mounted () {
-    this.$ga.event('issue', 'open', this.issue.issueNumber)
+const props = defineProps<{
+  issue: {
+    issueNumber: number
+    description: string
+    stories: Array<{ fields: any }>
+    podcast: { source: string }
   }
+}>()
+
+const store = useStore()
+
+const stories = computed(() => {
+  if (!props.issue.stories) return []
+  return props.issue.stories
+    .filter(story => !story.fields.isLibrary)
+    .map(story => story.fields)
+})
+
+const libraries = computed(() => {
+  if (!props.issue.stories) return []
+  return props.issue.stories
+    .filter(story => story.fields.isLibrary)
+    .map(library => library.fields)
+})
+
+const podcastExists = computed(() => !!props.issue.podcast.source)
+
+const playPodcast = () => {
+  store.currentPodcastNumber = props.issue.issueNumber
+  // eventBus.$emit('play')
 }
+
+// onMounted(() => {
+//   this.$ga.event('issue', 'open', props.issue.issueNumber)
+// })
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .issue
   padding: 0 0 20px

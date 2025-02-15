@@ -3,45 +3,31 @@ div
   NavBar
   .container
     .content-container
-      nuxt
+      slot
     .sidebar-container
       SideBar
-    SubscribePrompt
-    PodcastPlayer
+    //- SubscribePrompt
+    //- PodcastPlayer
 </template>
 
-<script>
+<script setup lang="ts">
 import NavBar from '@/components/NavBar'
 import SideBar from '@/components/SideBar'
 import PodcastPlayer from '@/components/PodcastPlayer'
 import SubscribePrompt from '@/components/SubscribePrompt'
-
-export default {
-  components: {
-    NavBar,
-    SideBar,
-    PodcastPlayer,
-    SubscribePrompt
-  },
-  head () {
-    return {
-      title: 'News — Vue.js'
-    }
-  }
-}
 </script>
 
 <style lang="sass">
-@import 'assets/branding'
-@import 'vue-multiselect/dist/vue-multiselect.min.css'
+@use '~/assets/branding'
+// @use 'vue-multiselect/dist/vue-multiselect.min.css'
 
 html
   font:
-    family: $primary-font-stack
+    family: branding.$primary-font-stack
     size: 15px
   background: #fff
   margin: 0
-  color: $color-dark-blue
+  color: branding.$color-dark-blue
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
   -moz-osx-font-smoothing: grayscale
@@ -63,7 +49,7 @@ html
   padding: 0 18px 50px
   overflow: hidden
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     overflow: visible
     padding-left: 30px
     padding-right: 30px
@@ -71,14 +57,14 @@ html
 .content-container
   width: 100%
 
-  @media #{$medium-up}
+  @media #{branding.$medium-up}
     width: 65%
 
 .sidebar-container
   width: 35%
   display: none
 
-  @media #{$medium-up}
+  @media #{branding.$medium-up}
     display: block
 
 a
@@ -103,7 +89,7 @@ a
   transform: translate(-50px, 0)
 
 .button
-  background: $light-grey
+  background: branding.$light-grey
   padding: 5px 20px
   line-height: 30px
   letter-spacing: 0.1em
@@ -121,5 +107,5 @@ a
 .hr
   margin: 30px 0 20px
   border: none
-  border-top: 1px solid darken($light-grey, 10%)
+  // border-top: 1px solid darken(branding.$light-grey, 10%)
 </style>

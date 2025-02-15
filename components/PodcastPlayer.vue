@@ -13,17 +13,17 @@
     title="Step 15s forward"
     @click="stepBackward"
   )
-    Icon(icon="fast-backward")
+    //- Icon(icon="fast-backward")
   button.podcast-player-button(
     title="Play/Pause"
     @click="togglePlayer"
   )
-    Icon(:icon="isPaused ? 'play' : 'pause'")
+    //- Icon(:icon="isPaused ? 'play' : 'pause'")
   button.podcast-player-button(
     title="Step 15s backward"
     @click="stepForward"
   )
-    Icon(icon="fast-forward")
+    //- Icon(icon="fast-forward")
   nuxt-link.podcast-details(
     :to="{ name: 'issues-number', params: { number: podcast.issueNumber } }"
   )
@@ -33,101 +33,101 @@
       | {{ podcast.title }}
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+
 import ProgressBar from './ProgressBar'
-import { mapGetters } from 'vuex'
-import eventBus from '@/helpers/eventBus'
-import Icon from '@fortawesome/vue-fontawesome'
+// import Icon from '@fortawesome/vue-fontawesome'
+// import eventBus from '@/helpers/eventBus'
 
-export default {
-  components: { ProgressBar, Icon },
-  data () {
-    return {
-      isPaused: true,
-      progress: 0,
-      totalDuration: 0
-    }
-  },
-  computed: {
-    ...mapGetters({
-      podcast: 'currentPodcast'
-    }),
-    podcastExists () {
-      return this.podcast && this.podcast.source
-    }
-  },
-  methods: {
-    togglePlayer () {
-      this.isPaused = !this.isPaused
-      // Couldn’t use watch, because of Safar’s autoplay policy
-      if (this.isPaused) {
-        this.$refs.player.pause()
-      } else {
-        this.$refs.player.play()
-        this.sendEvent()
-      }
-    },
-    stepBackward () {
-      this.$refs.player.currentTime -= 15
-    },
-    stepForward () {
-      this.$refs.player.currentTime += 15
-    },
-    updateTime () {
-      const currentTime = parseFloat(this.$refs.player.currentTime)
-      this.progress = parseFloat((currentTime / this.totalDuration) * 100)
-    },
-    onLoaded () {
-      this.totalDuration = parseInt(this.$refs.player.duration)
-    },
-    updateProgress (seekPos) {
-      this.$refs.player.currentTime = parseInt(this.totalDuration * seekPos)
-    },
-    nextPodcast () {
-      this.$store.dispatch('playNextPodcast')
-    },
-    sendEvent () {
-      this.$ga.event('Podcasts', 'play', `Issue #${this.podcast.issueNumber}`)
-    },
-    initPlayer () {
-      this.$refs.player.src = this.podcast.source
-      this.$refs.player.addEventListener('canplay', () => {
-        if (!this.isPaused) {
-          this.sendEvent()
-          this.$refs.player.play()
-        }
-      })
-    }
-  },
-  watch: {
-    podcast (newPodcast) {
-      this.$nextTick(() => {
-        this.$refs.player.src = newPodcast.source
-      })
-    }
-  },
-  mounted () {
-    if (this.podcastExists) this.initPlayer()
+const store = useStore()
 
-    eventBus.$on('play', () => {
-      this.$nextTick(() => {
-        if (this.podcastExists) {
-          this.initPlayer()
-          this.sendEvent()
-          this.$refs.player.play()
-          this.isPaused = false
-        }
-      })
-    })
-  },
-  beforeDestroy () {
-    eventBus.$off('play')
+const isPaused = ref(true)
+const progress = ref(0)
+const totalDuration = ref(0)
+const player = ref<HTMLAudioElement | null>(null)
+
+const podcast = computed(() => store.currentPodcast)
+const podcastExists = computed(() => podcast.value && podcast.value.source)
+
+const togglePlayer = () => {
+  isPaused.value = !isPaused.value
+  if (isPaused.value) {
+    player.value?.pause()
+  } else {
+    player.value?.play()
+    sendEvent()
   }
 }
+
+const stepBackward = () => {
+  if (player.value) player.value.currentTime -= 15
+}
+
+const stepForward = () => {
+  if (player.value) player.value.currentTime += 15
+}
+
+const updateTime = () => {
+  if (player.value) {
+    const currentTime = parseFloat(player.value.currentTime.toString())
+    progress.value = parseFloat((currentTime / totalDuration.value) * 100)
+  }
+}
+
+const onLoaded = () => {
+  if (player.value) totalDuration.value = parseInt(player.value.duration.toString())
+}
+
+const updateProgress = (seekPos: number) => {
+  if (player.value) player.value.currentTime = parseInt((totalDuration.value * seekPos).toString())
+}
+
+const nextPodcast = () => {
+  store.playNextPodcast()
+}
+
+const sendEvent = () => {
+  // Assuming $ga is globally available
+  window.$ga.event('Podcasts', 'play', `Issue #${podcast.value.issueNumber}`)
+}
+
+const initPlayer = () => {
+  if (player.value) {
+    player.value.src = podcast.value.source
+    player.value.addEventListener('canplay', () => {
+      if (!isPaused.value) {
+        sendEvent()
+        player.value.play()
+      }
+    })
+  }
+}
+
+watch(podcast, (newPodcast) => {
+  if (player.value) player.value.src = newPodcast.source
+})
+
+// onMounted(() => {
+//   if (podcastExists.value) initPlayer()
+
+//   eventBus.$on('play', () => {
+//     if (podcastExists.value) {
+//       initPlayer()
+//       sendEvent()
+//       player.value?.play()
+//       isPaused.value = false
+//     }
+//   })
+// })
+
+// onBeforeUnmount(() => {
+//   eventBus.$off('play')
+// })
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .podcast
   position: fixed
@@ -137,13 +137,13 @@ export default {
   height: 60px
   display: flex
   padding: 10px
-  background: darken($color-dark-blue, 10%)
+  // background: darken($color-dark-blue, 10%)
   border-top: 1px solid #d0d0d0
 
-  &:hover
+  // &:hover
 
-    /deep/ .podcast-progress-bar
-      transform: scaleY(2)
+  //   /deep/ .podcast-progress-bar
+  //     transform: scaleY(2)
 
 .podcast-audio
   width: 100%
@@ -152,14 +152,14 @@ export default {
   display: flex
   width: 100%
   align-items: center
-  color: $color-green
+  color: branding.$color-green
   justify-content: flex-end
 
-  @media #{$medium-up}
-    justify-content: flex-start
+  // @media #{branding.$medium-up}
+  //   justify-content: flex-start
 
 .podcast-number
-  font-family: $secondary-font-stack
+  font-family: branding.$secondary-font-stack
   font-size: 24px
   line-height: 32px
   padding-right: 10px
@@ -173,8 +173,8 @@ export default {
   max-width: calc(100% - 250px)
   white-space: nowrap
 
-  @media #{$medium-up}
-    display: inline-block
+  // @media #{branding.$medium-up}
+  //   display: inline-block
 
 .podcast-player-button
   padding-right: 10px
@@ -189,9 +189,9 @@ export default {
     width: 22px
     margin: 0 0 0 auto
     cursor: pointer
-    color: $color-green
+    color: branding.$color-green
 
-    @media #{$medium-up}
-      height: 24px
-      width: 24px
+    // @media #{branding.$medium-up}
+    //   height: 24px
+      // width: 24px
 </style>

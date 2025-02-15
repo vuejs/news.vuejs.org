@@ -38,17 +38,17 @@
       img(src="https://cdn.discordapp.com/attachments/560524372897562636/636900598700179456/vuejobs-logo.png" alt="Vue Jobs" width="140px")
 </template>
 
-<script>
-export default {
-  transition (to, from) {
+<script setup lang="ts">
+definePageMeta({
+  transition: (to, from) => {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
   }
-}
+})
 </script>
 
 <style lang="sass" scoped>
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .h2
   margin: 40px 0 10px
@@ -60,7 +60,7 @@ export default {
   margin-top: 40px
 
 .link
-  color: $color-green
+  color: branding.$color-green
   margin-right: 3px
 
 .section, .list, .sponsors
@@ -70,11 +70,11 @@ export default {
   font-size: 15px
   line-height: 1.4
 
-  @media #{$small-up}
-    font-size: 16px
+  // @media #{branding.$small-up}
+  //   font-size: 16px
 
-  @media #{$medium-up}
-    font-size: 18px
+  // @media #{branding.$medium-up}
+  //   font-size: 18px
 
 .logos
   text-align: center
@@ -84,9 +84,9 @@ export default {
   margin: 15px
 
 
-@media #{$mini-only}
-  .logo-and
-    display: block
-    position: relative
-    top: 0.6em
+// @media #{branding.$mini-only}
+//   .logo-and
+//     display: block
+//     position: relative
+//     top: 0.6em
 </style>

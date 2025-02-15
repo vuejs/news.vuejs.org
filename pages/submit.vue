@@ -16,13 +16,13 @@
     | Loading...
 </template>
 
-<script>
-export default {
-  transition (to, from) {
+<script setup lang="ts">
+definePageMeta({
+  transition: (to, from) => {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
   }
-}
+})
 </script>
 
 <style lang="sass" scoped>

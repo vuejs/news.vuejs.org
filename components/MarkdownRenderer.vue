@@ -2,29 +2,25 @@
   .markdown(v-html="html")
 </template>
 
-<script>
-import marked from 'marked'
+<script setup lang="ts">
+import { computed } from 'vue'
+import { marked } from 'marked'
 
-export default {
-  props: {
-    content: {
-      type: String,
-      required: true
-    }
-  },
-  computed: {
-    html () {
-      return marked(this.content)
-    }
-  }
-}
+const props = defineProps<{
+  content: string
+}>()
+
+const html = computed(() => {
+  return marked.parse(props.content)
+})
 </script>
 
 <style lang="sass">
-@import 'assets/branding'
+@use '~/assets/branding'
 
 mark
-  background: $color-blue
+  background: branding.$color-blue
+  background: branding.$color-blue
   color: #fff
   padding: 0 6px
   font-weight: 700
@@ -41,15 +37,15 @@ mark
   li
     line-height: 1.2
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     font-size: 16px
 
-  @media #{$medium-up}
+  @media #{branding.$medium-up}
     font-size: 18px
 
   a
     font-weight: 600
-    color: $color-green
+    color: branding.$color-green
 
     &:hover
       text-decoration: underline

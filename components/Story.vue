@@ -30,87 +30,92 @@
     )
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from 'vue'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 
-export default {
-  components: { MarkdownRenderer },
-  props: {
-    story: {
-      type: Object
-    },
-    query: {
-      type: String,
-      default: ''
-    }
-  },
-  computed: {
-    tags () {
-      if (!this.story.tags) return []
-      return this.story.tags.map(
-        tagObj => this.$store.state.tags.find(tag => tag.id === tagObj.sys.id)
-      )
-    },
-    tagNames () {
-      return this.tags.map(tag => tag.name)
-    },
-    description () {
-      return !this.queries.length
-        ? this.story.description
-        : this.queries.reduce((desc, query) => {
-          return desc.replace(new RegExp(query), `<mark>${query}</mark>`)
-        }, this.story.description)
-    },
-    queries () {
-      return this.query.trim().length
-        ? this.query.trim().split(' ')
-        : []
-    },
-    specialTypeStory () {
-      switch (true) {
-        case this.tagNames.includes('tweet'):
-          return () => import('@/components/stories/TweetStory')
-        default:
-          return false
-      }
-    },
-    imageUrl () {
-      if (this.story.image) {
-        return `${this.story.image.fields.file.url}?fm=jpg&fl=progressive`
-      }
-    }
+const props = defineProps<{
+  story: {
+    image?: { fields: { file: { url: string } } }
+    title: string
+    url: string
+    author?: string
+    isSponsored?: boolean
+    tags?: Array<{ sys: { id: string } }>
+    description?: string
   }
-}
+  query?: string
+}>()
+
+const store = useStore()
+
+const tags = computed(() => {
+  if (!props.story.tags) return []
+  return props.story.tags.map(
+    tagObj => store.tags.find(tag => tag.id === tagObj.sys.id)
+  )
+})
+
+const tagNames = computed(() => tags.value.map(tag => tag.name))
+
+const queries = computed(() => {
+  return props.query?.trim().length
+    ? props.query.trim().split(' ')
+    : []
+})
+
+const description = computed(() => {
+  return !queries.value.length
+    ? props.story.description
+    : queries.value.reduce((desc, query) => {
+      return desc.replace(new RegExp(query, 'gi'), `<mark>${query}</mark>`)
+    }, props.story.description)
+})
+
+const specialTypeStory = computed(() => {
+  switch (true) {
+    // case tagNames.value.includes('tweet'):
+    //   return () => import('@/components/stories/TweetStory')
+    default:
+      return false
+  }
+})
+
+const imageUrl = computed(() => {
+  if (props.story.image) {
+    return `${props.story.image.fields.file.url}?fm=jpg&fl=progressive`
+  }
+})
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .story-link
 
   &:hover
     .story-title
-      color: $color-green
+      color: branding.$color-green
 
 .story-title
   font-size: 18px
   line-height: 1.2
   transition: color 0.1s ease
 
-  @media #{$small-up}
-    font-size: 24px
+  // @media #{branding.$small-up}
+  //   font-size: 24px
 
 .story-author
   margin: 2px 0 7px 0
   font-size: 18px
   font-weight: 600
-  color: $color-dark-blue
+  color: branding.$color-dark-blue
 
 .tag
   margin-right: 10px
   font-size: 14px
   font-weight: 600
-  background: $color-green
+  background: branding.$color-green
   padding: 2px 8px
   color: #fff
   border-radius: 5px
@@ -137,7 +142,7 @@ export default {
 //   overflow: hidden
 //   text-overflow: ellipsis
 //
-//   @media #{$small-up}
+//   @media #{branding.$small-up}
 //     font-weight: 600
 
 .story-description
@@ -146,10 +151,10 @@ export default {
   margin-bottom: 10px
   word-wrap: break-word
 
-  @media #{$small-up}
-    font-size: 16px
+  // @media #{branding.$small-up}
+  //   font-size: 16px
 
-  @media #{$medium-up}
-    font-size: 18px
+  // @media #{branding.$medium-up}
+  //   font-size: 18px
 
 </style>

@@ -8,17 +8,17 @@
     placeholder="Type to search"
     @keyup.enter="updateQuery"
   )
-  Multiselect(
-    :searchable="false"
-    :value="selectedTags"
-    :multiple="true"
-    :options="tags"
-    :close-on-select="false"
-    track-by="id"
-    label="name"
-    placeholder="Select tags"
-    @input="updateTags"
-  )
+  //- Multiselect(
+  //-   :searchable="false"
+  //-   :value="selectedTags"
+  //-   :multiple="true"
+  //-   :options="tags"
+  //-   :close-on-select="false"
+  //-   track-by="id"
+  //-   label="name"
+  //-   placeholder="Select tags"
+  //-   @input="updateTags"
+  //- )
   button.button.search-button(
     tabindex="0"
     type="button"
@@ -36,73 +36,64 @@
     Spinner
 </template>
 
-<script>
-import api from '../api/index'
+<script setup lang="ts">
+import { ref, computed, watch, onMounted } from 'vue'
+// import api from '../api/index'
 import Story from '@/components/Story'
-import Multiselect from 'vue-multiselect'
+// import Multiselect from 'vue-multiselect'
 import Spinner from '@/components/Spinner'
-import { mapState } from 'vuex'
 
-export default {
-  components: { Story, Multiselect, Spinner },
-  data () {
-    return {
-      isLoading: false,
-      query: '',
-      selectedTagNames: [],
-      stories: []
-    }
-  },
-  computed: {
-    ...mapState(['tags']),
-    selectedTags () {
-      return this.tags.filter(tag => this.selectedTagNames.includes(tag.name))
-    }
-  },
-  head () {
-    return {
-      title: 'Search | News – Vue.js'
-    }
-  },
-  methods: {
-    async searchStories () {
-      this.isLoading = true
-      try {
-        this.stories = await api.getStoriesByContent(this.query, this.selectedTags)
-      } catch (e) {
-        console.error(e)
-      }
-      this.isLoading = false
-    },
-    updateQuery () {
-      this.$router.push({
-        query: {
-          q: this.query,
-          tags: this.selectedTagNames
-        }
-      })
-    },
-    updateTags (tags) {
-      this.selectedTagNames = tags.map(tag => tag.name)
-    }
-  },
-  watch: {
-    '$route.query': 'searchStories'
-  },
-  created () {
-    if (this.$route.query.tags) {
-      this.selectedTagNames = this.$route.query.tags
-    }
+const store = useStore()
 
-    if (this.$route.query.q) {
-      this.query = this.$route.query.q
-    }
+const isLoading = ref(false)
+const query = ref('')
+const selectedTagNames = ref<string[]>([])
+const stories = ref([])
 
-    if (this.query || this.selectedTagNames.length) {
-      this.searchStories()
-    }
+const tags = computed(() => store.tags)
+
+const selectedTags = computed(() => {
+  return tags.value.filter(tag => selectedTagNames.value.includes(tag.name))
+})
+
+const searchStories = async () => {
+  isLoading.value = true
+  try {
+    // stories.value = await api.getStoriesByContent(query.value, selectedTags.value)
+  } catch (e) {
+    console.error(e)
   }
+  isLoading.value = false
 }
+
+const updateQuery = () => {
+  router.push({
+    query: {
+      q: query.value,
+      tags: selectedTagNames.value
+    }
+  })
+}
+
+const updateTags = (tags: any[]) => {
+  selectedTagNames.value = tags.map(tag => tag.name)
+}
+
+watch(() => route.query, searchStories)
+
+onMounted(() => {
+  if (route.query.tags) {
+    selectedTagNames.value = route.query.tags
+  }
+
+  if (route.query.q) {
+    query.value = route.query.q
+  }
+
+  if (query.value || selectedTagNames.value.length) {
+    searchStories()
+  }
+})
 </script>
 
 <style lang="sass" scoped>

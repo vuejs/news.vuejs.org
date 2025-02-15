@@ -14,33 +14,30 @@
     | .
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from 'vue'
 import IssueHeader from '@/components/IssueHeader'
 
-export default {
-  components: {
-    IssueHeader
-  },
-  transition (to, from) {
+const store = useStore()
+
+const issues = computed(() => store.issues)
+
+definePageMeta({
+  transition: (to, from) => {
     if (!from) return 'slide-right'
     return +to.query.page < +from.query.page ? 'slide-left' : 'slide-right'
-  },
-  computed: {
-    issues () {
-      return this.$store.getters.issues
-    }
   }
-}
+})
 </script>
 
 <style lang="sass" scoped>
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .h2
   margin-top: 40px
   padding-top: 40px
-  border-top: 1px solid $light-grey
+  border-top: 1px solid branding.$light-grey
 
   a
-    color: $color-green
+    color: branding.$color-green
 </style>

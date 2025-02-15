@@ -13,50 +13,53 @@
     ) Next issue →
 </template>
 
-<script>
-export default {
-  computed: {
-    issues () {
-      return this.$store.getters.issues
-    },
-    currentIssueNumber () {
-      return this.$route.name === 'issues-number'
-        ? parseInt(this.$route.params.number)
-        : this.issues[0].issueNumber
-    },
-    currentIndex () {
-      return this.issues.findIndex(issue => issue.issueNumber === this.currentIssueNumber)
-    },
-    previousIssue () {
-      const previousIssue = this.issues[this.currentIndex + 1]
-      return {
-        link: {
-          name: 'issues-number',
-          params: {
-            number: previousIssue && previousIssue.issueNumber
-          }
-        },
-        exists: !!previousIssue
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const store = useStore()
+const route = useRoute()
+
+const issues = computed(() => store.issues)
+
+const currentIssueNumber = computed(() => {
+  return route.path === '/issues'
+    ? parseInt(route.params.number)
+    : issues.value[0].issueNumber
+})
+
+const currentIndex = computed(() => {
+  return issues.value.findIndex(issue => issue.issueNumber === currentIssueNumber.value)
+})
+
+const previousIssue = computed(() => {
+  const previousIssue = issues.value[currentIndex.value + 1]
+  return {
+    link: {
+      name: 'issues-number',
+      params: {
+        number: previousIssue && previousIssue.issueNumber
       }
     },
-    nextIssue () {
-      const nextIssue = this.issues[this.currentIndex - 1]
-      return {
-        link: {
-          name: 'issues-number',
-          params: {
-            number: nextIssue && nextIssue.issueNumber
-          }
-        },
-        exists: !!nextIssue
-      }
-    }
+    exists: !!previousIssue
   }
-}
+})
+
+const nextIssue = computed(() => {
+  const nextIssue = issues.value[currentIndex.value - 1]
+  return {
+    link: {
+      name: 'issues-number',
+      params: {
+        number: nextIssue && nextIssue.issueNumber
+      }
+    },
+    exists: !!nextIssue
+  }
+})
 </script>
 
 <style lang="sass">
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .issues-nav
   position: relative
@@ -77,10 +80,10 @@ export default {
   border: none
   background: none
   color: #34495e
-  font-family: $primary-font-stack
+  font-family: branding.$primary-font-stack
 
-  @media #{$medium-up}
-    margin-top: 0
+  // @media #{branding.$medium-up}
+  //   margin-top: 0
 
 .issue-nav-link
   position: absolute

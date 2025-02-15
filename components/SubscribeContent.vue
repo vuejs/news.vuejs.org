@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .newsletter-form
   position: relative
@@ -89,7 +89,7 @@ export default {
   border-radius: 50px
   border: 1px solid #ccc
   font-size: 18px
-  font-family: $primary-font-stack
+  font-family: branding.$primary-font-stack
 
   &:focus
     outline: none
@@ -100,7 +100,7 @@ export default {
   padding: 4px 20px
   right: 4px
   top: 4px
-  background: $color-green
+  background: branding.$color-green
   color: #fff
   font-weight: 600
   -webkit-appearance: none
