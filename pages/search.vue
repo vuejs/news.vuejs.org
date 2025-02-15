@@ -59,7 +59,7 @@ const selectedTags = computed(() => {
 const searchStories = async () => {
   isLoading.value = true
   try {
-    // stories.value = await api.getStoriesByContent(query.value, selectedTags.value)
+    stories.value = await api.getStoriesByContent(query.value, selectedTags.value)
   } catch (e) {
     console.error(e)
   }

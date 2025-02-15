@@ -102,8 +102,8 @@ const imageUrl = computed(() => {
   line-height: 1.2
   transition: color 0.1s ease
 
-  // @media #{branding.$small-up}
-  //   font-size: 24px
+  @media #{branding.$small-up}
+    font-size: 24px
 
 .story-author
   margin: 2px 0 7px 0
@@ -132,18 +132,18 @@ const imageUrl = computed(() => {
   margin-bottom: 10px
   border-radius: 5px
 
-// .story-url
-//   margin-bottom: 10px
-//   margin-top: 5px
-//   max-width: 100%
-//   color: rgba($color-dark-blue, 0.8)
-//   font-weight: 400
-//   white-space: nowrap
-//   overflow: hidden
-//   text-overflow: ellipsis
-//
-//   @media #{branding.$small-up}
-//     font-weight: 600
+.story-url
+  margin-bottom: 10px
+  margin-top: 5px
+  max-width: 100%
+  // color: rgba($color-dark-blue, 0.8)
+  font-weight: 400
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+  @media #{branding.$small-up}
+    font-weight: 600
 
 .story-description
   font-size: 15px
@@ -151,10 +151,9 @@ const imageUrl = computed(() => {
   margin-bottom: 10px
   word-wrap: break-word
 
-  // @media #{branding.$small-up}
-  //   font-size: 16px
+  @media #{branding.$small-up}
+    font-size: 16px
 
-  // @media #{branding.$medium-up}
-  //   font-size: 18px
-
+  @media #{branding.$medium-up}
+    font-size: 18px
 </style>

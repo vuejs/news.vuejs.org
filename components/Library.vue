@@ -36,12 +36,12 @@ const owner = computed(() => getRepoData(props.library.url).owner)
 
 const repo = computed(() => getRepoData(props.library.url).repo)
 
-// const stars = computed(() => {
-//   if (!isGitHubRepo.value) return false
-//   return githubStats.value ? githubStats.value.stargazers_count : 0
-// })
+const stars = computed(() => {
+  if (!isGitHubRepo.value) return false
+  return githubStats.value ? githubStats.value.stargazers_count : 0
+})
 
-// const githubStats = ref(null)
+const githubStats = ref(null)
 
 // onMounted(async () => {
 //   if (isGitHubRepo.value) {
@@ -58,8 +58,8 @@ const repo = computed(() => getRepoData(props.library.url).repo)
   line-height: 1.2
   margin-bottom: 0
 
-  // @media #{branding.$small-up}
-  //   font-size: 24px
+  @media #{branding.$small-up}
+    font-size: 24px
 
 .library-link
   display: block
@@ -75,18 +75,18 @@ const repo = computed(() => getRepoData(props.library.url).repo)
   margin: 0 10px 5px 0
   font-size: 14px
 
-  // @media #{branding.$small-up}
-  //   font-size: 16px
-  //   font-weight: 600
+  @media #{branding.$small-up}
+    font-size: 16px
+    font-weight: 600
 
 .library-description
   font-size: 15px
   line-height: 1.4
   margin-bottom: 30px
 
-  // @media #{branding.$small-up}
-  //   font-size: 16px
+  @media #{branding.$small-up}
+    font-size: 16px
 
-  // @media #{branding.$medium-up}
-  //   font-size: 18px
+  @media #{branding.$medium-up}
+    font-size: 18px
 </style>

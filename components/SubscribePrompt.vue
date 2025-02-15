@@ -66,7 +66,7 @@ export default {
   font-weight: 600
   display: block
 
-  // @media #{branding.$medium-up}
+  @media #{branding.$medium-up}
   //   display: none
 
 .subscribe-prompt-close

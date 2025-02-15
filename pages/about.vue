@@ -70,11 +70,11 @@ definePageMeta({
   font-size: 15px
   line-height: 1.4
 
-  // @media #{branding.$small-up}
-  //   font-size: 16px
+  @media #{branding.$small-up}
+    font-size: 16px
 
-  // @media #{branding.$medium-up}
-  //   font-size: 18px
+  @media #{branding.$medium-up}
+    font-size: 18px
 
 .logos
   text-align: center
@@ -84,9 +84,9 @@ definePageMeta({
   margin: 15px
 
 
-// @media #{branding.$mini-only}
-//   .logo-and
-//     display: block
-//     position: relative
-//     top: 0.6em
+@media #{branding.$mini-only}
+  .logo-and
+    display: block
+    position: relative
+    top: 0.6em
 </style>

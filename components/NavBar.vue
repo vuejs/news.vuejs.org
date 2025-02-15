@@ -19,10 +19,6 @@
             nuxt-link(to="/about") About
 </template>
 
-<script setup lang="ts">
-// Add your script setup code here if needed
-</script>
-
 <style lang="sass">
 @use '~/assets/branding'
 
@@ -42,8 +38,8 @@
   height: 90px
   box-shadow: 0 0 1px rgba(#000, .25)
 
-  // @media #{branding.$small-up}
-  //   height: 60px
+  @media #{branding.$small-up}
+    height: 60px
 
 .nav-bar__inner
   max-width: 1200px
@@ -53,10 +49,10 @@
   display: flex
   flex-direction: column
 
-  // @media #{branding.$small-up}
-  //   padding-left: 30px
-  //   padding-right: 30px
-  //   display: block
+  @media #{branding.$small-up}
+    padding-left: 30px
+    padding-right: 30px
+    display: block
 
 .nav-bar__home
   display: flex
@@ -67,8 +63,8 @@
   font-family: branding.$secondary-font-stack
   font-weight: 500
 
-  // @media #{branding.$small-up}
-  //   display: inline
+  @media #{branding.$small-up}
+    display: inline
 
 .nav-bar__logo
   vertical-align: middle
@@ -79,8 +75,8 @@
 .nav-bar__logo-text
   display: none
 
-  // @media #{branding.$small-up}
-  //   display: inline-block
+  @media #{branding.$small-up}
+    display: inline-block
 
 .nav
   list-style-type: none
@@ -95,17 +91,17 @@
   justify-content: center
   align-items: center
 
-  // @media #{branding.$small-up}
-  //   right: 30px
-  //   top: 0
-  //   display: block
-  //   width: unset
+  @media #{branding.$small-up}
+    right: 30px
+    top: 0
+    display: block
+    width: unset
 
   ul
     padding: 0
 
-    // @media #{branding.$small-up}
-    //   padding-left: 40px
+    @media #{branding.$small-up}
+      padding-left: 40px
 
   li
     display: inline-block
@@ -113,14 +109,14 @@
     margin: 0 0 0 1em
     font-size: 0.9rem
 
-    // @media #{branding.$small-up}
-    //   font-size: 1rem
+    @media #{branding.$small-up}
+      font-size: 1rem
 
   li:first-of-type
     margin: 0
 
   .nav-bar__subscribe-link
 
-    // @media #{branding.$medium-up}
-    //   display: none
+    @media #{branding.$medium-up}
+      display: none
 </style>

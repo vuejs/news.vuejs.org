@@ -155,7 +155,7 @@ watch(podcast, (newPodcast) => {
   color: branding.$color-green
   justify-content: flex-end
 
-  // @media #{branding.$medium-up}
+  @media #{branding.$medium-up}
   //   justify-content: flex-start
 
 .podcast-number
@@ -173,7 +173,7 @@ watch(podcast, (newPodcast) => {
   max-width: calc(100% - 250px)
   white-space: nowrap
 
-  // @media #{branding.$medium-up}
+  @media #{branding.$medium-up}
   //   display: inline-block
 
 .podcast-player-button
@@ -191,7 +191,7 @@ watch(podcast, (newPodcast) => {
     cursor: pointer
     color: branding.$color-green
 
-    // @media #{branding.$medium-up}
+    @media #{branding.$medium-up}
     //   height: 24px
       // width: 24px
 </style>

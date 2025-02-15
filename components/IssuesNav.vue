@@ -82,7 +82,7 @@ const nextIssue = computed(() => {
   color: #34495e
   font-family: branding.$primary-font-stack
 
-  // @media #{branding.$medium-up}
+  @media #{branding.$medium-up}
   //   margin-top: 0
 
 .issue-nav-link
