@@ -12,64 +12,53 @@
     | {{ library.description }}
 </template>
 
-<script>
-function getRepoData (url) {
-  // eslint-disable-next-line no-unused-vars
-  const [repo, owner, ...rest] = url.replace(/\/$/, '').split('/').reverse()
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const props = defineProps<{
+  library: {
+    url: string
+    title: string
+    description: string
+  }
+}>()
+
+function getRepoData(url: string) {
+  const [repo, owner] = url.replace(/\/$/, '').split('/').reverse()
   return { owner, repo }
 }
 
-export default {
-  props: {
-    library: {
-      type: Object
-    }
-  },
-  data () {
-    return {
-      githubStats: null
-    }
-  },
-  computed: {
-    isGitHubRepo () {
-      return this.library.url.indexOf('github.com/') !== -1
-    },
-    title () {
-      return this.isGitHubRepo
-        ? `${this.owner}/${this.repo}`
-        : this.library.title
-    },
-    owner () {
-      const { owner } = getRepoData(this.library.url)
-      return owner
-    },
-    repo () {
-      const { repo } = getRepoData(this.library.url)
-      return repo
-    }
-    // stars () {
-    //   if (!this.isGitHubRepo) return false
-    //   return this.githubStats ? this.githubStats.stargazers_count : 0
-    // }
-  },
-  async mounted () {
-    // TODO: Uncomment once GitHub app has been created
-    // if (this.isGitHubRepo) {
-    //   this.githubStats = (await axios.get(`https://api.github.com/repos/${this.owner}/${this.repo}`)).data
-    // }
-  }
-}
+const isGitHubRepo = computed(() => props.library.url.indexOf('github.com/') !== -1)
+
+const title = computed(() => isGitHubRepo.value ? `${owner.value}/${repo.value}` : props.library.title)
+
+const owner = computed(() => getRepoData(props.library.url).owner)
+
+const repo = computed(() => getRepoData(props.library.url).repo)
+
+const stars = computed(() => {
+  if (!isGitHubRepo.value) return false
+  return githubStats.value ? githubStats.value.stargazers_count : 0
+})
+
+const githubStats = ref(null)
+
+// onMounted(async () => {
+//   if (isGitHubRepo.value) {
+//     githubStats.value = (await axios.get(`https://api.github.com/repos/${owner.value}/${repo.value}`)).data
+//   }
+// })
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .library-title
   font-size: 18px
   line-height: 1.2
   margin-bottom: 0
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     font-size: 24px
 
 .library-link
@@ -77,7 +66,7 @@ export default {
 
   &:hover
     .library-title
-      color: $color-green
+      color: branding.$color-green
 
 .library-stats,
 .library-url
@@ -86,7 +75,7 @@ export default {
   margin: 0 10px 5px 0
   font-size: 14px
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     font-size: 16px
     font-weight: 600
 
@@ -95,9 +84,9 @@ export default {
   line-height: 1.4
   margin-bottom: 30px
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     font-size: 16px
 
-  @media #{$medium-up}
+  @media #{branding.$medium-up}
     font-size: 18px
 </style>

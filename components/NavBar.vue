@@ -20,7 +20,7 @@
 </template>
 
 <style lang="sass">
-@import '../assets/branding'
+@use '~/assets/branding'
 
 .nav-bar
   display: block
@@ -38,7 +38,7 @@
   height: 90px
   box-shadow: 0 0 1px rgba(#000, .25)
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     height: 60px
 
 .nav-bar__inner
@@ -49,7 +49,7 @@
   display: flex
   flex-direction: column
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     padding-left: 30px
     padding-right: 30px
     display: block
@@ -60,10 +60,10 @@
   font-size: 1.5em
   line-height: 40px
   color: #2c3e50
-  font-family: $secondary-font-stack
+  font-family: branding.$secondary-font-stack
   font-weight: 500
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     display: inline
 
 .nav-bar__logo
@@ -75,7 +75,7 @@
 .nav-bar__logo-text
   display: none
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     display: inline-block
 
 .nav
@@ -91,7 +91,7 @@
   justify-content: center
   align-items: center
 
-  @media #{$small-up}
+  @media #{branding.$small-up}
     right: 30px
     top: 0
     display: block
@@ -100,7 +100,7 @@
   ul
     padding: 0
 
-    @media #{$small-up}
+    @media #{branding.$small-up}
       padding-left: 40px
 
   li
@@ -109,7 +109,7 @@
     margin: 0 0 0 1em
     font-size: 0.9rem
 
-    @media #{$small-up}
+    @media #{branding.$small-up}
       font-size: 1rem
 
   li:first-of-type
@@ -117,6 +117,6 @@
 
   .nav-bar__subscribe-link
 
-    @media #{$medium-up}
+    @media #{branding.$medium-up}
       display: none
 </style>

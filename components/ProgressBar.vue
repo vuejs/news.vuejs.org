@@ -3,35 +3,31 @@
   .podcast-progress(:style="progressStyle")
 </template>
 
-<script>
-export default {
-  props: {
-    progress: {
-      type: Number,
-      required: true,
-      default: 0
-    }
-  },
-  computed: {
-    progressStyle () {
-      return {
-        width: `${this.progress}%`
-      }
-    }
-  },
-  methods: {
-    updateProgress (e) {
-      let tag = e.target
-      const pos = tag.getBoundingClientRect()
-      const seekPos = (e.clientX - pos.left) / pos.width
-      this.$emit('update', seekPos)
-    }
-  }
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const props = defineProps<{
+  progress: number
+}>()
+
+const emit = defineEmits<{
+  (e: 'update', seekPos: number): void
+}>()
+
+const progressStyle = computed(() => ({
+  width: `${props.progress}%`
+}))
+
+const updateProgress = (e: MouseEvent) => {
+  const tag = e.target as HTMLElement
+  const pos = tag.getBoundingClientRect()
+  const seekPos = (e.clientX - pos.left) / pos.width
+  emit('update', seekPos)
 }
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .podcast-progress-bar
   position: absolute
@@ -40,7 +36,7 @@ export default {
   right: 0
   width: 100%
   height: 5px
-  background: darken($color-dark-blue, 15%)
+  // background: darken($color-dark-blue, 15%)
   cursor: pointer
   overflow: hidden
   transition: transform 0.2s ease
@@ -48,7 +44,7 @@ export default {
 
 .podcast-progress
   height: 10px
-  background: linear-gradient(to left, lighten($color-green, 5%), darken($color-green, 5%))
+  // background: linear-gradient(to left, lighten($color-green, 5%), darken($color-green, 5%))
   pointer-events: none
   position: relative
 </style>

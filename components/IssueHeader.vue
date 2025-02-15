@@ -6,26 +6,23 @@ nuxt-link(:to="{ name: 'issues-number', params: { number: issue.issueNumber } }"
     .issue-title {{ issue.title }}
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from 'vue'
 import { parseDate } from '@/helpers/parsers'
 
-export default {
-  props: {
-    issue: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    issueDate () {
-      return parseDate(this.issue.publishedOn)
-    }
+const props = defineProps<{
+  issue: {
+    issueNumber: number
+    publishedOn: string
+    title: string
   }
-}
+}>()
+
+const issueDate = computed(() => parseDate(props.issue.publishedOn))
 </script>
 
 <style lang="sass">
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .issue-title
   font-weight: 400
@@ -42,17 +39,17 @@ export default {
   cursor: pointer
 
   &:hover
-    color: $color-green
+    color: branding.$color-green
 
 .issue-number
-  font-family: $secondary-font-stack
+  font-family: branding.$secondary-font-stack
   font-weight: 500
   font-size: 0.9em
-  color: $color-green
+  color: branding.$color-green
   display: inline-block
   margin-right: 6px
 
-  @media #{$large-up}
+  @media #{branding.$large-up}
     transform: translateX(-100%)
     position: absolute
     top: 2px

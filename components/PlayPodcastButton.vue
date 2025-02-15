@@ -13,11 +13,14 @@ button.button.play-podcast-button
   | Play the podcast
 </template>
 
+<script setup lang="ts">
+</script>
+
 <style lang="sass">
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .button.play-podcast-button
-  background-color: $color-green
+  background-color: branding.$color-green
   color: #fff
   padding: 5px 20px 5px 5px
   margin: 20px 30px 0 0

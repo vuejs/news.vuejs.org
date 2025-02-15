@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '~assets/branding'
+@use '~/assets/branding'
 
 .sidebar__box
   background: #f9f9f9

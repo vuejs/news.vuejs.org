@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import 'assets/branding'
+@use '~/assets/branding'
 
 .subscribe-prompt
   position: fixed
@@ -60,14 +60,14 @@ export default {
   text-align: center
   border-radius: 20px
   background: #fff
-  color: $color-green
+  color: branding.$color-green
   box-shadow: 0 2px 3px rgba(#000, .15)
   font-size: 18px
   font-weight: 600
   display: block
 
-  @media #{$medium-up}
-    display: none
+  @media #{branding.$medium-up}
+  //   display: none
 
 .subscribe-prompt-close
   border: none

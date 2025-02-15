@@ -1,47 +1,49 @@
 import { createClient } from 'contentful'
 
-const client = createClient({
-  space: config.space,
-  accessToken: config.accessToken,
-  host: config.host
-})
+export default defineNuxtPlugin((nuxtApp) => {
+  const config = useRuntimeConfig()
 
-export default function (config) {
-  return {
-    async getIssues () {
+  const client = createClient({
+    space: config.public.space,
+    accessToken: config.public.accessToken,
+    host: config.public.host
+  })
+
+  nuxtApp.provide('api', {
+    async getIssues() {
       const data = await client.getEntries({
-        content_type: config.contentTypes.issues
+        content_type: 'issueNumber'
       })
       return data.items
     },
-    async getPodcasts () {
+    async getPodcasts() {
       const data = await client.getEntries({
-        content_type: config.contentTypes.podcasts
+        content_type: 'podcast'
       })
       return data.items
     },
-    async getIssueByNumber (issueNumber) {
+    async getIssueByNumber(issueNumber) {
       const data = await client.getEntries({
-        content_type: config.contentTypes.issues,
+        content_type: 'issueNumber',
         'fields.issueNumber': issueNumber
       })
       return data.items[0]
     },
-    async getAuthors () {
+    async getAuthors() {
       const data = await client.getEntries({
-        content_type: config.contentTypes.authors
+        content_type: 'authors'
       })
       return data.items
     },
-    async getTags () {
+    async getTags() {
       const data = await client.getEntries({
-        content_type: config.contentTypes.tags
+        content_type: 'tag'
       })
       return data.items
     },
-    async getStoriesByContent (query = '', tags = []) {
+    async getStoriesByContent(query = '', tags = []) {
       let params = {
-        content_type: config.contentTypes.stories,
+        content_type: 'stories',
         'query': query
       }
       if (tags.length) {
@@ -56,5 +58,5 @@ export default function (config) {
 
       return data.items
     }
-  }
-}
+  })
+})
